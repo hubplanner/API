@@ -8,7 +8,7 @@ This is an example of how the Harvest API and the Hub Planner API can work toget
 ## Important Information
 * We advice you to first run this example on a Hub Planner trial account and make sure all data is correctly imported before using your real account. 
 
-* This example are built using 3rd party applications and modifications of the 3rd party source can break or change the expected result at any given time. 
+* This example are built using 3rd party source code and modifications of the 3rd party source can break or change the expected result at any given time. 
 
 * This example might require modifciations to fully function with your account and existing data. 
 
