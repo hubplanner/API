@@ -9,6 +9,12 @@
  *
  * This example might require modifciations to fully function with your account and existing data. 
  * 
+ * 
+ * What it does. 
+ * 
+ * 1. Load all people from Harvest account. Search on Hub for same email. If not found create else update. 
+ * 2. Load all projects from Harvest account. Search on Hub project.metadata property for Harvest project.id. If found update else crate
+ * 3. Load Harvest report for this month. Search on Hub for timeentries.metadata property for Harvest entry.id if found update else create
  */
 
 var async = require('async');
