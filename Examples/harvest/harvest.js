@@ -3,6 +3,12 @@
  * Example app which does load resource, projects and time from Harvest and create them on Hub Planner.
  * All entities will be created once only relying on HP's metadata which can be used to store a reff id from a different system.
  *
+ * Important Information before you run this example
+ * We advise you to first run this example on a Hub Planner trial account and make sure all data is correctly imported before using your real account. 
+ * This example is built using 3rd party applications and modifications of the 3rd party source can break or change the expected result at any given time. 
+ *
+ * This example might require modifciations to fully function with your account and existing data. 
+ * 
  */
 
 var async = require('async');
