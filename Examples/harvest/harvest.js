@@ -93,8 +93,9 @@ function runProjectsJob(callback) {
     // Load all projects from the harvest account
     Projects.list({}, function(err, response) {
         if (err) return callback(err);
-        //loop through each harvest person, if something fails stop process.
+        //loop through each harvest project, if something fails stop process.
         async.eachSeries (response, function (item, callback) {
+            //we are first trying to locate each harvest project by querying Hub Planner project.metadata == id. 
             projectHandler.createOrUpdate(item.project, callback);
         }, function(err){
             callback(err);
@@ -105,7 +106,7 @@ function runProjectsJob(callback) {
 function runTimeEntryJob(callback) {
     Projects.list({}, function(err, response) {
         if (err) return callback(err);
-        //loop through each harvest person, if something fails stop process.
+        //loop through each harvest project, if something fails stop process.
         async.eachSeries (response, function (item, callback) {
             runReportForProject(item.project, callback);
         }, function(err){
@@ -150,7 +151,7 @@ function getProject (harvestProjectId) {
 }
 
 function runReportForProject(project, callback) {
-    // Load all projects from the harvest account
+    // Load report from the harvest account
     var query = {};
     query.project_id =  project.id;
     query.from =  reportTimeRange[0];
