@@ -1,0 +1,7 @@
+.DS_Store
+*.iml
+*.ipr
+*.iws
+.idea/
+Examples/general/node_modules/*
+Examples/harvest/node_modules/*

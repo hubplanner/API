@@ -1,0 +1,13 @@
+{
+  "name": "harvest",
+  "description": "hello world test app",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "async": "^0.9.0",
+    "harvest": "0.0.9",
+    "moment": "^2.8.4",
+    "superagent": "^0.21.0",
+    "underscore": "^1.7.0"
+  }
+}
