@@ -20,7 +20,6 @@ var Harvest = require('harvest')
         subdomain: "***",
         email: "***",
         password: "***"
-
     });
 
 //TimeTracking = harvest.TimeTracking;
@@ -70,7 +69,9 @@ function runPeopleJob(callback) {
         if (err) return callback(err);
         //loop through each harvest person, if something fails stop process.
         async.eachSeries (response, function (person, callback) {
-            resourceHandler.createOrUpdate(person.user, callback);
+            setTimeout(function() {
+                resourceHandler.createOrUpdate(person.user, callback);
+            }, 100);
         }, function(err){
             callback(err);
         });
@@ -83,7 +84,9 @@ function runProjectsJob(callback) {
         if (err) return callback(err);
         //loop through each harvest person, if something fails stop process.
         async.eachSeries (response, function (item, callback) {
-            projectHandler.createOrUpdate(item.project, callback);
+            setTimeout(function() {
+                projectHandler.createOrUpdate(item.project, callback);
+            }, 100);
         }, function(err){
             callback(err);
         });
@@ -95,7 +98,9 @@ function runTimeEntryJob(callback) {
         if (err) return callback(err);
         //loop through each harvest person, if something fails stop process.
         async.eachSeries (response, function (item, callback) {
-            runReportForProject(item.project, callback);
+            setTimeout(function() {
+                runReportForProject(item.project, callback);
+            }, 100);
         }, function(err){
             callback(err);
         });
@@ -152,7 +157,9 @@ function runReportForProject(project, callback) {
             var hpProject = getProject(project.id);
 
             if(hpResource && hpProject) {
-                timeEntryHandler.createOrUpdate(item.day_entry, hpResource, hpProject, callback);
+                setTimeout(function() {
+                    timeEntryHandler.createOrUpdate(item.day_entry, hpResource, hpProject, callback);
+                }, 100);
             } else {
                 callback("no resource or project found")
             }
