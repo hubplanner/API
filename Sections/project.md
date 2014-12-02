@@ -25,7 +25,7 @@ Server Response example below for 1 project returned within an array.
           amount: 0,
           billingRate: { useDefault: true, rate: 0 } 
         } 
-      }
+      },
     useStatusColor: true,
     status: 'STATUS_ACTIVE',
     useProjectDuration: false,
