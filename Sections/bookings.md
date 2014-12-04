@@ -112,10 +112,10 @@ An example of a booking for resource id `1234` on project id `5678`. Note: These
 
 ```
 {
-    bookingData.resource = "1234";
-    bookingData.start = "2014-11-03 08:00";
-    bookingData.end = "2014-11-19 18:00";
-    bookingData.project = "5678";
+    "resource" : "1234",
+    "start" : "2014-11-03 08:00",
+    "end" : "2014-11-19 18:00",
+    "project" : "5678"
 }
 ```
 The server will return the full booking object once created including the newly created booking ID `_id`
