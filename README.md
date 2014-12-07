@@ -70,6 +70,16 @@ There are 2 types of API keys you can generate.
 
 Please note if you decide to disable access to the API. All API access will be revoked for all generated keys. The generated keys should be considered as sensitive as passwords and must not be shared or distributed to untrusted parties.
 
+##Error Codes & Responses
+Our aim is to return appropriate HTTP status codes for every rquest.
+
+Code | Text | Description
+--- | --- | ---
+200 | OK | Success
+201 | OK | Created
+400 | Bad Request | The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modifications.
+
+
 ##Examples
 Below we are lising some integration examples you can follow. Please let us know if you would like to add an example to this list. hello@hubplanner.com
 
