@@ -78,6 +78,13 @@ Code | Text | Description
 200 | OK | Success
 201 | OK | Created
 400 | Bad Request | The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modifications.
+401 | Unauthorized | The request requires user authentication @Authentication
+403 | Forbidden | The request is understood, but it has been refused or access is not allowed.
+404 | Not Found | The URI requested is invalid or the resource requested, such as a user, does not exists.
+429 | To Many Requests | This status code indicates that the user has sent too many requests
+   in a given amount of time ("rate limiting"). We currently allow 2 requests / second per account. 
+500 | Internal Server Error | Something unexpected broke. Please raise an [issue](https://github.com/hubplanner/API/issues) so we can investigate your problem.
+502 | Bad Gateway | Hub Planner API is down or temporary not accessible. 
 
 
 ##Examples
