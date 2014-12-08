@@ -26,7 +26,7 @@ POST holiday/search
 ```
 If you want to query all Holidays for a date range:
 ```
-{"date": {"$lt": "2014-07-15"} }
+{"date":{"$lt":"2014-07-15"} }
 ```
 
 ### Search Parameters
@@ -68,8 +68,8 @@ An example of a Holiday on Christmas
 
 ```
 { 
-  name: 'Christmas 2014'
-  date: '2014-12-25'
+  "name":"Christmas 2014"
+  "date":"2014-12-25"
 }
 ```
 The server will return the full holiday object once created including the newly created holiday ID `_id`
