@@ -54,9 +54,7 @@ POST /event
 An example of a event
 
 ```
-{
-	name: "Photo Shoot"
-}
+{"name": "Photo Shoot"}
 ```
 The server will retyrn the full event object once created including the newly created event ID `_id`
 
