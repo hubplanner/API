@@ -119,9 +119,9 @@ An example of a Resource
 
 ```
 {
-    firstName: "Paddy",
-    lastName: "DMan",
-    email:"unique@email.com"				   
+    "firstName":"Paddy",
+    "lastName":"DMan",
+    "email":"unique@email.com"				   
 }
 ```
 The server will return the full resource object once created including the newly created resource ID `_id`
