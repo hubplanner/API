@@ -47,7 +47,7 @@ An example of a projectGroup
 
 ```
 {
-	name: "My Developer Group"
+	"name": "My Developer Group"
 }
 ```
 The server will return the full projectGroup object once created including the newly created projectGroup ID `_id`
@@ -79,7 +79,7 @@ POST projectgroup/addProjectsToGroup/123456
 Accept: application/json
 Content-Type: application/json
 
-'{"projectIds":["654654365436543634","654365436543654365436"]}'
+{"projectIds":["654654365436543634","654365436543654365436"]}
 ```
 A successful add will return a `200` Ok response status from the server.
 
@@ -90,7 +90,7 @@ POST resourcegroup/addResourcesToGroup/123456
 Accept: application/json
 Content-Type: application/json
 
-'{"resourceIds":["654654365436543634","654365436543654365436"]}'
+{"resourceIds":["654654365436543634","654365436543654365436"]}
 ```
 A successful add will return a `200` Ok response status from the server.
 
@@ -112,7 +112,7 @@ POST resourcegroup/removeResourceFromGroups/123456
 Accept: application/json
 Content-Type: application/json
 
-'{"groupIds":["654654365436543634","654365436543654365436"]}'
+{"groupIds":["654654365436543634","654365436543654365436"]}
 ```
 A successful add will return a `200` Ok response status from the server.
 
