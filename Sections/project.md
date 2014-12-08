@@ -117,9 +117,7 @@ POST /project
 An example of a project
 
 ```
-{
-	"name": "My First Project"
-}
+{"name": "My First Project"}
 ```
 The server will retyrn the full project object once created including the newly created project ID `_id`
 
@@ -150,7 +148,7 @@ POST project/addResourcesToProject/projectId
 Accept: application/json
 Content-Type: application/json
 
-'{"resourceIds":["654654365436543634","654365436543654365436"]}'
+{"resourceIds":["654654365436543634","654365436543654365436"]}
 ```
 Property | Type | Description
 --- | --- | ---
