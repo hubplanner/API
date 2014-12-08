@@ -75,9 +75,9 @@ An example of a milestone on project id `5678`. Note: These are the minimum requ
 
 ```
 { 
-  name: 'Delivery Phase 1'
-  date: '2014-07-15'
-  project: '54785431e91e5ead13e8d841'
+  "name":"Delivery Phase 1"
+  "date":"2014-07-15"
+  "project":"54785431e91e5ead13e8d841"
 }
 ```
 The server will return the full milestone object once created including the newly created milestone ID `_id`
