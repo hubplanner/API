@@ -36,10 +36,10 @@ An example of a TimeEntry, all are required fields below.
 
 ```
 {
-   resource: "1234",
-   project: "5678",
-   date: "2014-11-18",
-   minutes: 480
+   "resource":"1234",
+   "project":"5678",
+   "date":"2014-11-18",
+   "minutes":480
 }
 ```
 The server will return the full TimeEntry object once created including the newly created TimeEntry ID `_id`
