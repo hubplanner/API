@@ -71,7 +71,7 @@ There are 2 types of API keys you can generate.
 Please note if you decide to disable access to the API. All API access will be revoked for all generated keys. The generated keys should be considered as sensitive as passwords and must not be shared or distributed to untrusted parties.
 
 ##Error Codes & Responses
-Our aim is to return appropriate HTTP status codes for every rquest.
+Overview of possible HTTP status codes
 
 Code | Text | Description
 --- | --- | ---
