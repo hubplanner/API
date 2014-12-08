@@ -75,8 +75,8 @@ Our aim is to return appropriate HTTP status codes for every rquest.
 
 Code | Text | Description
 --- | --- | ---
-200 | OK | Success
-201 | OK | Created
+200 | OK | Success.
+201 | OK | Created.
 400 | Bad Request | The request could not be understood by the server due to malformed syntax. The client SHOULD NOT repeat the request without modifications.
 401 | Unauthorized | The request requires user authentication @Authentication
 403 | Forbidden | The request is understood, but it has been refused or access is not allowed.
