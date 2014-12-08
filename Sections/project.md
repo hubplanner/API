@@ -166,7 +166,7 @@ POST project/removeResourceFromProjects/resourceId
 Accept: application/json
 Content-Type: application/json
 
-'{"projectIds":["654654365436543634","654365436543654365436"]}'
+{"projectIds":["654654365436543634","654365436543654365436"]}
 ```
 Property | Type | Description
 --- | --- | ---
