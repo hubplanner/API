@@ -118,7 +118,7 @@ An example of a project
 
 ```
 {
-	name: "My First Project"
+	"name": "My First Project"
 }
 ```
 The server will retyrn the full project object once created including the newly created project ID `_id`
