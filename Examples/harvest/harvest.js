@@ -26,7 +26,7 @@ var _ = require("underscore");
 
 
 
-var REQUEST_DELAY = 1000; //ms
+var REQUEST_DELAY = 2000; //ms
 
 //Set to current month.
 var reportTimeRange = [moment().startOf('month').format('YYYYMMDD'), moment().endOf('month').format('YYYYMMDD')];
