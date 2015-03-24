@@ -6,8 +6,8 @@ GET /holiday
 A response from the server would be as follows:
 ```
 [{ _id: '54785431e91e5ead13e8d841',
-  name: 'Christmas'
-  date: '2014-12-25'
+  name: 'Christmas',
+  date: '2014-12-25',
   metadata: '' 
 }]
   ```
