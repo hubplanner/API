@@ -68,7 +68,7 @@ An example of a Holiday on Christmas
 
 ```
 { 
-  "name":"Christmas 2014"
+  "name":"Christmas 2014",
   "date":"2014-12-25"
 }
 ```
