@@ -87,6 +87,17 @@ templateLabel: "Skills",
     }
 ] }
 ```
+Property | Type | Description
+--- | --- | ---
+_id | *string* | ID
+templateId | *string* | Refference ID @customFieldTemplate._id
+templateType | *string* | The type of custom field
+templateLabel | *string* | Label for the custom field (showing on custom fields tab) 
+value | *string* | The user inputed value for the custom field if type allows for text input
+choices | *array* | Array of selected choices (options that are not selected will not be present)
+choices.value | *string* | Value 
+choices.choiceId | *string* | Refference ID @customFieldTemplate.choices._id
+choices._id | *string* | ID
 
 ## Search Projects
 ```
