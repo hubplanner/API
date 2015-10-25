@@ -55,7 +55,7 @@ useCustomAvailability | *boolean* | Using Default Availability
 customAvailabilities | *object* | Define Custom Availability
 customFields | *object array* | Custom Fields* (read only)
 
-Custom Fields 
+### Custom Fields 
 
 There is different templates of custom fields, one that has a single property (string) value and one that allows for multiple linkable values. The templateType will dictate which template.  
 
