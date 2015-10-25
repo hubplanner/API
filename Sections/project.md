@@ -57,6 +57,7 @@ end |*string* |('YYYY-MM-DD') Project End Display Date
 backgroundColor |*string* | Project  Color
 projectCode |*string* | Project Code (Unique)
 metadata | *string* | Custom Field (255 Characters)
+customFields | *object array* | Custom Fields* (read only)
 
 ##### Custom Fields 
 
