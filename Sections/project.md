@@ -58,6 +58,36 @@ backgroundColor |*string* | Project  Color
 projectCode |*string* | Project Code (Unique)
 metadata | *string* | Custom Field (255 Characters)
 
+##### Custom Fields 
+
+There are two different templates of custom fields, one that has a single property (string) value and one that allows for multiple linkable values. The templateType will dictate which template.  
+
+```
+{ templateId:"55100b09640c63d006c673b2",
+_id: "5626541945f2d486dd0b7106",
+templateType: "TEXT | TEXTAREA | EMAIL | DATE | COLOR | NUMBER",
+templateLabel: "Other information",
+value: "Can make a mean chili" }
+```
+```
+{ templateId:"55100b09640c63d006c673b2",
+_id: "5626541945f2d486dd0b7106",
+templateType: "CHECKBOX | RADIO | SELECT",
+templateLabel: "Skills",
+"choices": [
+    {
+        "value": "JAVA",
+        "choiceId": "560a9a1cf0168116192eccf5",
+        "_id": "5626541945f2d486dd0b7105"
+    },
+    {
+        "value": "C++",
+        "choiceId": "560a9a1ea5a77611195a3ee1",
+        "_id": "5626541945f2d486dd0b7104"
+    }
+] }
+```
+
 ## Search Projects
 ```
 POST project/search
