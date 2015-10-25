@@ -31,7 +31,8 @@ Server Response example below for 1 resource returned within an array.
        wednesday: { minutes: 480, workDay: true },
        tuesday: { minutes: 240, workDay: true },
        monday: { minutes: 480, workDay: true }} 
-   }
+   },
+    customFields: []
 }]
 ```
 The following is a description of the properties in the response.
