@@ -33,7 +33,8 @@ Server Response example below for 1 project returned within an array.
     end: null,
     backgroundColor: '#81A489',
     projectCode: 'AA',
-    metadata: '' 
+    metadata: '',
+    customFields: []
 }]
 ```
 
