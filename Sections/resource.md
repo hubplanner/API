@@ -57,7 +57,7 @@ customFields | *object array* | Custom Fields* (read only)
 
 ##### Custom Fields 
 
-There are two different templates of custom fields, one that has a single property (string) value and one that allows for multiple linkable values. The templateType will dictate which template.  
+There are two different templates for custom fields, one that has a single property (string) value and one that allows for multiple linkable values. The templateType property will dictate which template is being used.  
 
 ```
 { templateId:"55100b09640c63d006c673b2",
