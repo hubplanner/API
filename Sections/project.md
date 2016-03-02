@@ -166,6 +166,8 @@ The server will retyrn the full project object once created including the newly 
 
 A successful create will return a `201` Ok response status from the server.
 
+Note: Budgets rate is not supported to change through the API and will be possible to change in V2
+
 ## Update a Project
 Update an existing project.
 ```
@@ -174,6 +176,8 @@ PUT /project/123456789
 will update the project with the id 123456789. You must pass in the entire project object in the body. 
 
 A successful update will return a `200` Ok response status from the server.
+
+Note: Budgets rate is not supported to change through the API and will be possible to change in V2
 
 ## Delete a Project
 Use the following command to delete a specific project by `id`.
