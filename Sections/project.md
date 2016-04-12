@@ -182,7 +182,7 @@ Note: Budget rate is not supported to change / create through the API. Planned s
 ## Delete a Project
 Use the following command to delete a specific project by `id`.
 ```
-DEL /project/12345678
+DELETE /project/12345678
 ```
 Will delete project with the id `12345678`
 
