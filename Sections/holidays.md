@@ -88,7 +88,7 @@ A successful update will return a `200` Ok response status from the server.
 ## Delete a holiday
 Use the following command to delete a specific holiday by `id`.
 ```
-DEL /holiday/12345678
+DELETE /holiday/12345678
 ```
 Will delete holiday with the id `12345678`
 
