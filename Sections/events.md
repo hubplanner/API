@@ -72,7 +72,7 @@ A successful update will return a `200` Ok response status from the server.
 ## Delete a Event
 Use the following command to delete a specific event by `id`.
 ```
-DEL /event/12345678
+DELETE /event/12345678
 ```
 Will delete event with the id `12345678`
 
