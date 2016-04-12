@@ -72,7 +72,7 @@ A successful update will return a `200` Ok response status from the server.
 ## Delete a TimeEntry
 Use the following command to delete a specific TimeEntry by `id`.
 ```
-DEL /timeentry/12345678
+DELETE /timeentry/12345678
 ```
 Will delete TimeEntry with the id `12345678`
 
