@@ -66,7 +66,7 @@ A successful update will return a `200` Ok response status from the server.
 ## Delete a projectGroup
 Use the following command to delete a specific projectGroup by `id`.
 ```
-DEL /projectgroup/12345678
+DELETE /projectgroup/12345678
 ```
 Will delete projectGroup with the id `12345678`
 
