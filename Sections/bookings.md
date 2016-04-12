@@ -134,7 +134,7 @@ A successful update will return a `200` Ok response status from the server.
 ## Delete a booking
 Use the following command to delete a specific booking by `id`.
 ```
-DEL /booking/12345678
+DELETE /booking/12345678
 ```
 Will delete booking with the id `12345678`
 
