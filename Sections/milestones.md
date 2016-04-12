@@ -96,7 +96,7 @@ A successful update will return a `200` Ok response status from the server.
 ## Delete a milestone
 Use the following command to delete a specific milestone by `id`.
 ```
-DEL /milestone/12345678
+DELETE /milestone/12345678
 ```
 Will delete milestone with the id `12345678`
 
