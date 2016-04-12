@@ -185,7 +185,7 @@ A successful update will return a `200` Ok response status from the server.
 ## Delete a Resource
 Use the following command to delete a specific resource by `id`.
 ```
-DEL /resource/12345678
+DELETE /resource/12345678
 ```
 Will delete resource with the id `12345678`
 
