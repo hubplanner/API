@@ -116,13 +116,13 @@ If you only want a certain status of resource such as `STATUS_ACTIVE`.
 ```
 {"status" : "STATUS_ACTIVE" }
 ```
-will return all projects which are NOT `STATUS_ACTIVE`
+will return all resources which are NOT `STATUS_ACTIVE`
 ```
 {"status" : {"$nin": "STATUS_ACTIVE" } }
 ```
-will return all projects which are `STATUS_ACTIVE` and `STATUS_ARCHIVED`
+will return all resources which are `STATUS_ACTIVE` and `STATUS_ARCHIVED`
 ```
-{"name" : {"$in": ["STATUS_ACTIVE", "STATUS_ARCHIVED"] } }
+{"status" : {"$in": ["STATUS_ACTIVE", "STATUS_ARCHIVED"] } }
 ```
 
 ### Search Parameters
