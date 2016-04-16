@@ -50,8 +50,8 @@ The following table shows the different types of booking states that can be retu
 Booking State | Description
 --- | ---
 STATE_DAY_MINUTE | the `stateValue` is the minutes per day for the booking
-STATE_PERCENTAGE | the `stateValue` is the total minutes for the booking from start to end
-STATE_TOTAL_MINUTE | the `stateValue` is the percentage of the daily commitment
+STATE_PERCENTAGE | the `stateValue` is the percentage of the daily commitment
+STATE_TOTAL_MINUTE | the `stateValue` is the total minutes for the booking from start to end
 
 
 ## Search Bookings
