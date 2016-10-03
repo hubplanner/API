@@ -1,16 +1,20 @@
-## Get All Milestones
+## Get Specific Milestone
+Use the following command to get a specific milestone by `id`.
+```
+GET /milestone/12345678
+```
+Will return milestone with the id `12345678`
 
-```
-GET /milestone
-```
+A successful milestone will return a `200` Ok response status from the server.
+
 A response from the server would be as follows:
 ```
-[{ _id: '54785431e91e5ead13e8d841',
+{ _id: '12345678',
   name: 'Delivery Phase 1'
   date: '2014-07-15'
   project: '54785431e91e5ead13e8d841'
   metadata: '' 
-}]
+}
   ```
 The following is a description of the properties in the response.
 
@@ -56,15 +60,6 @@ name | $nin, $in | Milestone Name
 project | $nin, $in | project id
 
 A successful search will return a `200` Ok response status from the server.
-
-## Get Specific Milestone
-Use the following command to get a specific booking by `id`.
-```
-GET /milestone/12345678
-```
-Will return milestone with the id `12345678`
-
-A successful milestone will return a `200` Ok response status from the server.
 
 ## Create a new Booking
 Create a new booking.
