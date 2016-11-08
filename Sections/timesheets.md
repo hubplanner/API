@@ -102,7 +102,8 @@ $nin | not included
 $in | included
 $lt | less than
 $lte | less than or equal
-$gte | greater than
+$gt | greater than
+$gte | greater than or equal
 
 ### Searchable Properties
 Property | Parameters | Description
