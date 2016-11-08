@@ -42,20 +42,20 @@ Property | Type | Description
 _id | *string* | id of the TimeEntry
 resource | *string* | id of the Resource
 project | *string* | id of the Project  
-projectName | *string* | Project Name
-projectType | *string* | Project Type
-projectStatus | *string* | Project Status (Active, Archived, Pending, Planned, Floating)
+projectName | *string* | Project Name (Read Only)
+projectType | *string* | Project Type (REGULAR, EVENT) (Read Only)
+projectStatus | *string* | Project Status (Active, Archived, Pending, Planned, Floating)(Read Only)
 date | *string* | ('YYYY-MM-DD') TimeEntry date
 minutes | *number* | How many minutes this entry is for
 note | *string* | Note on this entry
-createdDate | *string* | Server date when entry was created
-updatedDate | *string* | Server date when entry was last updated
+createdDate | *string* | Server date when entry was created (Read Only)
+updatedDate | *string* | Server date when entry was last updated (Read Only)
 metadata | *string* | Custom Field (255 Characters)
 status | *string* | Entry Status (UNSUBMITTED, SUBMITTED, APPROVED, REJECTED, PENDING)
 locked | *boolean* | Possible to update entry (read only)
-creator |*string* | Resource ID of who created this entry
+creator |*string* | Resource ID of who created this entry (Read Only)
 categoryTemplateId |*string* | Category Template ID
-categoryName |*string* | Category Template Name
+categoryName |*string* | Category Template Name (Read Only)
 
 ## Create a TimeEntry
 Create a new TimeEntry.
