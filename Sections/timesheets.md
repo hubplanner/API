@@ -15,13 +15,23 @@ Will return TimeEntry with the id `12345678`
 
 ```
 {
-  _id: "12345678",
-  resource: 1234,
-  project: 4567,
-  date: "2014-11-18",
-  minutes: 480,
-  note: "",
-  metadata: ""
+      "_id": "12345678",
+      "resource": "xxx",
+      "project": "xxx",
+      "projectName": "Customer Service",
+      "projectType": "REGULAR",
+      "projectStatus": "Active",
+      "date": "2016-03-07",
+      "minutes": 240,
+      "note": "",
+      "createdDate": "2016-03-09T23:32:57.007Z",
+      "updatedDate": "2016-11-03T06:40:15.668Z",
+      "metadata": "",
+      "status": "APPROVED",
+      "locked": true,
+      "creator": "xxx",
+      "categoryTemplateId": "xxx",
+      "categoryName": "Project Research"
 }
 ```
 
