@@ -89,6 +89,32 @@ If you only want all TimeEntry for a project id `456`
 {"project":"456"}
 ```
 If you want to query all TimeEntry for a date range:
+```
+{"date":{"$gte": "2014-10-20", "$lte": "2014-10-27"}}
+```
+
+### Search Parameters
+Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
+
+Property | Parameters
+--- | --- | ---
+$nin | not included
+$in | included
+$lt | less than
+$lte | less than or equal
+$gte | greater than
+
+### Searchable Properties
+Property | Parameters | Description
+--- | --- | ---
+_id | $nin, $in | booking id
+metadata | $nin, $in | custom meta data field
+date | $lt, $lte, $gte | date ('YYYY-MM-DD') 
+resources | $nin, $in | resource id
+project | $nin, $in | project id
+status | $nin, $in | Entry Status (UNSUBMITTED, SUBMITTED, APPROVED, REJECTED, PENDING)
+
+A successful search will return a `200` Ok response status from the server.
 
 ## Update a TimeEntry
 Update an existing TimeEntry.
