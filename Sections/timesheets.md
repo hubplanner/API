@@ -37,6 +37,26 @@ Will return TimeEntry with the id `12345678`
 
 A successful TimeEntry will return a `200` Ok response status from the server.
 
+Property | Type | Description
+--- | --- | ---
+_id | *string* | id of the TimeEntry
+resource | *string* | id of the Resource
+project | *string* | id of the Project  
+projectName | *string* | Project Name
+projectType | *string* | Project Type
+projectStatus | *string* | Project Status (Active, Archived, Pending, Planned, Floating)
+date | *string* | ('YYYY-MM-DD') TimeEntry date
+minutes | *number* | How many minutes this entry is for
+note | *string* | Note on this entry
+createdDate | *string* | Server date when entry was created
+updatedDate | *string* | Server date when entry was last updated
+metadata | *string* | Custom Field (255 Characters)
+status | *string* | Entry Status (UNSUBMITTED, SUBMITTED, APPROVED, REJECTED, PENDING)
+locked | *boolean* | Possible to update entry (read only)
+creator |*string* | Resource ID of who created this entry
+categoryTemplateId |*string* | Category Template ID
+categoryName |*string* | Category Template Name
+
 ## Create a TimeEntry
 Create a new TimeEntry.
 ```
