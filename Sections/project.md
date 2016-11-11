@@ -111,7 +111,7 @@ If you only want a certain status of project such as `STATUS_ACTIVE`.
 ```
 will return all projects which are NOT `STATUS_ACTIVE`
 ```
-{"status" : {"$nin": "STATUS_ACTIVE" } }
+{"status" : {"$nin": ["STATUS_ACTIVE"] } }
 ```
 will return all projects which are `STATUS_ACTIVE` and `STATUS_FLOATING`
 ```
