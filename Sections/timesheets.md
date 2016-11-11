@@ -20,7 +20,7 @@ Will return TimeEntry with the id `12345678`
       "project": "xxx",
       "projectName": "Customer Service",
       "projectType": "REGULAR",
-      "projectStatus": "Active",
+      "projectStatus": "STATUS_ACTIVE",
       "date": "2016-03-07",
       "minutes": 240,
       "note": "",
