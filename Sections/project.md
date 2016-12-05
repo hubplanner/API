@@ -34,7 +34,8 @@ Server Response example below for 1 project returned within an array.
     backgroundColor: '#81A489',
     projectCode: 'AA',
     metadata: '',
-    customFields: []
+    customFields: [],
+    timeEntryNoteRequired: true
 }]
 ```
 
@@ -58,6 +59,7 @@ backgroundColor |*string* | Project  Color
 projectCode |*string* | Project Code (Unique)
 metadata | *string* | Custom Field (255 Characters)
 customFields | *object array* | Custom Fields* (read only)
+timeEntryNoteRequired | *boolean* | Require Note on Time Entries
 
 ##### Custom Fields 
 
