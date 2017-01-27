@@ -10,5 +10,4 @@ Welcome to the Hub Planner API. The Hub Planner API provides programmatic access
 * [Events](https://github.com/hubplanner/API/blob/master/Sections/events.md)
 * [Holidays](https://github.com/hubplanner/API/blob/master/Sections/holidays.md)
 * [Groups](https://github.com/hubplanner/API/blob/master/Sections/groups.md)
-* [Budgets](https://github.com/hubplanner/API/blob/master/Sections/budgets.md)
 * [Milestones](https://github.com/hubplanner/API/blob/master/Sections/milestones.md)
