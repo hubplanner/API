@@ -61,8 +61,8 @@ project | $nin, $in | project id
 
 A successful search will return a `200` Ok response status from the server.
 
-## Create a new Booking
-Create a new booking.
+## Create a new Milestone
+Create a new Milestone.
 ```
 POST /milestone
 ```
