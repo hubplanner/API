@@ -15,8 +15,6 @@ Welcome to the Hub Planner API. The Hub Planner API provides programmatic access
 You can use the API to integrate Hub Planner with your own third party applications or generally integrate with your existing back-office setup.
 
 ##API Support
-The API is in beta status which means it is a fully functioning API but there might be some unforeseen bugs that we will iron out as soon as we receive them.
-
 If you have a question about using the API or have noticed an error or omission in the documentation. Please feel free to open an [issue](https://github.com/hubplanner/API/issues) on GitHub with your question and we will attend to it.
 
 If you have any direct implementation issues, please contact the tech team at the following address hello@hubplanner.com and add API as as the Subject. 
