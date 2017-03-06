@@ -14,6 +14,9 @@ Welcome to the Hub Planner API. The Hub Planner API provides programmatic access
 
 You can use the API to integrate Hub Planner with your own third party applications or generally integrate with your existing back-office setup.
 
+##Zapier Integration
+We offer an integration with Zapier. Please [Contact Us](https://hubplanner.com/contact) to get access.
+
 ##API Support
 If you have a question about using the API or have noticed an error or omission in the documentation. Please feel free to open an [issue](https://github.com/hubplanner/API/issues) on GitHub with your question and we will attend to it.
 
