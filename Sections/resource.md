@@ -9,30 +9,64 @@ call will return all resources.
 Server Response example below for 1 resource returned within an array. 
 
 ```
-[{ _id: '547832df25044c9b060f9a5e',
-  email: 'unique@email.com',
-  metadata: '',
-  createdDate: '2014-11-28T08:31:27.035Z',
-  updatedDate: '2014-11-28T08:31:27.039Z',
-  note: '',
-  firstName: 'Paddy',
-  lastName: 'DMan',
-  status: 'STATUS_ACTIVE',
-  role: 'ROLE_TEAM',
-  links: { link5: '', link4: '', link3: '', link2: '', link1: '' },
-  billing: { useDefault: true, rate: 0 },
-  useCustomAvailability: false,
-  customAvailabilities: { _id: '547845a7406ca4620b3a1356',
-    weekDays:
-     { sunday: { minutes: 0, workDay: false },
-       saturday: { minutes: 0, workDay: false },
-       friday: { minutes: 480, workDay: true },
-       thursday: { minutes: 480, workDay: true },
-       wednesday: { minutes: 480, workDay: true },
-       tuesday: { minutes: 240, workDay: true },
-       monday: { minutes: 480, workDay: true }} 
-   },
-    customFields: []
+[{
+  "_id": "547832df25044c9b060f9a5e",
+  "email": "unique@email.com",
+  "metadata": "",
+  "createdDate": "2017-06-28T08:31:27.035Z",
+  "updatedDate": "2017-06-28T08:31:27.039Z",
+  "note": "",
+  "firstName": "Paddy",
+  "lastName": "DMan",
+  "isProjectManager": false,
+  "status": "STATUS_ACTIVE",
+  "role": "ROLE_TEAM",
+  "links": {
+    "link5": "",
+    "link4": "",
+    "link3": "",
+    "link2": "",
+    "link1": ""
+  },
+  "billing": {
+    "useDefault": true,
+    "rate": 0
+  },
+  "useCustomAvailability": false,
+  "customAvailabilities": {
+    "_id": "547845a7406ca4620b3a1356",
+    "weekDays": {
+      "sunday": {
+        "minutes": 0,
+        "workDay": false
+      },
+      "saturday": {
+        "minutes": 0,
+        "workDay": false
+      },
+      "friday": {
+        "minutes": 480,
+        "workDay": true
+      },
+      "thursday": {
+        "minutes": 480,
+        "workDay": true
+      },
+      "wednesday": {
+        "minutes": 480,
+        "workDay": true
+      },
+      "tuesday": {
+        "minutes": 240,
+        "workDay": true
+      },
+      "monday": {
+        "minutes": 480,
+        "workDay": true
+      }
+    }
+  },
+  "customFields": []
 }]
 ```
 The following is a description of the properties in the response.
