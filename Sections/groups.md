@@ -54,14 +54,27 @@ The server will return the full projectGroup object once created including the n
 
 A successful create will return a `201` Ok response status from the server.
 
+### Subgroup
+If you have Sidebar Pro extension enabled on your account you can create a group as subgroup by specifying id of parent group. For example:
+```
+{
+	"name": "My Developer Subgroup",
+	"parentGroupId": "123456789"
+}
+```
+This will create subgroup of group 123456789.
+
 ## Update a projectGroup
 Update an existing project.
 ```
 PUT /projectgroup/123456789
 ```
-will update the projectGroup with the id 123456789. You must pass in the entire projectGroup object in the body. 
+will update the projectGroup with the id 123456789. You must pass in the entire projectGroup object in the body.
 
 A successful update will return a `200` Ok response status from the server.
+
+### Subgroup
+If you have Sidebar Pro extension enabled on your account you can use update endpoint to change `parentGroupId` of a group, converting it into subgroup or extracting subgroup into parent group. To convert subgroup into parent group pass `null` as the value.
 
 ## Delete a projectGroup
 Use the following command to delete a specific projectGroup by `id`.
@@ -115,4 +128,3 @@ Content-Type: application/json
 {"groupIds":["654654365436543634","654365436543654365436"]}
 ```
 A successful add will return a `200` Ok response status from the server.
-
