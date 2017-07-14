@@ -35,7 +35,15 @@ Server Response example below for 1 project returned within an array.
     projectCode: 'AA',
     metadata: '',
     customFields: [],
-    timeEntryNoteRequired: true
+    timeEntryNoteRequired: true,
+    resourceRates: [
+        {
+            _id: 1234567890,
+            resource: 1234567890,
+            companyBillingRateId: 1234567890,
+            companyBillingRate: 100
+        }
+     ],
 }]
 ```
 
@@ -101,6 +109,40 @@ choices | *array* | Array of selected choices (options that are not selected wil
 choices.value | *string* | Value 
 choices.choiceId | *string* | Refference ID @customFieldTemplate.choices._id
 choices._id | *string* | ID
+
+##### Billing
+
+You can set custom billing rate for your resource by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
+default billing will be used for this resource. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
+
+```
+budget: {
+    cashAmount: {
+        billingRate: {
+            useDefault: false,
+            id: 123456789,
+            rate: 80
+        }
+     }
+},
+```
+
+`useDefault` and `rate` fields will be automatically set to what is set in chosen billing rate.
+
+You can also set custom billing rates for resources. To do that change resourceRates array in project object.
+
+```
+    "resourceRates": [
+        {
+            "resource": "596397771a488107aafc1db6",
+            "companyBillingRateId": "596397761a488107aafc1da2",
+            "companyBillingRate": 100
+        }
+    ],
+```
+
+In the response you will get automatically generated `_id` of custom resource rate, which you should keep in update calls.
+Both resource id and billing rate id must exist in system. Billing rate is assigned automatically from the billing rate.
 
 ## Search Projects
 ```

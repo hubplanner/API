@@ -29,8 +29,9 @@ Server Response example below for 1 resource returned within an array.
     "link1": ""
   },
   "billing": {
-    "useDefault": true,
-    "rate": 0
+    "useDefault": false,
+    "id": 123456789
+    "rate": 100
   },
   "useCustomAvailability": false,
   "customAvailabilities": {
@@ -140,6 +141,22 @@ STATUS_ACTIVE | Active Resources
 STATUS_ARCHIVED | Archived Resources
 STATUS_NON_BOOKABLE | Non Bookable Resource
 
+##### Billing
+
+You can set custom billing rate for your resource by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
+default billing will be used for this resource. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
+
+```
+{
+    billing: {
+        useDefault: false,
+        id: 123456789,
+        rate: 80
+    }
+}
+```
+
+`useDefault` and `rate` fields will be automatically set to what is set in chosen billing rate.
 
 ## Search Resources
 ```
