@@ -88,11 +88,95 @@ links | *object* |Resource Links
 billing | *object* | Resource Billing Options
 useCustomAvailability | *boolean* | Using Default Availability
 customAvailabilities | *object* | Define Custom Availability
-customFields | *object array* | Custom Fields* (read only)
+customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them
 
-##### Custom Fields 
+##### Custom Fields
 
-There are two different templates for custom fields, one that has a single property (string) value and one that allows for multiple linkable values. The templateType property will dictate which template is being used.  
+You can fetch custom field templates defined for your account using:
+
+```
+GET /resource/customField/template
+```
+
+Those templates can be used to fill in corresponding fields in your resource. The sample answer for template list looks as follows(with only single template
+in an array):
+
+```
+{
+        "_id": 1234567890,
+        "filterGrid": true,
+        "deleted": false,
+        "company": 1234567890,
+        "label": "select field example",
+        "instructions": "",
+        "defaultValue": "",
+        "defaultRadioId": "",
+        "placeholderText": "",
+        "createdDate": "2017-07-18T09:02:53.016Z",
+        "choices": [
+            {
+                "value": "first choice",
+                "_id": 1234567890
+            },
+            {
+                "value": "second choice",
+                "_id": 1234567890
+            },
+            {
+                "value": "third choice",
+                "_id": 1234567890
+            }
+        ],
+        "canResourceEdit": false,
+        "type": "SELECT",
+        "category": "PROJECT",
+        "status": "ACTIVE",
+        "__v": 8,
+        "allowMultipleValues": false,
+        "characterLimit": 0,
+        "maxValue": 0,
+        "minValue": 0,
+        "order": 5,
+        "stepValue": 0,
+        "updatedDate": "2017-07-18T09:04:22.152Z",
+        "weekStartOn": 1
+    }
+```
+
+Property | Type | Description
+--- | --- | ---
+_id | *string* | ID
+filterGrid | *boolean* | ?
+company | *string* | Id of company this belongs to. Always will be your company.
+label | *string* | Name of custom field, set by company admin
+instructions | *string* | Instructions how to use custom field, set by company admin
+defaultValue | *string* | Default value, if any. Used only by fields without choices
+defaultRadioId | *string* | Id of default value for radio button
+placeholderText | *string* | Placeholder text for frontend forms
+createdDate | *date* | Date of creation
+choices | *objects* | Array of choices selectable by users
+canResourceEdit | *boolean* | Whenever regular resources can edit this field
+type | *enum* | Type of field, one of TEXT, TEXTAREA, EMAIL, DATE, COLOR, NUMBER, CHECKBOX, SELECT, RADIO
+category | *enum* | Whenever this is project or resource custom field. Always will be RESOURCE for this endpoint
+status | *enum* | Status of the custom field
+allowMultipleValues | *boolean* | For select fields, whenever multiple values should be possible to be chosen at once
+characterLimit | *number* | For number of text fields, limit of characters
+maxValue | *number* | Max value for number fields
+minValue | *number* | Min value for number fields
+stepValue | *number* | For number fields step between possible values.
+updatedDate | *date* | Date the field was last updated
+weekStartOn | *number* | Number of day week starts on, starting with 0 as Sunday, 1 Monday. User by date field
+
+Items in choices array have following properties:
+
+Property | Type | Description
+--- | --- | ---
+_id | *string* | ID
+value | *string* | Choice value
+
+There are two different templates for custom fields, one that has a single property (string) value and one that allows for multiple linkable values stored in choices array. The templateType property will dictate which template is being used.
+
+To set simple values choose templateId to use, pass in proper templateType and value you want to set, for example:
 
 ```
 { templateId:"55100b09640c63d006c673b2",
@@ -101,6 +185,12 @@ templateType: "TEXT | TEXTAREA | EMAIL | DATE | COLOR | NUMBER",
 templateLabel: "Other information",
 value: "Can make a mean chili" }
 ```
+
+The value will be validated based on it's type. Min length, max length has to be kept as given. Email field can only contain properly validated e-mail.
+Date needs to be in `YYYY-MM-DD` format. Color needs to use html hex codes(for example `#fff000` or `#fff`).
+
+For choice fields you need to set templateId and an array of choices, where each choice needs to have proper choiceId. For example:
+
 ```
 { templateId:"55100b09640c63d006c673b2",
 _id: "5626541945f2d486dd0b7106",
@@ -119,17 +209,6 @@ templateLabel: "Skills",
     }
 ] }
 ```
-Property | Type | Description
---- | --- | ---
-_id | *string* | ID
-templateId | *string* | Refference ID @customFieldTemplate._id
-templateType | *string* | The type of custom field
-templateLabel | *string* | Label for the custom field (showing on custom fields tab) 
-value | *string* | The user inputed value for the custom field if type allows for text input
-choices | *array* | Array of selected choices (options that are not selected will not be present)
-choices.value | *string* | Value 
-choices.choiceId | *string* | Refference ID @customFieldTemplate.choices._id
-choices._id | *string* | ID
 
 ##### Status
 
