@@ -26,6 +26,10 @@ Server Response example below for 1 project returned within an array.
           billingRate: { useDefault: true, rate: 0 } 
         } 
       },
+    companyBillingRateId: 1234567890,
+    budgetHours: 200,
+    budgetCashAmount: 8000,
+    budgetCurrency: "USD",
     useStatusColor: true,
     status: 'STATUS_ACTIVE',
     useProjectDuration: false,
@@ -57,7 +61,11 @@ createdDate | *string* | Project Creation Date
 updatedDate | *string* | Project Updated Date
 workDays | *boolean* | Object of work days for a week
 useProjectDays | *boolean* | If using default days or custom.
-budget | *object* | An object containing budget properites. 
+budget | *object* | An object containing budget properites.
+companyBillingRateId | *string* | Id of selected billing rate for project
+budgetHours | number | Amount of hours budgeted for this project
+budgetCashAmount | number | Amount of money budgeted for this project, given in currency selected in budgetCurrency
+budgetCurrency | number | Currency of money budgeted for this project
 useStatusColor | *boolean* | If using the default status color or not
 status | *string* | Project Status (Active, Archived, Pending, Planned, Floating)
 useProjectDuration | *boolean* | Display Project Start and End Display Dates
@@ -195,18 +203,8 @@ You can set custom billing rate for your project by giving the id of billing rat
 default billing will be used for this resource. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
 
 ```
-budget: {
-    cashAmount: {
-        billingRate: {
-            useDefault: false,
-            id: 123456789,
-            rate: 80
-        }
-     }
-},
+    companyBillingRateId: 1234567890,
 ```
-
-`useDefault` and `rate` fields will be automatically set to what is set in chosen billing rate.
 
 You can also set custom billing rates for resources. To do that change resourceRates array in project object.
 
@@ -222,6 +220,76 @@ You can also set custom billing rates for resources. To do that change resourceR
 
 In the response you will get automatically generated `_id` of custom resource rate, which you should keep in update calls.
 Both resource id and billing rate id must exist in system. Billing rate is assigned automatically from the billing rate.
+
+###### Legacy Billing
+
+*IMPORTANT*: Following method to manage billing is DEPRECATED and will be disabled in upcoming updates. This method will work only if you use `budget` object and will overwrite
+settings in new properties. It's suggested to start using new properties for dealing with billing. To do so don't add `budget` object to your requests.
+
+You can set custom billing rate for your resource by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
+default billing will be used for this resource. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
+
+```
+budget: {
+    cashAmount: {
+        billingRate: {
+            useDefault: false,
+            id: 123456789,
+            rate: 80
+        }
+     }
+},
+```
+
+`useDefault` and `rate` fields will be automatically set to what is set in chosen billing rate.
+
+##### Budget
+
+You can set budget settings by using following properties:
+
+* Budget in hours: `budgetHours`
+* Budget in cash: `budgetCashAmount`
+* Budget currency: `budgetCurrency`
+
+Sample below shows how to set budget for 200 hours and 8000 USD:
+
+```
+    budgetHours: 200,
+    budgetCashAmount: 8000,
+    budgetCurrency: "USD",
+```
+
+###### Legacy budget
+
+*IMPORTANT*: Following method to manage budget is DEPRECATED and will be disabled in upcoming updates. This method will work only if you use `budget` object and will overwrite
+settings in new properties. It's suggested to start using new properties for dealing with budget. To do so don't add `budget` object to your requests.
+
+You can set budget settings by using budget object in your request. You can set:
+
+* Budget in hours: by setting `budget.projectHours.hours` to value you want.
+* Budget in cash amount: by setting `budget.cashAmount.amount` to value you want.
+* Budget currency: by setting `budget.cashAmount.currency` to one of available currencies - check this section [this section](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md#currency) for more detail.
+
+Sample below shows how to set budget for 200 hours and 8000 USD. All other values are ignored during update and will be recalculated and returned in the response.
+```
+"budget": {
+            "hasBudget": false,
+            "projectHours": {
+                "active": false,
+                "hours": 200
+            },
+            "cashAmount": {
+                "active": false,
+                "amount": 8000,
+                "currency": "USD",
+                "billingRate": {
+                    "useDefault": false,
+                    "rate": 0,
+                    "id": null
+                }
+            }
+        },
+```
 
 ## Search Projects
 ```
