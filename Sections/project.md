@@ -191,7 +191,7 @@ templateLabel: "Skills",
 
 ##### Billing
 
-You can set custom billing rate for your resource by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
+You can set custom billing rate for your project by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
 default billing will be used for this resource. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
 
 ```
@@ -288,8 +288,6 @@ An example of a project
 The server will retyrn the full project object once created including the newly created project ID `_id`
 
 A successful create will return a `201` Ok response status from the server.
-
-Note: Budget rate is not supported to change / create through the API. Planned support in V2, Spring 2016
 
 ## Update a Project
 Update an existing project.
