@@ -26,6 +26,10 @@ Server Response example below for 1 project returned within an array.
           billingRate: { useDefault: true, rate: 0 } 
         } 
       },
+    companyBillingRateId: 1234567890,
+    budgetHours: 200,
+    budgetCashAmount: 8000,
+    budgetCurrency: "USD",
     useStatusColor: true,
     status: 'STATUS_ACTIVE',
     useProjectDuration: false,
@@ -57,7 +61,11 @@ createdDate | *string* | Project Creation Date
 updatedDate | *string* | Project Updated Date
 workDays | *boolean* | Object of work days for a week
 useProjectDays | *boolean* | If using default days or custom.
-budget | *object* | An object containing budget properites. 
+budget | *object* | An object containing budget properites.
+companyBillingRateId | *string* | Id of selected billing rate for project
+budgetHours | number | Amount of hours budgeted for this project
+budgetCashAmount | number | Amount of money budgeted for this project, given in currency selected in budgetCurrency
+budgetCurrency | number | Currency of money budgeted for this project
 useStatusColor | *boolean* | If using the default status color or not
 status | *string* | Project Status (Active, Archived, Pending, Planned, Floating)
 useProjectDuration | *boolean* | Display Project Start and End Display Dates
@@ -242,6 +250,14 @@ You can set budget settings by using following properties:
 * Budget in hours: `budgetHours`
 * Budget in cash: `budgetCashAmount`
 * Budget currency: `budgetCurrency`
+
+Sample below shows how to set budget for 200 hours and 8000 USD:
+
+```
+    budgetHours: 200,
+    budgetCashAmount: 8000,
+    budgetCurrency: "USD",
+```
 
 ###### Legacy budget
 
