@@ -366,8 +366,6 @@ will update the project with the id 123456789. You must pass in the entire proje
 
 A successful update will return a `200` Ok response status from the server.
 
-Note: Budget rate is not supported to change / create through the API. Planned support in V2, Spring 2016
-
 ## Delete a Project
 Use the following command to delete a specific project by `id`.
 ```
