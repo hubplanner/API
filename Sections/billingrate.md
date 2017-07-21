@@ -23,15 +23,15 @@ Server Response example below for 1 billing rate returned within an array.
 ```
 The following is a description of the properties in the response.
 
-Property | Type | Description
---- | --- | ---
-_id | *string* | id of the Billing Rate
-rate | *number* | Billing rate amount in given currency
-metadata | *string* | Custom Field (255 Characters)
-createdDate | *string* | Billing Rate Creation Date
-updatedDate | *string* | Billing Rate Updated Date
-label | *string* | The name of billing rate
-currency | *string* | Currency the rate is in
+Property | Type | Description | Required
+--- | --- | --- | ---
+_id | *string* | id of the Billing Rate | NO
+rate | *number* | Billing rate amount in given currency | *YES*
+metadata | *string* | Custom Field (255 Characters) | NO
+createdDate | *string* | Billing Rate Creation Date | NO
+updatedDate | *string* | Billing Rate Updated Date | NO
+label | *string* | The name of billing rate | *YES*
+currency | *string* | Currency the rate is in | *YES*
 
 ##### Currency
 
