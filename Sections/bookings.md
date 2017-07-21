@@ -28,22 +28,22 @@ A response from the server would be as follows:
   ```
 The following is a description of the properties in the response.
 
-Property | Type | Description
---- | --- | ---
-_id | *string* | id of the Booking
-title | *string* | Booking Tile
-state | *string* | Booking State (see Below)
-allDay | *boolean* | If created in day view or not
-start | *string* | booking start date
-end | *string* | booking end date
-stateValue | *integer* | booking state value (depends on booking state)
-resource | *string* | Resource ID
-project | *string* | Project ID
-note | *string* | Booking Note
-details | *object* | Booking Details
-createdDate | *string* | Created Date
-updatedDate | *string* | Updated Date
-metadata | *string* | Custom Field
+Property | Type | Description | Required
+--- | --- | --- | ---
+_id | *string* | id of the Booking | NO
+title | *string* | Booking Tile | NO
+state | *string* | Booking State (see Below) | NO
+allDay | *boolean* | If created in day view or not | NO
+start | *string* | booking start date | *YES*
+end | *string* | booking end date | *YES*
+stateValue | *integer* | booking state value (depends on booking state) | NO
+resource | *string* | Resource ID | *YES*
+project | *string* | Project ID | *YES*
+note | *string* | Booking Note | NO
+details | *object* | Booking Details | NO
+createdDate | *string* | Created Date | NO
+updatedDate | *string* | Updated Date | NO
+metadata | *string* | Custom Field | NO
 
 The following table shows the different types of booking states that can be returned and their implication on which property they use for the booking time. 
 

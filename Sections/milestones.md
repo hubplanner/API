@@ -18,13 +18,13 @@ A response from the server would be as follows:
   ```
 The following is a description of the properties in the response.
 
-Property | Type | Description
---- | --- | ---
-_id | *string* | id of the Milestone
-name | *string* | Milestone Name
-date | *string* | Milestone date
-project | *string* | Project ID
-metadata | *string* | Custom Field
+Property | Type | Description | Required
+--- | --- | --- | ---
+_id | *string* | id of the Milestone | NO
+name | *string* | Milestone Name | *YES*
+date | *string* | Milestone date | *YES*
+project | *string* | Project ID | *YES*
+metadata | *string* | Custom Field | NO
 
 ## Search Milestones
 ```

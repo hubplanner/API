@@ -13,12 +13,12 @@ A response from the server would be as follows:
   ```
 The following is a description of the properties in the response.
 
-Property | Type | Description
---- | --- | ---
-_id | *string* | id of the Holiday
-name | *string* | Holiday Name
-date | *string* | Holiday date
-metadata | *string* | Custom Field
+Property | Type | Description | Required
+--- | --- | --- | ---
+_id | *string* | id of the Holiday | NO
+name | *string* | Holiday Name | *YES*
+date | *string* | Holiday date | *YES*
+metadata | *string* | Custom Field | NO
 
 ## Search Holidays
 ```

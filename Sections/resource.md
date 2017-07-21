@@ -72,23 +72,23 @@ Server Response example below for 1 resource returned within an array.
 ```
 The following is a description of the properties in the response.
 
-Property | Type | Description
---- | --- | ---
-_id | *string* | id of the Resource
-email | *string* | Resource Email (Unique)
-metadata | *string* | Custom Field (255 Characters)
-createdDate | *string* | Resource Creation Date
-updatedDate | *string* | Resource Updated Date
-note | *string* | Resource Notes
-firstName | *string* | Resource First Name
-lastName | *string* | Resource Last Name
-status | *string* | Resource Status
-role | *string* | Resource Role
-links | *object* |Resource Links
-billing | *object* | Resource Billing Options
-useCustomAvailability | *boolean* | Using Default Availability
-customAvailabilities | *object* | Define Custom Availability
-customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them
+Property | Type | Description | Required
+--- | --- | --- | ---
+_id | *string* | id of the Resource | NO
+email | *string* | Resource Email (Unique) | NO
+metadata | *string* | Custom Field (255 Characters) | NO
+createdDate | *string* | Resource Creation Date | NO
+updatedDate | *string* | Resource Updated Date | NO
+note | *string* | Resource Notes | NO
+firstName | *string* | Resource First Name | *YES*
+lastName | *string* | Resource Last Name | NO
+status | *string* | Resource Status | NO
+role | *string* | Resource Role | NO
+links | *object* |Resource Links | NO
+billing | *object* | Resource Billing Options | NO
+useCustomAvailability | *boolean* | Using Default Availability | NO
+customAvailabilities | *object* | Define Custom Availability | NO
+customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO
 
 ##### Custom Fields
 

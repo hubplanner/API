@@ -21,12 +21,12 @@ Server Response example below for 1 projectGroup returned within an array.
 }]
 ```
 
-Property | Type | Description
---- | --- | ---
-_id | *string* | id of the group
-name | *string* | Group name
-projects | *Array* | Array of Project Id's in Group
-metadata | *string* | Custom Field (255 Characters)
+Property | Type | Description | Required
+--- | --- | --- | ---
+_id | *string* | id of the group | NO
+name | *string* | Group name | YES
+projects | *Array* | Array of Project Id's in Group | NO
+metadata | *string* | Custom Field (255 Characters) | NO
 
 
 ## Get Specific Project
