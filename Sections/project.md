@@ -51,31 +51,31 @@ Server Response example below for 1 project returned within an array.
 }]
 ```
 
-Property | Type | Description
---- | --- | ---
-_id | *string* | id of the project
-name | *string* | Project name
-links | *object* |Project Links
-note | *string* | Project Notes
-createdDate | *string* | Project Creation Date
-updatedDate | *string* | Project Updated Date
-workDays | *boolean* | Object of work days for a week
-useProjectDays | *boolean* | If using default days or custom.
-budget | *object* | An object containing budget properites.
-companyBillingRateId | *string* | Id of selected billing rate for project
-budgetHours | number | Amount of hours budgeted for this project
-budgetCashAmount | number | Amount of money budgeted for this project, given in currency selected in budgetCurrency
-budgetCurrency | number | Currency of money budgeted for this project
-useStatusColor | *boolean* | If using the default status color or not
-status | *string* | Project Status (Active, Archived, Pending, Planned, Floating)
-useProjectDuration | *boolean* | Display Project Start and End Display Dates
-start | *string* |('YYYY-MM-DD') Project Start Display Date
-end |*string* |('YYYY-MM-DD') Project End Display Date
-backgroundColor |*string* | Project  Color
-projectCode |*string* | Project Code (Unique)
-metadata | *string* | Custom Field (255 Characters)
-customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them
-timeEntryNoteRequired | *boolean* | Require Note on Time Entries
+Property | Type | Description | Required
+--- | --- | --- | ---
+_id | *string* | id of the project | NO
+name | *string* | Project name | *YES*
+links | *object* |Project Links | NO
+note | *string* | Project Notes | NO
+createdDate | *string* | Project Creation Date | NO
+updatedDate | *string* | Project Updated Date | NO
+workDays | *boolean* | Object of work days for a week | NO
+useProjectDays | *boolean* | If using default days or custom. | NO
+budget | *object* | An object containing budget properites. | NO, deprecated, use `companyBillingRateId`, `budgetHours`, `budgetCashAmount` and `budgetCurrency` instead
+companyBillingRateId | *string* | Id of selected billing rate for project | NO
+budgetHours | number | Amount of hours budgeted for this project. 0 means the budget in hours is disabled for this project. | NO
+budgetCashAmount | number | Amount of money budgeted for this project, given in currency selected in `budgetCurrency`. 0 means that cash budget is disabled in this project. | NO
+budgetCurrency | number | Currency of money budgeted for this project | NO
+useStatusColor | *boolean* | If using the default status color or not | NO
+status | *string* | Project Status (Active, Archived, Pending, Planned, Floating) | NO, defaults to Active
+useProjectDuration | *boolean* | Display Project Start and End Display Dates | NO
+start | *string* |('YYYY-MM-DD') Project Start Display Date | Only if `useProjectDuration` is set to true
+end |*string* |('YYYY-MM-DD') Project End Display Date | Only if `useProjectDuration` is set to true
+backgroundColor |*string* | Project  Color | NO
+projectCode |*string* | Project Code (Unique) | NO
+metadata | *string* | Custom Field (255 Characters) | NO
+customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO, but if you use them check Custom Fields section to see how to use them
+timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO
 
 ##### Custom Fields
 
@@ -133,7 +133,6 @@ in an array):
 Property | Type | Description
 --- | --- | ---
 _id | *string* | ID
-filterGrid | *boolean* | ?
 company | *string* | Id of company this belongs to. Always will be your company.
 label | *string* | Name of custom field, set by company admin
 instructions | *string* | Instructions how to use custom field, set by company admin
@@ -212,8 +211,7 @@ You can also set custom billing rates for resources. To do that change resourceR
     "resourceRates": [
         {
             "resource": "596397771a488107aafc1db6",
-            "companyBillingRateId": "596397761a488107aafc1da2",
-            "companyBillingRate": 100
+            "companyBillingRateId": "596397761a488107aafc1da2"
         }
     ],
 ```
@@ -258,6 +256,8 @@ Sample below shows how to set budget for 200 hours and 8000 USD:
     budgetCashAmount: 8000,
     budgetCurrency: "USD",
 ```
+
+You can set budgetHours or budgetCashAmount to 0 to disable those budgets in your project.
 
 ###### Legacy budget
 
