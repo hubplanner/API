@@ -72,23 +72,23 @@ Server Response example below for 1 resource returned within an array.
 ```
 The following is a description of the properties in the response.
 
-Property | Type | Description | Required
---- | --- | --- | ---
-_id | *string* | id of the Resource | NO
-email | *string* | Resource Email (Unique) | NO
-metadata | *string* | Custom Field (255 Characters) | NO
-createdDate | *string* | Resource Creation Date | NO
-updatedDate | *string* | Resource Updated Date | NO
-note | *string* | Resource Notes | NO
-firstName | *string* | Resource First Name | *YES*
-lastName | *string* | Resource Last Name | NO
-status | *string* | Resource Status | NO
-role | *string* | Resource Role | NO
-links | *object* |Resource Links | NO
-billing | *object* | Resource Billing Options | NO
-useCustomAvailability | *boolean* | Using Default Availability | NO
-customAvailabilities | *object* | Define Custom Availability | NO
-customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO
+Property | Type | Description | Required | Sortable
+--- | --- | --- | --- | ---
+_id | *string* | id of the Resource | NO | NO
+email | *string* | Resource Email (Unique) | NO | YES
+metadata | *string* | Custom Field (255 Characters) | NO | YES
+createdDate | *string* | Resource Creation Date | NO | YES
+updatedDate | *string* | Resource Updated Date | NO | YES
+note | *string* | Resource Notes | NO | NO
+firstName | *string* | Resource First Name | *YES* | YES
+lastName | *string* | Resource Last Name | NO | YES
+status | *string* | Resource Status | NO | YES
+role | *string* | Resource Role | NO | YES
+links | *object* |Resource Links | NO | NO
+billing | *object* | Resource Billing Options | NO | NO
+useCustomAvailability | *boolean* | Using Default Availability | NO | NO
+customAvailabilities | *object* | Define Custom Availability | NO | NO
+customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO | NO
 
 ##### Custom Fields
 

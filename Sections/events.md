@@ -19,14 +19,14 @@ Server Response example below for 1 project returned within an array.
 }]
 ```
 
-Property | Type | Description | Required
---- | --- | --- | ---
-_id | *string* | id of the project | NO
-name | *string* | Event name | *YES*
-createdDate | *string* | Event Creation Date | NO
-updatedDate | *string* | Event Updated Date | NO
-backgroundColor | *string* | Event Color | NO
-metadata | *string* | Custom Field | NO
+Property | Type | Description | Required | Sortable
+--- | --- | --- | --- | ---
+_id | *string* | id of the project | NO | NO
+name | *string* | Event name | *YES* | YES
+createdDate | *string* | Event Creation Date | NO | YES
+updatedDate | *string* | Event Updated Date | NO | YES
+backgroundColor | *string* | Event Color | NO | NO
+metadata | *string* | Custom Field | NO | YES
 
 ## Search Events
 ```
