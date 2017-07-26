@@ -15,7 +15,44 @@ Welcome to the Hub Planner API. The Hub Planner API provides programmatic access
 
 You can use the API to integrate Hub Planner with your own third party applications or generally integrate with your existing back-office setup.
 
-## Pagination
+## Zapier Integration
+
+We offer an integration with Zapier. Please [Contact Us](https://hubplanner.com/contact) to get access.
+
+## API Support
+
+If you have a question about using the API or have noticed an error or omission in the documentation. Please feel free to open an [issue](https://github.com/hubplanner/API/issues) on GitHub with your question and we will attend to it.
+
+If you have any direct implementation issues, please contact the tech team at the following address hello@hubplanner.com and add API as as the Subject. 
+
+## API Updates and Changes
+
+We will be managing the API via GitHub, so please watch the Hub Planner API repository to receive email notification of updates to the API documentation. 
+
+## Sharing
+
+If you've built something interesting with the Hub Planner API, made a wrapper for a certain code language or integrated with a third party software you would like to share or think will help others, then please let us know at hello@hubplanner.com
+
+## API Data Formats
+
+Hub Planner API is a RESTful API that uses HTTP requests and returns JSON for all responses. 
+
+All URLs start with the root URL: 
+
+```
+https://api.hubplanner.com/v1/
+```
+Content-Type and Accept must be defined in the header of all requests. 
+
+```
+GET resource/123
+Accept: application/json
+Content-Type: application/json
+```
+
+Please note that all requests to the Hub Planner API must be made over HTTPS.
+
+### Pagination
 
 Most of the above areas can be paginated using url parameters `limit` and `page`. By default the limit is `0`, which means unlimited. In the future unlimited
 listings will be disabled and the results will need to be paginated, so we suggest adding support for pagination as soon as possible.
@@ -30,7 +67,7 @@ you reach page with less than requested amount of elements(in this example less 
 
 The endpoints that can be paginated in most areas are `GET /areaName` and `POST /areaName/search`.
 
-## Sorting results
+### Sorting results
 
 Most of the endpoints can be sorted ascending or descending based on some of the properties. Documentation for each area you have access to lists sortable
 fields in the property table. Results can be sorted for `GET /areaName` and `POST /areaName/search` requests.
@@ -95,43 +132,6 @@ properties ommited):
 ```
 
 It's suggested that you use sort argument along with pagination.
-
-## Zapier Integration
-
-We offer an integration with Zapier. Please [Contact Us](https://hubplanner.com/contact) to get access.
-
-## API Support
-
-If you have a question about using the API or have noticed an error or omission in the documentation. Please feel free to open an [issue](https://github.com/hubplanner/API/issues) on GitHub with your question and we will attend to it.
-
-If you have any direct implementation issues, please contact the tech team at the following address hello@hubplanner.com and add API as as the Subject. 
-
-## API Updates and Changes
-
-We will be managing the API via GitHub, so please watch the Hub Planner API repository to receive email notification of updates to the API documentation. 
-
-## Sharing
-
-If you've built something interesting with the Hub Planner API, made a wrapper for a certain code language or integrated with a third party software you would like to share or think will help others, then please let us know at hello@hubplanner.com
-
-## API Data Formats
-
-Hub Planner API is a RESTful API that uses HTTP requests and returns JSON for all responses. 
-
-All URLs start with the root URL: 
-
-```
-https://api.hubplanner.com/v1/
-```
-Content-Type and Accept must be defined in the header of all requests. 
-
-```
-GET resource/123
-Accept: application/json
-Content-Type: application/json
-```
-
-Please note that all requests to the Hub Planner API must be made over HTTPS.
 
 ## User Agent Identification
 
