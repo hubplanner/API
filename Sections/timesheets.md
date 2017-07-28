@@ -37,25 +37,25 @@ Will return TimeEntry with the id `12345678`
 
 A successful TimeEntry will return a `200` Ok response status from the server.
 
-Property | Type | Description | Required
---- | --- | --- | ---
-_id | *string* | id of the TimeEntry | NO
-resource | *string* | id of the Resource | *YES*
-project | *string* | id of the Project | *YES*
-projectName | *string* | Project Name (Read Only) | NO
-projectType | *string* | Project Type (REGULAR, EVENT) (Read Only) | NO
-projectStatus | *string* | Project Status (Active, Archived, Pending, Planned, Floating)(Read Only) | NO
-date | *string* | ('YYYY-MM-DD') TimeEntry date | *YES*
-minutes | *number* | How many minutes this entry is for | *YES*
-note | *string* | Note on this entry | Depends on project configuration of setting `timeEntryNoteRequired`
-createdDate | *string* | Server date when entry was created (Read Only) | NO
-updatedDate | *string* | Server date when entry was last updated (Read Only) | NO
-metadata | *string* | Custom Field (255 Characters) | NO
-status | *string* | Entry Status (UNSUBMITTED, SUBMITTED, APPROVED, REJECTED, PENDING) | NO
-locked | *boolean* | Possible to update entry (read only) | NO
-creator |*string* | Resource ID of who created this entry (Read Only) | NO
-categoryTemplateId |*string* | Category Template ID | NO
-categoryName |*string* | Category Template Name (Read Only) | NO
+Property | Type | Description | Required | Sortable
+--- | --- | --- | --- | ---
+_id | *string* | id of the TimeEntry | NO | NO
+resource | *string* | id of the Resource | *YES* | NO
+project | *string* | id of the Project | *YES* | NO
+projectName | *string* | Project Name (Read Only) | NO | YES
+projectType | *string* | Project Type (REGULAR, EVENT) (Read Only) | NO | NO
+projectStatus | *string* | Project Status (Active, Archived, Pending, Planned, Floating)(Read Only) | NO | NO
+date | *string* | ('YYYY-MM-DD') TimeEntry date | *YES* | YES
+minutes | *number* | How many minutes this entry is for | *YES* | YES
+note | *string* | Note on this entry | Depends on project configuration of setting `timeEntryNoteRequired` | NO
+createdDate | *string* | Server date when entry was created (Read Only) | NO | YES
+updatedDate | *string* | Server date when entry was last updated (Read Only) | NO | YES
+metadata | *string* | Custom Field (255 Characters) | NO | YES
+status | *string* | Entry Status (UNSUBMITTED, SUBMITTED, APPROVED, REJECTED, PENDING) | NO | YES
+locked | *boolean* | Possible to update entry (read only) | NO | NO
+creator |*string* | Resource ID of who created this entry (Read Only) | NO | NO
+categoryTemplateId |*string* | Category Template ID | NO | NO
+categoryName |*string* | Category Template Name (Read Only) | NO | YES
 
 ## Create a TimeEntry
 Create a new TimeEntry.

@@ -51,31 +51,31 @@ Server Response example below for 1 project returned within an array.
 }]
 ```
 
-Property | Type | Description | Required
---- | --- | --- | ---
-_id | *string* | id of the project | NO
-name | *string* | Project name | *YES*
-links | *object* |Project Links | NO
-note | *string* | Project Notes | NO
-createdDate | *string* | Project Creation Date | NO
-updatedDate | *string* | Project Updated Date | NO
-workDays | *boolean* | Object of work days for a week | NO
-useProjectDays | *boolean* | If using default days or custom. | NO
-budget | *object* | An object containing budget properites. | NO, deprecated, use `companyBillingRateId`, `budgetHours`, `budgetCashAmount` and `budgetCurrency` instead
-companyBillingRateId | *string* | Id of selected billing rate for project | NO
-budgetHours | number | Amount of hours budgeted for this project. 0 means the budget in hours is disabled for this project. | NO
-budgetCashAmount | number | Amount of money budgeted for this project, given in currency selected in `budgetCurrency`. 0 means that cash budget is disabled in this project. | NO
-budgetCurrency | number | Currency of money budgeted for this project | NO
-useStatusColor | *boolean* | If using the default status color or not | NO
-status | *string* | Project Status (Active, Archived, Pending, Planned, Floating) | NO, defaults to Active
-useProjectDuration | *boolean* | Display Project Start and End Display Dates | NO
-start | *string* |('YYYY-MM-DD') Project Start Display Date | Only if `useProjectDuration` is set to true
-end |*string* |('YYYY-MM-DD') Project End Display Date | Only if `useProjectDuration` is set to true
-backgroundColor |*string* | Project  Color | NO
-projectCode |*string* | Project Code (Unique) | NO
-metadata | *string* | Custom Field (255 Characters) | NO
-customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO, but if you use them check Custom Fields section to see how to use them
-timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO
+Property | Type | Description | Required | Sortable
+--- | --- | --- | --- | ---
+_id | *string* | id of the project | NO | NO
+name | *string* | Project name | *YES* | YES
+links | *object* |Project Links | NO | NO
+note | *string* | Project Notes | NO | NO
+createdDate | *string* | Project Creation Date | NO | YES
+updatedDate | *string* | Project Updated Date | NO | YES
+workDays | *boolean* | Object of work days for a week | NO | NO
+useProjectDays | *boolean* | If using default days or custom. | NO | NO
+budget | *object* | An object containing budget properites. | NO, deprecated, use `companyBillingRateId`, `budgetHours`, `budgetCashAmount` and `budgetCurrency` instead | NO
+companyBillingRateId | *string* | Id of selected billing rate for project | NO | NO
+budgetHours | number | Amount of hours budgeted for this project. 0 means the budget in hours is disabled for this project. | NO | YES
+budgetCashAmount | number | Amount of money budgeted for this project, given in currency selected in `budgetCurrency`. 0 means that cash budget is disabled in this project. | NO | YES
+budgetCurrency | number | Currency of money budgeted for this project | NO | YES
+useStatusColor | *boolean* | If using the default status color or not | NO | NO
+status | *string* | Project Status (Active, Archived, Pending, Planned, Floating) | NO, defaults to Active | YES | NO
+useProjectDuration | *boolean* | Display Project Start and End Display Dates | NO | NO
+start | *string* |('YYYY-MM-DD') Project Start Display Date | Only if `useProjectDuration` is set to true | YES | NO
+end |*string* |('YYYY-MM-DD') Project End Display Date | Only if `useProjectDuration` is set to true | YES | NO
+backgroundColor |*string* | Project  Color | NO | NO
+projectCode |*string* | Project Code (Unique) | NO | NO
+metadata | *string* | Custom Field (255 Characters) | NO | YES
+customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO, but if you use them check Custom Fields section to see how to use them | NO
+timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO | NO
 
 ##### Custom Fields
 

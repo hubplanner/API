@@ -28,22 +28,22 @@ A response from the server would be as follows:
   ```
 The following is a description of the properties in the response.
 
-Property | Type | Description | Required
---- | --- | --- | ---
-_id | *string* | id of the Booking | NO
-title | *string* | Booking Tile | NO
-state | *string* | Booking State (see Below) | NO
-allDay | *boolean* | If created in day view or not | NO
-start | *string* | booking start date | *YES*
-end | *string* | booking end date | *YES*
-stateValue | *integer* | booking state value (depends on booking state) | NO
-resource | *string* | Resource ID | *YES*
-project | *string* | Project ID | *YES*
-note | *string* | Booking Note | NO
-details | *object* | Booking Details | NO
-createdDate | *string* | Created Date | NO
-updatedDate | *string* | Updated Date | NO
-metadata | *string* | Custom Field | NO
+Property | Type | Description | Required | Sortable
+--- | --- | --- | --- | ---
+_id | *string* | id of the Booking | NO | NO
+title | *string* | Booking Tile | NO | YES
+state | *string* | Booking State (see Below) | NO | YES
+allDay | *boolean* | If created in day view or not | NO | NO
+start | *string* | booking start date | *YES* | YES
+end | *string* | booking end date | *YES* | YES
+stateValue | *integer* | booking state value (depends on booking state) | NO | YES
+resource | *string* | Resource ID | *YES* | NO
+project | *string* | Project ID | *YES* | NO
+note | *string* | Booking Note | NO | NO
+details | *object* | Booking Details | NO | NO
+createdDate | *string* | Created Date | NO | YES
+updatedDate | *string* | Updated Date | NO | YES
+metadata | *string* | Custom Field | NO | YES
 
 The following table shows the different types of booking states that can be returned and their implication on which property they use for the booking time. 
 
