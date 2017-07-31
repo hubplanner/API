@@ -30,7 +30,7 @@ If you want to query all Holidays for a date range:
 ```
 
 ### Search Parameters
-Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
+Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included. Parameters for `$in` and `$nin` must be passed as an array within `[]`.
 
 Property | Parameters
 --- | --- | ---
