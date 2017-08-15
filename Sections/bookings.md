@@ -11,7 +11,7 @@ A response from the server would be as follows:
   allDay: true,
   start: '2014-11-03 08:00',
   end: '2014-11-19  18:00',
-  stateValue: 50,
+  stateValue: 480,
   resource: '5478423c406ca4620b3a1354',
   project: '5478396825044c9b060f9a61',
   note: '',
@@ -34,9 +34,9 @@ _id | *string* | id of the Booking | NO | NO
 title | *string* | Booking Tile | NO | YES
 state | *string* | Booking State (see Below) | NO | YES
 allDay | *boolean* | If created in day view or not | NO | NO
-start | *string* | booking start date | *YES* | YES
-end | *string* | booking end date | *YES* | YES
-stateValue | *integer* | booking state value (depends on booking state) | NO | YES
+start | *string* | booking start date (for hourly creation pass in hours, see below) | *YES* | YES
+end | *string* | booking end date (for hourly creation pass in hours, see below) | *YES* | YES
+stateValue | *integer* | booking state value (depends on booking state) - will be 0 unless set | NO | YES
 resource | *string* | Resource ID | *YES* | NO
 project | *string* | Project ID | *YES* | NO
 note | *string* | Booking Note | NO | NO
@@ -49,7 +49,7 @@ The following table shows the different types of booking states that can be retu
 
 Booking State | Description
 --- | ---
-STATE_DAY_MINUTE | the `stateValue` is the minutes per day for the booking
+STATE_DAY_MINUTE | the `stateValue` is the minutes per day for the booking. e.g. 480 would be 8hrs
 STATE_PERCENTAGE | the `stateValue` is the percentage of the daily commitment
 STATE_TOTAL_MINUTE | the `stateValue` is the total minutes for the booking from start to end
 
@@ -108,16 +108,45 @@ Create a new booking.
 ```
 POST /booking
 ```
-An example of a booking for resource id `1234` on project id `5678`. Note: These are the minimum required fields. 
+An example of a booking for resource id `5992a4a6e333b50c3c721c51` on project id `5992a4a6e583b5333c721c6d`. Note: These are the minimum required fields. 
 
 ```
 {
-    "resource" : "1234",
-    "start" : "2014-11-03 08:00",
-    "end" : "2014-11-19 18:00",
-    "project" : "5678"
+    "resource" : "5992a4a6e333b50c3c721c51",
+    "start" : "2014-11-03",
+    "end" : "2014-11-19",
+    "project" : "5992a4a6e583b5333c721c6d"
 }
 ```
+If you do not pass in `stateValue` it will be set to zero, so common practice is to pass in a `stateValue` when creating a booking. Please also be aware if you do not pass in a `state` the default will be used which is detrmined in your UI and usually `STATE_PERCENTAGE`
+
+for example when booking 8hrs
+
+```
+{
+    "resource" : "5992a4a6e333b50c3c721c51",
+    "start" : "2014-11-03",
+    "end" : "2014-11-19",
+    "project" : "5992a4a6e583b5333c721c6d",
+    "state" : "STATE_DAY_MINUTE",
+    "stateValue" : 480
+}
+```
+
+## Create a Booking in Hours View
+You will need to make sure to pass in the following object. Note the start and End include the hours and you do not pass in a `stateValue` and you set `allDay` to `false`.
+
+```
+{
+    "resource" : "5992a4a6e333b50c3c721c51",
+    "start" : "2017-08-21 10:00",
+    "end" : "2017-08-21 15:00",
+    "project" : "5992a4a6e583b5333c721c6d",
+    "allDay" : false,
+    "state" : "STATE_DAY_MINUTE"
+}
+```
+
 The server will return the full booking object once created including the newly created booking ID `_id`
 
 A successful create will return a `201` Ok response status from the server.
