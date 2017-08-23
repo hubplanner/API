@@ -26,6 +26,9 @@ target | String | url of your endpoint to listen for subscribed event | YES
 Event name | Description
 --- | ---
 project.update | Triggers when project is created or updated
+resource.update | Triggers when resource is created or updated
+booking.create | Triggers when booking is created 
+timeEntry.create | Triggers when time entry is created 
 
 In a response you will receive your subscription together with generated unique id (which you can use in other actions) and subscription creation time. 
 An example response will look like below.
