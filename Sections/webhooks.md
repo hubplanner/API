@@ -43,6 +43,123 @@ An example response will look like below.
 }
 ```
 
+## Responses when subscribed to web hooks
+
+*project.update*
+
+```
+{
+    "event" : "project.update",
+    "resourceIds" : [],
+    "projectManagerIds" : [],
+    "end" : null,
+    "start" : null,
+    "useProjectDays" : false,
+    "workDays" : [ 
+        false, 
+        true, 
+        true, 
+        true, 
+        true, 
+        true, 
+        false
+    ],
+    "includeBookedTimeGrid" : true,
+    "tags" : [],
+    "customFields" : [],
+    "type" : "REGULAR",
+    "status" : "Active",
+    "name" : "Test Project",
+    "projectId" : ObjectId("59a66aafe1b60a251c86b6a2")
+}
+```
+*resource.update*
+
+```
+{
+	"event" : "resource.update",
+	"isProjectManager" : true,
+	"useResourceAvailability" : false,
+	"customAvailabilities" : [ 
+		{
+			"_id" : ObjectId("59a66af0e1b60a251c86b6ad"),
+			"weekDays" : {
+				"sunday" : {
+					"minutes" : 0,
+					"workDay" : false
+				},
+				"saturday" : {
+					"minutes" : 0,
+					"workDay" : false
+				},
+				"friday" : {
+					"minutes" : 0,
+					"workDay" : true
+				},
+				"thursday" : {
+					"minutes" : 0,
+					"workDay" : true
+				},
+				"wednesday" : {
+					"minutes" : 0,
+					"workDay" : true
+				},
+				"tuesday" : {
+					"minutes" : 0,
+					"workDay" : true
+				},
+				"monday" : {
+					"minutes" : 0,
+					"workDay" : true
+				}
+			},
+			"end" : null,
+			"start" : null
+		}
+	],
+	"tags" : [ 
+		{
+			"tagId" : ObjectId("59a66aeee1b60a251c86b6aa"),
+			"value" : "superstar",
+			"_id" : ObjectId("59a66af0e1b60a251c86b6ae")
+		}
+	],
+	"customFields" : [],
+	"type" : "REGULAR",
+	"status" : "STATUS_ACTIVE",
+	"role" : "ROLE_TEAM",
+	"lastName" : "Smith",
+	"firstName" : "Alan",
+	"resourceId" : ObjectId("59a66af0e1b60a251c86b6ab"),
+	"email" : "smith@test.com"
+}
+```
+
+*booking.create*
+
+```
+{
+    "event" : "booking.create",
+    "end" : "2017-09-13T00:00:00",
+    "start" : "2017-09-13T00:00:00",
+    "projectId" : ObjectId("599db3c1021ffc2abc1d427d"),
+    "resourceId" : ObjectId("599db3c0021ffc2abc1d4240")
+}
+```
+
+*timeEntry.create*
+
+```
+{
+    "event" : "timeEntry.create",
+    "status" : "UNSUBMITTED",
+    "categoryName" : "General",
+    "minutes" : "180",
+    "date" : "2017-08-30T00:00",
+    "projectId" : "59a008a8ab3cad27e08a9374",
+    "timeEntryId" : "59a3ea783e1e8427b4547a6d"
+}
+```
 
 ## Unsubscribing from a web hook
 
