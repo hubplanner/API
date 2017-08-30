@@ -1,11 +1,14 @@
-## Creating a new web hook
+# Webhooks
+You can use Hub Planners webhooks to tap into real time events that are triggered in the Hub Planner application and use those events in other third party softwares. A simple example of usage could be when a New Project is created in Hub Planner, you want to create that project in another service. You can apply this concept to the support events below. 
 
-To use web hooks functionality you need to subscribe to first choosen event. Below url and example how to create such a subscription.
+## Creating a New Webhook
+
+To use the webhooks functionality you first need to subscribe to the choosen event. Below is a url and example of how to create such a subscription.
 
 ```
 POST /subscription
 ```
-With request body in JSON format.
+With the request body passed in JSON format.
 
 ```
 {
@@ -20,8 +23,8 @@ event | String (*check supported events for possible values*) | name of event fo
 target | String | url of your endpoint to listen for subscribed event | YES
 
 
-
-*Supported events*
+## Supported Events
+The following table outlines the supported events that you can subscribe to. 
 
 Event name | Description
 --- | ---
@@ -30,7 +33,8 @@ resource.update | Triggers when resource is created or updated
 booking.create | Triggers when booking is created 
 timeEntry.create | Triggers when time entry is created 
 
-In a response you will receive your subscription together with generated unique id (which you can use in other actions) and subscription creation time. 
+In a response you will receive your subscription together with a generated unique id (which you can use in other actions) and subscription creation time. 
+
 An example response will look like below.
 
 ```
@@ -38,12 +42,13 @@ An example response will look like below.
    "_id": "448847eea20e6d05bc53a49a",
    "companyId": "59841c04844e6738c8d45123",
    "creationDate": "2017-06-01T10:56:34.088Z",
-   "target": "http://mycompany.com/webhooks_listener",
+   "target": "http://mydomain.hubplanner.com/webhooks_listener",
    "event": "project.update",
 }
 ```
 
-## Responses when subscribed to web hooks
+## Responses when Subscribed to Webhooks
+The following code examples show sample responses when subscribed to the different webhooks. 
 
 *project.update*
 
@@ -161,10 +166,9 @@ An example response will look like below.
 }
 ```
 
-## Unsubscribing from a web hook
+## Unsubscribing from a Webhook
 
-
-To unsubscribe from a particular web hook you need to use subscription identifier (see _id parameter from creation part) from previously created subscription.
+To unsubscribe from a particular webhook you need to use a subscription identifier (see _id parameter from creation part) from previously created subscription.
 
 ```
 DELETE /subscription/{subscription_id}
