@@ -144,11 +144,28 @@ The following code examples show sample responses when subscribed to the differe
 
 ```
 {
-    "event" : "booking.create",
-    "end" : "2017-09-13T00:00:00",
-    "start" : "2017-09-13T00:00:00",
-    "projectId" : ObjectId("599db3c1021ffc2abc1d427d"),
-    "resourceId" : ObjectId("599db3c0021ffc2abc1d4240")
+    "event": "booking.create",
+        "duration": "24 hrs",
+        "categoryName": "General",
+        "end": {
+            "day": "14th",
+            "month": "Sep",
+            "year": "2017",
+            "date": "2017-09-14T18:00:00.000Z",
+            "formatted": "Sep 14th 2017"
+        },
+        "start": {
+            "day": "12th",
+            "month": "Sep",
+            "year": "2017",
+            "date": "2017-09-12T09:00:00.000Z",
+            "formatted": "Sep 12th 2017"
+        },
+        "bookingCreatorName": "Tom M",
+        "resourceName": "Resource 1",
+        "projectName": "Test Project",
+        "projectId": "5963b1320eb98a0be485a1d4",
+        "resourceId": "5963b1320eb98a0be485a1cb"
 }
 ```
 
