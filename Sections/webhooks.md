@@ -165,7 +165,8 @@ The following code examples show sample responses when subscribed to the differe
         "resourceName": "Resource 1",
         "projectName": "Test Project",
         "projectId": "5963b1320eb98a0be485a1d4",
-        "resourceId": "5963b1320eb98a0be485a1cb"
+        "resourceId": "5963b1320eb98a0be485a1cb",
+        "bookingId": "5363b1320ec94a0be400a1de"		
 }
 ```
 
