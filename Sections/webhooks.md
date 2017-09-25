@@ -143,7 +143,8 @@ An example response will look like below.
     "end" : "2017-09-13T00:00:00",
     "start" : "2017-09-13T00:00:00",
     "projectId" : ObjectId("599db3c1021ffc2abc1d427d"),
-    "resourceId" : ObjectId("599db3c0021ffc2abc1d4240")
+    "resourceId" : ObjectId("599db3c0021ffc2abc1d4240"),
+    "bookingId" : ObjectId("599d4cc00211232abc1d4243")
 }
 ```
 
