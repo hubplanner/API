@@ -406,3 +406,33 @@ resourceId | string | Resource ID e.g. 654654365436543634
 projectIds | array | Array of Project ID's
 
 A successful remove will return a `200` Ok response status from the server.
+## Add Clients to a Project
+Add Clients to a Project
+```
+POST projectId/client/
+Accept: application/json
+Content-Type: application/json
+
+{"clientIds": ["654654365436543634","654365436543654365436"]}
+```
+Property | Type | Description
+--- | --- | ---
+projectId | string | Project ID e.g. 654654365436543634
+clientIds | array | Array of Client ID's
+
+A successful add will return a `200` Ok response status from the server.
+## Remove a Client from Projects
+Remove a Client from a Projects
+```
+POST project/client/clientId
+Accept: application/json
+Content-Type: application/json
+
+{"projectIds": ["654654365436543634","654365436543654365436"]}
+```
+Property | Type | Description
+--- | --- | ---
+clientId | string | Resource ID e.g. 654654365436543634
+projectIds | array | Array of Project ID's
+
+A successful remove will return a `200` Ok response status from the server.
