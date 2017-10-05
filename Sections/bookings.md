@@ -23,7 +23,24 @@ A response from the server would be as follows:
      budgetBookedAmount: 0 },
   createdDate: '2014-11-28T10:53:37.469Z',
   updatedDate: '2014-11-28T10:53:37.470Z',
-  metadata: '' 
+  metadata: '' ,
+  customFields: [
+	{
+		'templateAllowMultipleValues': false,
+		'templateId': '590b8f004442770b0c96d89c',
+		'_id': '59d5eb63ad285e0c95d3f62a',
+		'choices': [
+			{
+				'choiceId': '59d5eb22ad285e0c95d3f61b',
+				'value': 'Java Script',
+				'_id': '59d5eb63ad285e0c95d3f62b'
+			}
+		],
+		'value': '',
+		'templateType': 'CHECKBOX',
+		'templateLabel': 'Skills'
+	}
+  ]
 }]
   ```
 The following is a description of the properties in the response.
@@ -44,6 +61,7 @@ details | *object* | Booking Details | NO | NO
 createdDate | *string* | Created Date | NO | YES
 updatedDate | *string* | Updated Date | NO | YES
 metadata | *string* | Custom Field | NO | YES
+customFields | *string* | All resource custom fields | NO | NO
 
 The following table shows the different types of booking states that can be returned and their implication on which property they use for the booking time. 
 
