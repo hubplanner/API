@@ -23,6 +23,7 @@ A response from the server would be as follows:
      budgetBookedAmount: 0 },
   createdDate: '2014-11-28T10:53:37.469Z',
   updatedDate: '2014-11-28T10:53:37.470Z',
+  "isBillable": false,
   metadata: '' 
 }]
   ```
@@ -43,6 +44,7 @@ note | *string* | Booking Note | NO | NO
 details | *object* | Booking Details | NO | NO
 createdDate | *string* | Created Date | NO | YES
 updatedDate | *string* | Updated Date | NO | YES
+isBillable | *boolean* | Is booking billable | NO | YES
 metadata | *string* | Custom Field | NO | YES
 
 The following table shows the different types of booking states that can be returned and their implication on which property they use for the booking time. 
@@ -168,3 +170,18 @@ DELETE /booking/12345678
 Will delete booking with the id `12345678`
 
 A successful delete will return a `200` Ok response status from the server.
+
+## Set a booking rate
+Use the following command to set custom booking rate for a specific booking by `id`:
+```
+PATCH /booking/59ec84adf10f9a1b6673dd54/bookingRate
+```
+with sample body request:
+```
+{
+    "bookingRateId": "59eb4b6fdd6a9b12bcb798cf"
+}
+```
+will set booking rate with the id `59eb4b6fdd6a9b12bcb798cf`
+
+A successful update will return a `200` Ok response status from the server.
