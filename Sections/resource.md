@@ -67,7 +67,11 @@ Server Response example below for 1 resource returned within an array.
       }
     }
   },
-  "customFields": []
+  "customFields": [],
+  "resourceInternalBillingRate": {
+    "resourceInternalBillingRateId": "59bba791bb5af264e2a73ca0",
+    "resourceInternalBillingRateValue": 100
+  }
 }]
 ```
 The following is a description of the properties in the response.
@@ -89,7 +93,7 @@ billing | *object* | Resource Billing Options | NO | NO
 useCustomAvailability | *boolean* | Using Default Availability | NO | NO
 customAvailabilities | *object* | Define Custom Availability | NO | NO
 customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO | NO
-
+resourceInternalBillingRat | *object* | Internal billing rates define for resource | NO | NO
 ##### Custom Fields
 
 You can fetch custom field templates defined for your account using:
@@ -312,6 +316,51 @@ will update the resource with the id 123456789. You must pass in the entire reso
 
 A successful update will return a `200` Ok response status from the server.
 
+## Set internal rate for Resource
+Set internal rate for existing resource.
+```
+PATCH /resource/123456789/internalRate
+```
+You can set internal rate for existing resource passing defined rate id:
+````
+{
+    "resourceInternalBillingRate":
+    {
+        "resourceInternalBillingRateId": "59eb4b6fdd6a9b12bcb798cf"
+    }
+}
+````
+will update the resource with the id 59eb4b6fdd6a9b12bcb798cf return updated
+resource data with resourceInternalBillingRate object:
+```
+{
+    "_id": "59eb4bcfdd209512c0dfdb20",
+    "email": "test@hubplanner.com",
+    "type": "REGULAR",
+    "createdDate": "2017-10-21T13:29:51.999Z",
+    "passwordResetToken": "",
+    "rememberMe": false,
+    "currentCompanySpecific": {
+        "_id": "59eb4bcfdd209512c0dfdb21",
+        "metadata": "",
+        "company": "59eb4b6fdd6a9b12bcb798ce",
+
+        . . .
+        "useResourceAvailability": false,
+        "resourceInternalBillingRate": {
+            "value": 100,
+            "resourceInternalBillingRateId": "59eb4b6fdd6a9b12bcb798cf"
+        },
+        "companyBillingRateId": null,
+        "companyBillingRate": 0,
+        . . .
+
+    }
+}
+```
+
+A successful update will return a `200` Ok response status from the server.
+
 ## Delete a Resource
 Use the following command to delete a specific resource by `id`.
 ```
@@ -320,3 +369,54 @@ DELETE /resource/12345678
 Will delete resource with the id `12345678`
 
 A successful delete will return a `200` Ok response status from the server.
+
+## Set start and end employment dates
+Use the following command to set an employment start date:
+```
+PATCH resource/59eb4bcfdd209512c0dfdb20/employmentDate
+```
+with sample body request:
+```
+{
+    "employment": {
+    	"startDate": "2017-10-07"
+    }
+}
+```
+will return updated resource data with employment object:
+```
+{
+    "_id": "59eb4bcfdd209512c0dfdb20",
+    "email": "test@hubplanner.com",
+    "type": "REGULAR",
+    "createdDate": "2017-10-21T13:29:51.999Z",
+    "passwordResetToken": "",
+    "rememberMe": false,
+    "currentCompanySpecific": {
+        "_id": "59eb4bcfdd209512c0dfdb21",
+        "metadata": "",
+        "company": "59eb4b6fdd6a9b12bcb798ce",
+
+        . . .
+
+        "employment": {
+            "endDate": null,
+            "startDate": "2017-10-07T00:00:00.000Z"
+        },
+
+        . . .
+    }
+}
+```
+
+Use the following command to get an employment date:
+```
+GET resource/59eb4bcfdd209512c0dfdb20/employmentDate
+```
+will return employment dates for the resource:
+```
+{
+    "employmentStartDate": "2017-10-07T00:00:00.000Z",
+    "employmentEndDate": null
+}
+```
