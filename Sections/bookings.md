@@ -71,6 +71,13 @@ STATE_DAY_MINUTE | the `stateValue` is the minutes per day for the booking. e.g.
 STATE_PERCENTAGE | the `stateValue` is the percentage of the daily commitment
 STATE_TOTAL_MINUTE | the `stateValue` is the total minutes for the booking from start to end
 
+### Retrieving deleted bookings
+
+To retrieve deleted bookings use query parameter *deleted*
+```
+GET booking?deleted=true
+```
+
 
 ## Search Bookings
 ```
