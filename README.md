@@ -177,10 +177,3 @@ Code | Text | Description
 500 | Internal Server Error | Something unexpected broke. Please raise an [issue](https://github.com/hubplanner/API/issues) so we can investigate your problem.
 502 | Bad Gateway | Hub Planner API is down or temporary not accessible. 
 
-
-## Examples
-
-Below we are lising some integration examples you can follow. Please let us know if you would like to add an example to this list. hello@hubplanner.com
-
-* [harvest](https://github.com/hubplanner/API/tree/master/Examples/harvest)
-
