@@ -13,14 +13,14 @@ With the request body passed in JSON format.
 ```
 {
    "event":"project.update",
-   "target":"http://mycompany.com/webhooks_listener"
+   "target_url":"http://mycompany.com/webhooks_listener"
 }
 ```
 
 Property | Type | Description | Required
 --- | --- | --- | ---
 event | String (*check supported events for possible values*) | name of event for which you want to subscribe | YES
-target | String | url of your endpoint to listen for subscribed event | YES
+target_url | String | url of your endpoint to listen for subscribed event | YES
 
 
 ## Supported Events
@@ -42,7 +42,9 @@ An example response will look like below.
    "_id": "448847eea20e6d05bc53a49a",
    "companyId": "59841c04844e6738c8d45123",
    "creationDate": "2017-06-01T10:56:34.088Z",
-   "target": "http://mydomain.hubplanner.com/webhooks_listener",
+   "
+   
+   ": "http://mydomain.hubplanner.com/webhooks_listener",
    "event": "project.update",
 }
 ```
