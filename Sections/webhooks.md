@@ -197,7 +197,7 @@ The following code examples show sample responses when subscribed to the differe
     "projectId":"5ad9d08c880646448864427c",
     "projectName":"Test Project",
     "resourceName":"Resource 1",
-    "bookingCreatorName":"Wojciech B",
+    "bookingCreatorName":"Mike Tyson",
     "start": {
         "formatted":"Apr 24th 2018",
         "date":"2018-04-24T07:00:00.000Z",
@@ -228,7 +228,7 @@ The following code examples show sample responses when subscribed to the differe
     "projectId":"5adda32626bc1357570172b4",
     "projectName":"Test Project",
     "resourceName":"Resource 1",
-    "bookingCreatorName":"Wojciech B",
+    "bookingCreatorName":"Mike Tyson",
     "start": {
         "formatted":"May 10th 2018",
         "date":"2018-05-10T07:00:00.000Z",
