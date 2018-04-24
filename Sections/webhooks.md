@@ -37,6 +37,8 @@ booking.delete | Triggers when booking is deleted
 
 In a response you will receive your subscription together with a generated unique id (which you can use in other actions) and subscription creation time. 
 
+Responses from external service that have statuses 200, 201 or 204 are treated as correct ones. 
+
 An example response will look like below.
 
 ```
