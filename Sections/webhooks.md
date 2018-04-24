@@ -226,9 +226,9 @@ The following code examples show sample responses when subscribed to the differe
     "bookingId":"5addef855d2d554e026028a9",
     "resourceId":"5ad9d08c8806464488644245",
     "projectId":"5adda32626bc1357570172b4",
-    "projectName":"First Project",
-    "resourceName":"Resource 1123",
-    "bookingCreatorName":"Wojciech Bator",
+    "projectName":"Test Project",
+    "resourceName":"Resource 1",
+    "bookingCreatorName":"Wojciech B",
     "start": {
         "formatted":"May 10th 2018",
         "date":"2018-05-10T07:00:00.000Z",
