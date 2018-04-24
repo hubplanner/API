@@ -31,7 +31,9 @@ Event name | Description
 project.update | Triggers when project is created or updated
 resource.update | Triggers when resource is created or updated
 booking.create | Triggers when booking is created 
-timeEntry.create | Triggers when time entry is created 
+timeEntry.create | Triggers when time entry is created
+booking.update | Triggers when booking is updated
+booking.delete | Triggers when booking is deleted
 
 In a response you will receive your subscription together with a generated unique id (which you can use in other actions) and subscription creation time. 
 
@@ -184,6 +186,68 @@ The following code examples show sample responses when subscribed to the differe
     "projectId" : "59a008a8ab3cad27e08a9374",
     "timeEntryId" : "59a3ea783e1e8427b4547a6d"
 }
+```
+
+*booking.update*
+
+```
+{
+    "bookingId":"5adefe5561d3404890330f04",
+    "resourceId":"5addf4cd3b1d17531862d2b3",
+    "projectId":"5ad9d08c880646448864427c",
+    "projectName":"Test Project",
+    "resourceName":"Resource 1",
+    "bookingCreatorName":"Wojciech B",
+    "start": {
+        "formatted":"Apr 24th 2018",
+        "date":"2018-04-24T07:00:00.000Z",
+        "year":"2018",
+        "month":"Apr",
+        "day":"24th"
+    },
+    "end":{
+        "formatted":"Apr 25th 2018",
+        "date":"2018-04-25T16:00:00.000Z",
+        "year":"2018",
+        "month":"Apr",
+        "day":"25th"
+    },
+    "categoryName":"General",
+    "duration":"16 hrs",
+    "event":"booking.update"
+}
+
+```
+
+*booking.delete*
+
+```
+{
+    "bookingId":"5addef855d2d554e026028a9",
+    "resourceId":"5ad9d08c8806464488644245",
+    "projectId":"5adda32626bc1357570172b4",
+    "projectName":"First Project",
+    "resourceName":"Resource 1123",
+    "bookingCreatorName":"Wojciech Bator",
+    "start": {
+        "formatted":"May 10th 2018",
+        "date":"2018-05-10T07:00:00.000Z",
+        "year":"2018",
+        "month":"May",
+        "day":"10th"
+    },
+    "end": {
+        "formatted":"May 12th 2018",
+        "date":"2018-05-12T16:00:00.000Z",
+        "year":"2018",
+        "month":"May",
+        "day":"12th"
+    },
+    "categoryName":"General",
+    "duration":"16 hrs",
+    "event":"booking.delete"
+}
+
 ```
 
 ## Unsubscribing from a Webhook
