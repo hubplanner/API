@@ -320,3 +320,19 @@ DELETE /resource/12345678
 Will delete resource with the id `12345678`
 
 A successful delete will return a `200` Ok response status from the server.
+
+## Delete multiple resources
+Use the following command to delete multiple resources by their `id` fields.
+```
+DELETE /resource
+```
+Provide the array of ids in the request body. An example:
+```
+[
+    "5ae1d7a2d61e560c4936aaaa",
+    "5ae1d7a2d61e560c4936bbbb",
+    "5ae1d7a2d61e560c4936cccc"
+]
+```
+
+A successful delete will return a `200` Ok response status from the server and an array of removed resource ids.
