@@ -149,7 +149,9 @@ You must supply an Authorization header with the token for all requests.
 
 `Authorization: xxx`
 
-You must enable API access and generate your API key and in order to use the Hub Planner API. The API key is available in All Accounts with Administrator privileges and higher. To generate your API key and enable the API login to your Hub Planner account and navigate to 
+Where xxx is Your generated API key. Do not provide `Bearer` keyword before API key in the header.
+
+You must enable API access and generate your API key in order to use the Hub Planner API. The API key is available in All Accounts with Administrator privileges and higher. To generate your API key and enable the API login to your Hub Planner account and navigate to 
 
 `Settings -> API`
 
