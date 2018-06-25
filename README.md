@@ -19,7 +19,7 @@ You can use the API to integrate Hub Planner with your own third party applicati
 
 ## Zapier Integration
 
-We offer an integration with Zapier. Please [Contact Us](https://hubplanner.com/contact) to get access.
+We offer an integration with Zapier. Please [Visit Here](https://zapier.com/apps/hub-planner/integrations) to get access.
 
 ## API Support
 
