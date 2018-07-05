@@ -194,10 +194,10 @@ Will delete booking with the id `12345678`
 
 A successful delete will return a `200` Ok response status from the server.
 
-## Delete multiple bookings
-Use the query to delete multiple bookings, either by IDs, projectId or resourceId.
+## Delete multiple bookings (Bulk)
+Use the following query to delete multiple bookings, either by booking IDs, projectId or resourceId.
 
-Delete multiple bookings by IDs:
+Delete multiple bookings by booking IDs:
 ```
 DELETE /booking?ids=12340,12341,12342,12343,12344
 ```
