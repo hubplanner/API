@@ -34,6 +34,7 @@ booking.create | Triggers when booking is created
 timeEntry.create | Triggers when time entry is created
 booking.update | Triggers when booking is updated
 booking.delete | Triggers when booking is deleted
+booking.delete.multiple | Triggers when repeated booking is deleted
 
 In a response you will receive your subscription together with a generated unique id (which you can use in other actions) and subscription creation time. 
 
