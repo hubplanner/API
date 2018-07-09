@@ -252,6 +252,63 @@ The following code examples show sample responses when subscribed to the differe
 
 ```
 
+*booking.delete.multiple*
+
+```
+[
+    {
+        "bookingId":"5addef855d2d554e026028a8",
+        "resourceId":"5ad9d08c8806464488644245",
+        "projectId":"5adda32626bc1357570172b4",
+        "projectName":"Test Project",
+        "resourceName":"Resource 1",
+        "bookingCreatorName":"Mike Tyson",
+        "start": {
+            "formatted":"May 10th 2018",
+            "date":"2018-05-10T07:00:00.000Z",
+            "year":"2018",
+            "month":"May",
+            "day":"10th"
+        },
+        "end": {
+            "formatted":"May 12th 2018",
+            "date":"2018-05-12T16:00:00.000Z",
+            "year":"2018",
+            "month":"May",
+            "day":"12th"
+        },
+        "categoryName":"General",
+        "duration":"16 hrs",
+        "event":"booking.delete.multiple"
+    },
+    {
+        "bookingId":"5addef855d2d554e026028a9",
+        "resourceId":"5ad9d08c8806464488644245",
+        "projectId":"5adda32626bc1357570172b4",
+        "projectName":"Test Project",
+        "resourceName":"Resource 1",
+        "bookingCreatorName":"Mike Tyson",
+        "start": {
+            "formatted":"May 11th 2018",
+            "date":"2018-05-11T07:00:00.000Z",
+            "year":"2018",
+            "month":"May",
+            "day":"11th"
+        },
+        "end": {
+            "formatted":"May 13th 2018",
+            "date":"2018-05-13T16:00:00.000Z",
+            "year":"2018",
+            "month":"May",
+            "day":"13th"
+        },
+        "categoryName":"General",
+        "duration":"16 hrs",
+        "event":"booking.delete.multiple"
+    }
+]
+```
+
 ## Unsubscribing from a Webhook
 
 To unsubscribe from a particular webhook you need to use a subscription identifier (see _id parameter from creation part) from previously created subscription.
