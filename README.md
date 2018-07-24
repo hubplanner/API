@@ -14,6 +14,7 @@ Welcome to the Hub Planner API. The Hub Planner API provides programmatic access
 * [Billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md)
 * [Webhooks](https://github.com/hubplanner/API/blob/master/Sections/webhooks.md)
 * [Clients](https://github.com/hubplanner/API/blob/master/Sections/clients.md)
+* [Vacation](https://github.com/hubplanner/API/blob/master/Sections/vacation.md)
 
 You can use the API to integrate Hub Planner with your own third party applications or generally integrate with your existing back-office setup.
 
