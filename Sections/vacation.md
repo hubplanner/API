@@ -147,6 +147,7 @@ need to be company approvers. If the API user provide one of the company approve
 the resource provided in the body and the default approvers. Request can be approved only by one of the approvers. The example situation with approvers is explained below.
 
 We have given company approvers:
+
 Approver | ID
 --- | ---
 Adam | 1
