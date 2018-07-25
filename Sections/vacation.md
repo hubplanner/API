@@ -156,7 +156,8 @@ Caroline | 3
 Tom | 4
 
 Resource default approvers are Adam and Caroline. User can put in the request body Lisa's and Tom's IDs as approvers and in the result, all 4 approvers will be set for the resource. If user provides
-Adam and Lisa in the body, Adam, Lisa and Caroline will be set as approvers for the user. If user will provide Lisa and Ann (who is not an approver), the request will be rejected.
+Adam and Lisa in the body, Adam, Lisa and Caroline will be set as approvers for the user. If user will provide Lisa and Ann (who is not an approver), the request will be rejected. API won't let you
+provide empty approvers too. So make sure to provide them in request body or set default approvers for resources.
 
 ## Create a new Vacation
 Create a new Vacation.
