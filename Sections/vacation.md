@@ -1,5 +1,7 @@
 ## Get All Vacations
 
+Requires Vacation extension to be enabled.
+
 ```
 GET /vacation
 ```
@@ -213,7 +215,7 @@ Update an existing vacation.
 PUT /vacation/123456789
 ```
 will update the vacation with the id 123456789. You can provide only the fields that are needed to be updated. Note that if you provide `type` with `APPROVED` value, you need to
-also provide `approvalInfo` along.
+also provide `approvalInfo` as well.
 
 A successful update will return a `200` Ok response status from the server.
 
