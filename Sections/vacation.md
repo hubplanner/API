@@ -65,10 +65,6 @@ If you only want all vacation for a resource id `123`
 ```
 {"resource":"123"}
 ```
-If you only want all vacation for a project id `456`
-```
-{"project":"456"}
-```
 If you want to query all vacation for a date range:
 ```
 {"start": {"$lt": "2018-08-15"}, "end":{"$gte": "2018-08-01"} }
