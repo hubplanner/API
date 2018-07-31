@@ -138,13 +138,18 @@ The asterisk sign is explained in the approvers logic below.
 
 # Approvers logic
 
-In hubplanner company approvers can be set. From them user can specify default approvers for the resource. Default approvers of resource are a subset of company approvers.
-Vacation request can be approved by any of company approvers. By default, if no approvers are provided in request body, the resource default approvers will be set as request approvers.
-If the resource doesn't have any default approvers, it's required to put any approvers in the request body, otherwise API will respond with bad request error. The approvers put in the body 
-need to be company approvers. If the API user provide one of the company approvers in the request body and the resource also has default approvers, the approvers list will contain both
-the resource provided in the body and the default approvers. Request can be approved only by one of the approvers. The example situation with approvers is explained below.
+In Hub Planner under settings -> Manage Approvers, approvers can be set. From here you can specify default approvers for the resource. Default approvers of a resource are a subset of company approvers. 
 
-We have given company approvers:
+Vacation request can be approved by any of company approvers. By default, if no approvers are provided in request body, the resource default approvers will be set as request approvers. 
+
+If the resource doesn't have any default approvers, it's required to put any approvers in the request body, otherwise API will respond with bad request error. 
+
+The approvers put in the body need to be in the company approvers list. 
+
+If the API user provides one of the company approvers in the request body and the resource also has default approvers, the approvers list will contain both the resource provided in the body and the default approvers. 
+Requests can be approved only by one of the approvers. 
+
+The example situation with approvers is explained below.
 
 Approver | ID
 --- | ---
@@ -153,9 +158,7 @@ Lisa | 2
 Caroline | 3
 Tom | 4
 
-Resource default approvers are Adam and Caroline. User can put in the request body Lisa's and Tom's IDs as approvers and in the result, all 4 approvers will be set for the resource. If user provides
-Adam and Lisa in the body, Adam, Lisa and Caroline will be set as approvers for the user. If user will provide Lisa and Ann (who is not an approver), the request will be rejected. API won't let you
-provide empty approvers too. So make sure to provide them in request body or set default approvers for resources.
+Resource default approvers are Adam and Caroline. User can put in the request body Lisa's and Tom's IDs as approvers and in the result, all 4 approvers will be set for the resource. If user provides Adam and Lisa in the body, Adam, Lisa and Caroline will be set as approvers for the user. If user will provide Lisa and Ann (who is not an approver), the request will be rejected. API won't let you provide empty approvers too. So make sure to provide them in request body or set default approvers for resources.
 
 ## Create a new Vacation
 Create a new Vacation.
