@@ -80,13 +80,14 @@ GET booking?deleted=true
 
 
 ## Search Bookings
-Use paramters to narrow your search. For example use `$nin` for not included, and use `$in` for included. This endpoint allows to get more complex results if used correctly.
+Search allows to get more complex results if used correctly.
 
 ```
 POST booking/search
 ```
 
-Examples: 
+Examples:
+
 If you only want to get bookings with ids `123`, `456` and `789`
 ```
 {"_id": {"$in": ["123", "456", "789"]} }
