@@ -80,12 +80,28 @@ GET booking?deleted=true
 
 
 ## Search Bookings
+Use paramters to narrow your search. For example use `$nin` for not included, and use `$in` for included. This endpoint allows to get more complex results if used correctly.
+
 ```
 POST booking/search
+```
+
+Examples: 
+If you only want to get bookings with ids `123`, `456` and `789`
+```
+{"_id": {"$in": ["123", "456", "789"]} }
+```
+Similarly, if you want to get all bookings with ids other than `123`, `456` and `789`
+```
+{"_id": {"$nin": ["123", "456", "789"]} }
 ```
 If you only want all bookings for a resource id `123`
 ```
 {"resource":"123"}
+```
+If you want to get all bookings for resources with ids: `123` and `456`:
+```
+{"resource": {"$in": ["123", "456"]} }
 ```
 If you only want all bookings for a project id `456`
 ```
