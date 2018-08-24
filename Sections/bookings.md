@@ -80,7 +80,7 @@ GET booking?deleted=true
 
 
 ## Search Bookings
-Search allows to get more complex results if used correctly.
+Search allows to get more complex results.
 
 ```
 POST booking/search
