@@ -42,3 +42,6 @@ Server Response example below for 1 project manager returned within an array.
     "useCustomAvailability": false
 }]
 ```
+
+## Set Project Managers
+To set project managers in project, check the documentation of [Projects](https://github.com/hubplanner/API/blob/master/Sections/project.md).
