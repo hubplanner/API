@@ -436,3 +436,19 @@ clientId | string | Resource ID e.g. 654654365436543634
 projectIds | array | Array of Project ID's
 
 A successful remove will return a `200` Ok response status from the server.
+
+## Set Project Managers
+Set Project Managers in a project. Project Managers Extension is required to use this method.
+```
+PUT project/projectId/project-managers
+Accept: application/json
+Content-Type: application/json
+
+["654654365436543634","6543654365436543655"]
+```
+Property | Type | Description
+--- | --- | ---
+projectId | string | Project ID e.g. 654654365436543634
+Body | array | Array of Project Manager ID's
+
+A successful set will return a `200` Ok response status from the server along with updated project.
