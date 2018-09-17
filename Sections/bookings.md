@@ -5,43 +5,45 @@ GET /booking
 ```
 A response from the server would be as follows:
 ```
-[{ _id: '54785431e91e5ead13e8d841',
-  title: '',
-  state: 'STATE_DAY_MINUTE',
-  allDay: true,
-  start: '2014-11-03 08:00',
-  end: '2014-11-19  18:00',
-  stateValue: 480,
-  resource: '5478423c406ca4620b3a1354',
-  project: '5478396825044c9b060f9a61',
-  note: '',
-  details:
-   { workDaysCount: 13,
-     offDaysCount: 4,
-     workWeekDetails: { '0': 0, '1': 3, '2': 3, '3': 3, '4': 2, '5': 2, '6': 0 },
-     bookedMinutes: 6240,
-     budgetBookedAmount: 0 },
-  createdDate: '2014-11-28T10:53:37.469Z',
-  updatedDate: '2014-11-28T10:53:37.470Z',
-  metadata: '' ,
-  customFields: [
-	{
-		'templateAllowMultipleValues': false,
-		'templateId': '590b8f004442770b0c96d89c',
-		'_id': '59d5eb63ad285e0c95d3f62a',
-		'choices': [
-			{
-				'choiceId': '59d5eb22ad285e0c95d3f61b',
-				'value': 'Java Script',
-				'_id': '59d5eb63ad285e0c95d3f62b'
-			}
-		],
-		'value': '',
-		'templateType': 'CHECKBOX',
-		'templateLabel': 'Skills'
-	}
-  ]
-}]
+[
+  {
+        "_id": "5b1977ade02d407011112222",
+        "title": "",
+        "state": "STATE_PERCENTAGE",
+        "allDay": true,
+        "scale": "SCALE_DAY",
+        "start": "2018-06-07T09:00",
+        "end": "2018-06-09T18:00",
+        "categoryTemplateId": "5aa0f2414a576d0c11112222",
+        "categoryName": "General",
+        "bookingCreatorId": "5aa0f2414a576d0c11112222",
+        "stateValue": 100,
+        "resource": "5ae1d7a2d61e560c11112222",
+        "project": "5b06b094562dc80c11112222",
+        "note": "",
+        "details": {
+            "offDaysCount": 0,
+            "workDaysCount": 2,
+            "holidayCount": 0,
+            "workWeekDetails": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                1,
+                0
+            ],
+            "bookedMinutes": 960,
+            "budgetBookedAmount": 0
+        },
+        "createdDate": "2018-06-07T18:21:33.144Z",
+        "updatedDate": "2018-09-04T08:15:11.487Z",
+        "metadata": "",
+        "backgroundColor": "",
+        "customFields": []
+    }
+]
   ```
 The following is a description of the properties in the response.
 
@@ -62,6 +64,7 @@ createdDate | *string* | Created Date | NO | YES
 updatedDate | *string* | Updated Date | NO | YES
 metadata | *string* | Custom Field | NO | YES
 customFields | *string* | All resource custom fields | NO | NO
+bookingCreatorId | *string* | id of booking creator | NO | NO
 
 The following table shows the different types of booking states that can be returned and their implication on which property they use for the booking time. 
 
