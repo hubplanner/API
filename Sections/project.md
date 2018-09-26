@@ -72,20 +72,36 @@ Server Response example below for 1 project returned within an array.
     "includeBookedTimeReports": true,
     "includeBookedTimeGrid": true,
     "projectManagers": [
-        "5ba09fc85ff58f149a2cf58b"
+        "5ba09fc85ff58f149a2c2222"
     ],
     "resources": [
-        "5ba09b645ff58f149a2cf4eb",
-        "5ba09b645ff58f149a2cf4ef",
-        "5ba09b645ff58f149a2cf4f3",
-        "5ba09b635ff58f149a2cf4e7",
-        "5ba09fc85ff58f149a2cf58b",
-        "5ba09fdb5ff58f149a2cf59b",
-        "5ba09fd05ff58f149a2cf593"
+        "5ba09b645ff58f149a2c2222",
+        "5ba09b645ff58f149a2c3333",
+        "5ba09b645ff58f149a2c4444",
+        "5ba09b635ff58f149a2c5555",
+        "5ba09fc85ff58f149a2c6666",
+        "5ba09fdb5ff58f149a2c7777",
+        "5ba09fd05ff58f149a2c8888"
     ],
     "backgroundColor": "#81A489",
     "metadata": "",
-    "customFields": []
+    "customFields": [],
+    "projectRate": {
+        "external": {
+            "defaultRateId": "5ba09b645ff58f1455552222"
+            "customRates": [{
+                "resourceId": "5ba09b645ff58f149a2c3333",
+                "id": "5ba09b645ff58f1477773333"
+            }]
+        },
+        "internal": {
+            "defaultRateId": "5ba09b645ff58f1455552223"
+            "customRates": [{
+                "resourceId": "5ba09b645ff58f149a2c3333",
+                "id": "5ba09b645ff58f1477773333"
+            }]
+        }
+    }
 }]
 ```
 
@@ -122,6 +138,7 @@ projectCode |*string* | Project Code (Unique) | NO | NO
 metadata | *string* | Custom Field (255 Characters) | NO | YES
 customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO, but if you use them check Custom Fields section to see how to use them | NO
 timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO | NO
+projectRate | *object* | Reference to project billing rates | NO | NO
 
 ##### Custom Fields
 
@@ -242,10 +259,32 @@ templateLabel: "Skills",
 ] }
 ```
 
-##### Billing
+##### Billing rates
 
-You can set custom billing rate for your project by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
-default billing will be used for this resource. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
+The recommended way to set custom billing rate for your project is by using `projectRate` field. The `projectRate` is structured as follows:
+
+```
+"projectRate": {
+    "external": {
+        "defaultRateId": "5ba09b645ff58f1455552222"
+        "customRates": [{
+            "resourceId": "5ba09b645ff58f149a2c3333",
+            "id": "5ba09b645ff58f1477773333"
+        }]
+    },
+    "internal": {
+        "defaultRateId": "5ba09b645ff58f1455552223"
+        "customRates": [{
+            "resourceId": "5ba09b645ff58f149a2c3333",
+            "id": "5ba09b645ff58f1477773333"
+        }]
+    }
+}
+```
+
+Rates are split to internal rates and external rates. You can provide the id of billing rate used in your company for `defaultRateId` field. The `customRates` array allows to have custom billing rates for given resource. The `resourceId` field is the id of the resource and the `id` field is the id of the billing rate used for this resource. 
+
+There is also deprecated way to set the rates. You can set the id of billing rate used in your company to the `companyBillingRateId` field as follows:
 
 ```
     companyBillingRateId: 1234567890,
@@ -263,7 +302,7 @@ You can also set custom billing rates for resources. To do that change resourceR
 ```
 
 In the response you will get automatically generated `_id` of custom resource rate, which you should keep in update calls.
-Both resource id and billing rate id must exist in system. Billing rate is assigned automatically from the billing rate.
+Both resource id and billing rate id must exist in system. Billing rate is assigned automatically from the billing rate. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
 
 ###### Legacy Billing
 
