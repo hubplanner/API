@@ -41,7 +41,15 @@ A response from the server would be as follows:
         "updatedDate": "2018-09-04T08:15:11.487Z",
         "metadata": "",
         "backgroundColor": "",
-        "customFields": []
+        "customFields": [],
+        "bookingRate": {
+            "external": {
+                "defaultRateId": "5bab32f98a5a834311112222"
+            },
+            "internal": {
+                "defaultRateId": "5bab32f98a5a834311113333"
+            }
+        }
     }
 ]
   ```
@@ -64,7 +72,8 @@ createdDate | *string* | Created Date | NO | YES
 updatedDate | *string* | Updated Date | NO | YES
 metadata | *string* | Custom Field | NO | YES
 customFields | *string* | All resource custom fields | NO | NO
-bookingCreatorId | *string* | id of booking creator | NO | NO
+bookingCreatorId | *string* | Id of booking creator | NO | NO
+bookingRate | *object* | References booking rates | NO | NO
 
 The following table shows the different types of booking states that can be returned and their implication on which property they use for the booking time. 
 
