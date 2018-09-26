@@ -238,7 +238,7 @@ default billing will be used for this resource.
 }
 ```
 
-`useDefault` and `rate` fields will be automatically set to what is set in chosen billing rate. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
+`useDefault` and `rate` fields will be automatically set to what is set in chosen billing rate. Note, that using the legacy approach is compatible with `resourceRates` and will create `external` part of it. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
 
 ## Search Resources
 ```
