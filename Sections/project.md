@@ -9,45 +9,83 @@ call will return all projects.
 Server Response example below for 1 project returned within an array. 
 
 ```
-[{  _id: '53a168304cc0f1bb16a898ca',
-    name: '788',
-    links: { link1: '', link2: '', link3: '', link4: '', link5: '' },
-    note: '',
-    createdDate: '2014-06-18T10:21:36.917Z',
-    updatedDate: '2014-07-24T06:23:21.921Z',
-    workDays: [ false, true, true, true, true, true, false ],
-    useProjectDays: false,
-    budget:
-     { hasBudget: false,
-       projectHours: { active: false, hours: 0 },
-      cashAmount: { 
-          active: false,
-          amount: 0,
-          billingRate: { useDefault: true, rate: 0 } 
-        } 
-      },
-    companyBillingRateId: 1234567890,
-    budgetHours: 200,
-    budgetCashAmount: 8000,
-    budgetCurrency: "USD",
-    useStatusColor: true,
-    status: 'STATUS_ACTIVE',
-    useProjectDuration: false,
-    start: null,
-    end: null,
-    backgroundColor: '#81A489',
-    projectCode: 'AA',
-    metadata: '',
-    customFields: [],
-    timeEntryNoteRequired: true,
-    resourceRates: [
-        {
-            _id: 1234567890,
-            resource: 1234567890,
-            companyBillingRateId: 1234567890,
-            companyBillingRate: 100
+[{
+    "_id": "5ba09b645ff58f149a2cf521",
+    "name": "Test proj",
+    "links": {
+        "iconLink5": "",
+        "link1": "",
+        "iconLink4": "",
+        "link2": "",
+        "iconLink3": "",
+        "link3": "",
+        "iconLink2": "",
+        "link4": "",
+        "iconLink1": "",
+        "link5": ""
+    },
+    "note": "",
+    "createdDate": "2018-09-18T06:29:56.261Z",
+    "updatedDate": "2018-09-25T07:45:51.825Z",
+    "timeEntryEnabled": true,
+    "timeEntryLocked": false,
+    "timeEntryApproval": true,
+    "projectCode": "",
+    "timeEntryNoteRequired": false,
+    "workDays": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+    ],
+    "useProjectDays": false,
+    "budget": {
+        "hasBudget": false,
+        "projectHours": {
+            "active": false,
+            "hours": 0
+        },
+        "cashAmount": {
+            "active": false,
+            "amount": 0,
+            "currency": "USD",
+            "billingRate": {
+                "useDefault": false,
+                "rate": 0,
+                "id": null
+            }
         }
-     ],
+    },
+    "budgetHours": 0,
+    "budgetCashAmount": 0,
+    "budgetCurrency": "USD",
+    "companyBillingRateId": null,
+    "useStatusColor": true,
+    "status": "STATUS_ACTIVE",
+    "useProjectDuration": false,
+    "start": null,
+    "end": null,
+    "resourceRates": [],
+    "includeBookedTimeReports": true,
+    "includeBookedTimeGrid": true,
+    "projectManagers": [
+        "5ba09fc85ff58f149a2cf58b"
+    ],
+    "resources": [
+        "5ba09b645ff58f149a2cf4eb",
+        "5ba09b645ff58f149a2cf4ef",
+        "5ba09b645ff58f149a2cf4f3",
+        "5ba09b635ff58f149a2cf4e7",
+        "5ba09fc85ff58f149a2cf58b",
+        "5ba09fdb5ff58f149a2cf59b",
+        "5ba09fd05ff58f149a2cf593"
+    ],
+    "backgroundColor": "#81A489",
+    "metadata": "",
+    "customFields": []
 }]
 ```
 
@@ -59,6 +97,14 @@ links | *object* |Project Links | NO | NO
 note | *string* | Project Notes | NO | NO
 createdDate | *string* | Project Creation Date | NO | YES
 updatedDate | *string* | Project Updated Date | NO | YES
+timeEntryEnabled | *boolean* | If time entry is enabled | NO | NO
+timeEntryLocked | *boolean* | If time entry is locked | NO | NO
+timeEntryApproval | *boolean* | If time entry approval is set | NO | NO
+resourceRates | *object* | Reference to resource billing rates | NO | NO
+includeBookedTimeReports | *boolean* | If to include booked time reports | NO | NO
+includeBookedTimeGrid | *boolean* | If to include booked time grid | NO | NO
+projectManagers | *string array* | Project managers of project | NO | NO
+resources | *string array* | Resources in project | NO | NO
 workDays | *boolean* | Object of work days for a week | NO | NO
 useProjectDays | *boolean* | If using default days or custom. | NO | NO
 budget | *object* | An object containing budget properites. | NO, deprecated, use `companyBillingRateId`, `budgetHours`, `budgetCashAmount` and `budgetCurrency` instead | NO

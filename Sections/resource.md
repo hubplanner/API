@@ -10,64 +10,36 @@ Server Response example below for 1 resource returned within an array.
 
 ```
 [{
-  "_id": "547832df25044c9b060f9a5e",
-  "email": "unique@email.com",
-  "metadata": "",
-  "createdDate": "2017-06-28T08:31:27.035Z",
-  "updatedDate": "2017-06-28T08:31:27.039Z",
-  "note": "",
-  "firstName": "Paddy",
-  "lastName": "DMan",
-  "isProjectManager": false,
-  "status": "STATUS_ACTIVE",
-  "role": "ROLE_TEAM",
-  "links": {
-    "link5": "",
-    "link4": "",
-    "link3": "",
-    "link2": "",
-    "link1": ""
-  },
-  "billing": {
-    "useDefault": false,
-    "id": 123456789
-    "rate": 100
-  },
-  "useCustomAvailability": false,
-  "customAvailabilities": {
-    "_id": "547845a7406ca4620b3a1356",
-    "weekDays": {
-      "sunday": {
-        "minutes": 0,
-        "workDay": false
-      },
-      "saturday": {
-        "minutes": 0,
-        "workDay": false
-      },
-      "friday": {
-        "minutes": 480,
-        "workDay": true
-      },
-      "thursday": {
-        "minutes": 480,
-        "workDay": true
-      },
-      "wednesday": {
-        "minutes": 480,
-        "workDay": true
-      },
-      "tuesday": {
-        "minutes": 240,
-        "workDay": true
-      },
-      "monday": {
-        "minutes": 480,
-        "workDay": true
-      }
-    }
-  },
-  "customFields": []
+    "_id": "5ba09b635ff58f149a2cf4e7",
+    "email": "wojciech.bator@hubplanner.com",
+    "metadata": "",
+    "createdDate": "2018-09-18T06:24:25.297Z",
+    "updatedDate": null,
+    "note": "",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "status": "STATUS_ACTIVE",
+    "role": "ROLE_OWNER",
+    "isProjectManager": false,
+    "links": {
+        "iconLink5": "fa-link",
+        "link5": "",
+        "iconLink4": "fa-link",
+        "link4": "",
+        "iconLink3": "fa-link",
+        "link3": "",
+        "iconLink2": "fa-link",
+        "link2": "",
+        "iconLink1": "fa-link",
+        "link1": ""
+    },
+    "billing": {
+        "useDefault": false,
+        "id": null,
+        "rate": 0
+    },
+    "customFields": [],
+    "useCustomAvailability": false
 }]
 ```
 The following is a description of the properties in the response.
@@ -87,7 +59,6 @@ role | *string* | Resource Role | NO | YES
 links | *object* |Resource Links | NO | NO
 billing | *object* | Resource Billing Options | NO | NO
 useCustomAvailability | *boolean* | Using Default Availability | NO | NO
-customAvailabilities | *object* | Define Custom Availability | NO | NO
 customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO | NO
 
 ##### Custom Fields
