@@ -116,15 +116,15 @@ updatedDate | *string* | Project Updated Date | NO | YES
 timeEntryEnabled | *boolean* | If time entry is enabled | NO | NO
 timeEntryLocked | *boolean* | If time entry is locked | NO | NO
 timeEntryApproval | *boolean* | If time entry approval is set | NO | NO
-resourceRates | *object* | Reference to resource billing rates | NO | NO
+resourceRates | *object* | Reference to resource billing rates | NO, deprecated, use `projectRate` instead | NO
 includeBookedTimeReports | *boolean* | If to include booked time reports | NO | NO
 includeBookedTimeGrid | *boolean* | If to include booked time grid | NO | NO
 projectManagers | *string array* | Project managers of project | NO | NO
 resources | *string array* | Resources in project | NO | NO
 workDays | *boolean* | Object of work days for a week | NO | NO
 useProjectDays | *boolean* | If using default days or custom. | NO | NO
-budget | *object* | An object containing budget properites. | NO, deprecated, use `companyBillingRateId`, `budgetHours`, `budgetCashAmount` and `budgetCurrency` instead | NO
-companyBillingRateId | *string* | Id of selected billing rate for project | NO | NO
+budget | *object* | An object containing budget properites. | NO, deprecated, use `projectRate` instead | NO
+companyBillingRateId | *string* | Id of selected billing rate for project | NO, deprecated, use `projectRate` instead | NO
 budgetHours | number | Amount of hours budgeted for this project. 0 means the budget in hours is disabled for this project. | NO | YES
 budgetCashAmount | number | Amount of money budgeted for this project, given in currency selected in `budgetCurrency`. 0 means that cash budget is disabled in this project. | NO | YES
 budgetCurrency | number | Currency of money budgeted for this project | NO | YES
@@ -138,7 +138,7 @@ projectCode |*string* | Project Code (Unique) | NO | NO
 metadata | *string* | Custom Field (255 Characters) | NO | YES
 customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO, but if you use them check Custom Fields section to see how to use them | NO
 timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO | NO
-projectRate | *object* | Reference to project billing rates | NO | NO
+projectRate | *object* | Reference to billing rates in project | NO | NO
 
 ##### Custom Fields
 
@@ -261,7 +261,7 @@ templateLabel: "Skills",
 
 ##### Billing rates
 
-The recommended way to set custom billing rate for your project is by using `projectRate` field. The `projectRate` is structured as follows:
+The recommended way to set custom billing rate for the project is by using `projectRate` field. The `projectRate` is structured as follows:
 
 ```
 "projectRate": {
