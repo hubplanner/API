@@ -282,7 +282,7 @@ The recommended way to set custom billing rate for the project is by using `proj
 }
 ```
 
-Rates are split to internal rates and external rates. You can provide the id of billing rate used in your company for `defaultRateId` field. The `customRates` array allows to have custom billing rates for given resource. The `resourceId` field is the id of the resource and the `id` field is the id of the billing rate used for this resource. 
+Rates are split to internal rates and external rates. You need to have billing rates extension enabled to use internal rates. You can provide the id of billing rate used in your company for `defaultRateId` field. The `customRates` array allows to have custom billing rates for given resource. The `resourceId` field is the id of the resource and the `id` field is the id of the billing rate used for this resource. 
 
 There is also deprecated way to set the rates. You can set the id of billing rate used in your company to the `companyBillingRateId` field as follows:
 

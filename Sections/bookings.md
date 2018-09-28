@@ -83,6 +83,23 @@ STATE_DAY_MINUTE | the `stateValue` is the minutes per day for the booking. e.g.
 STATE_PERCENTAGE | the `stateValue` is the percentage of the daily commitment
 STATE_TOTAL_MINUTE | the `stateValue` is the total minutes for the booking from start to end
 
+### Billing rates
+
+To set billing rates for the booking You can use `bookingRate` field. The `bookingRate` is structured as follows:
+
+```
+"bookingRate": {
+    "external": {
+        "defaultRateId": "5bab32f98a5a834311112222"
+    },
+    "internal": {
+        "defaultRateId": "5bab32f98a5a834311113333"
+    }
+}
+```
+
+Rates are split to internal rates and external rates. You need to have billing rates extension enabled to use internal rates. You can provide the id of billing rate used in your company for `defaultRateId` field. Rate is assigned automatically from the billing rate. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
+
 ### Retrieving deleted bookings
 
 To retrieve deleted bookings use query parameter *deleted*

@@ -223,7 +223,7 @@ The recommended way to set custom billing rate for the resource is by using `res
 }
 ```
 
-Rates are split to internal rates and external rates. You can provide the id of billing rate used in your company for `defaultRateId` fields. The `effectiveFrom` and `effectiveTo` fields specifies the date ranges when the rate is effective.
+Rates are split to internal rates and external rates. You need to have billing rates extension enabled to use internal rates. You can provide the id of billing rate used in your company for `defaultRateId` fields. The `effectiveFrom` and `effectiveTo` fields specifies the date ranges when the rate is effective.
 
 There is also deprecated way to set the resource rates. You can set custom billing rate for your resource by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
 default billing will be used for this resource. 
