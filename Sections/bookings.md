@@ -41,7 +41,15 @@ A response from the server would be as follows:
         "updatedDate": "2018-09-04T08:15:11.487Z",
         "metadata": "",
         "backgroundColor": "",
-        "customFields": []
+        "customFields": [],
+        "bookingRate": {
+            "external": {
+                "defaultRateId": "5bab32f98a5a834311112222"
+            },
+            "internal": {
+                "defaultRateId": "5bab32f98a5a834311113333"
+            }
+        }
     }
 ]
   ```
@@ -64,7 +72,8 @@ createdDate | *string* | Created Date | NO | YES
 updatedDate | *string* | Updated Date | NO | YES
 metadata | *string* | Custom Field | NO | YES
 customFields | *string* | All resource custom fields | NO | NO
-bookingCreatorId | *string* | id of booking creator | NO | NO
+bookingCreatorId | *string* | Id of booking creator | NO | NO
+bookingRate | *object* | References booking rates | NO | NO
 
 The following table shows the different types of booking states that can be returned and their implication on which property they use for the booking time. 
 
@@ -73,6 +82,23 @@ Booking State | Description
 STATE_DAY_MINUTE | the `stateValue` is the minutes per day for the booking. e.g. 480 would be 8hrs
 STATE_PERCENTAGE | the `stateValue` is the percentage of the daily commitment
 STATE_TOTAL_MINUTE | the `stateValue` is the total minutes for the booking from start to end
+
+### Billing rates
+
+To set billing rates for the booking You can use `bookingRate` field. The `bookingRate` is structured as follows:
+
+```
+"bookingRate": {
+    "external": {
+        "defaultRateId": "5bab32f98a5a834311112222"
+    },
+    "internal": {
+        "defaultRateId": "5bab32f98a5a834311113333"
+    }
+}
+```
+
+Rates are split to internal rates and external rates. You need to have billing rates extension enabled to use internal rates. You can provide the id of billing rate used in your company for `defaultRateId` field. Rate is assigned automatically from the billing rate. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
 
 ### Retrieving deleted bookings
 

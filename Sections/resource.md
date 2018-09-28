@@ -10,64 +10,48 @@ Server Response example below for 1 resource returned within an array.
 
 ```
 [{
-  "_id": "547832df25044c9b060f9a5e",
-  "email": "unique@email.com",
-  "metadata": "",
-  "createdDate": "2017-06-28T08:31:27.035Z",
-  "updatedDate": "2017-06-28T08:31:27.039Z",
-  "note": "",
-  "firstName": "Paddy",
-  "lastName": "DMan",
-  "isProjectManager": false,
-  "status": "STATUS_ACTIVE",
-  "role": "ROLE_TEAM",
-  "links": {
-    "link5": "",
-    "link4": "",
-    "link3": "",
-    "link2": "",
-    "link1": ""
-  },
-  "billing": {
-    "useDefault": false,
-    "id": 123456789
-    "rate": 100
-  },
-  "useCustomAvailability": false,
-  "customAvailabilities": {
-    "_id": "547845a7406ca4620b3a1356",
-    "weekDays": {
-      "sunday": {
-        "minutes": 0,
-        "workDay": false
-      },
-      "saturday": {
-        "minutes": 0,
-        "workDay": false
-      },
-      "friday": {
-        "minutes": 480,
-        "workDay": true
-      },
-      "thursday": {
-        "minutes": 480,
-        "workDay": true
-      },
-      "wednesday": {
-        "minutes": 480,
-        "workDay": true
-      },
-      "tuesday": {
-        "minutes": 240,
-        "workDay": true
-      },
-      "monday": {
-        "minutes": 480,
-        "workDay": true
-      }
+    "_id": "5ba09b635ff58f149a2cf4e7",
+    "email": "wojciech.bator@hubplanner.com",
+    "metadata": "",
+    "createdDate": "2018-09-18T06:24:25.297Z",
+    "updatedDate": null,
+    "note": "",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "status": "STATUS_ACTIVE",
+    "role": "ROLE_OWNER",
+    "isProjectManager": false,
+    "links": {
+        "iconLink5": "fa-link",
+        "link5": "",
+        "iconLink4": "fa-link",
+        "link4": "",
+        "iconLink3": "fa-link",
+        "link3": "",
+        "iconLink2": "fa-link",
+        "link2": "",
+        "iconLink1": "fa-link",
+        "link1": ""
+    },
+    "billing": {
+        "useDefault": false,
+        "id": null,
+        "rate": 0
+    },
+    "customFields": [],
+    "useCustomAvailability": false,
+    "resourceRates": {
+      "external": [{
+          "defaultRateId": "5ba09b645ff58f1455552222",
+          "effectiveFrom": "2018-09-20 09:00",
+          "effectiveTo": "2018-10-30 18:00"
+      }],
+      "internal": [{
+          "defaultRateId": "5ba09b645ff58f1455552223",
+          "effectiveFrom": "2018-09-20 09:00",
+          "effectiveTo": "2018-10-30 18:00"
+      }]
     }
-  },
-  "customFields": []
 }]
 ```
 The following is a description of the properties in the response.
@@ -85,10 +69,10 @@ lastName | *string* | Resource Last Name | NO | YES
 status | *string* | Resource Status | NO | YES
 role | *string* | Resource Role | NO | YES
 links | *object* |Resource Links | NO | NO
-billing | *object* | Resource Billing Options | NO | NO
+billing | *object* | Resource Billing Options | NO, deprecated, use `resourceRates` instead | NO
 useCustomAvailability | *boolean* | Using Default Availability | NO | NO
-customAvailabilities | *object* | Define Custom Availability | NO | NO
 customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO | NO
+resourceRates | *object* | Reference to billing rates for the resource | NO | NO
 
 ##### Custom Fields
 
@@ -220,10 +204,29 @@ STATUS_ACTIVE | Active Resources
 STATUS_ARCHIVED | Archived Resources
 STATUS_NON_BOOKABLE | Non Bookable Resource
 
-##### Billing
+##### Billing rates
 
-You can set custom billing rate for your resource by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
-default billing will be used for this resource. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
+The recommended way to set custom billing rate for the resource is by using `resourceRates` field. The `resourceRates` is structured as follows:
+
+```
+"resourceRates": {
+  "external": [{
+      "defaultRateId": "5ba09b645ff58f1455552222",
+      "effectiveFrom": "2018-09-20 09:00",
+      "effectiveTo": "2018-10-30 18:00"
+  }],
+  "internal": [{
+      "defaultRateId": "5ba09b645ff58f1455552223",
+      "effectiveFrom": "2018-09-20 09:00",
+      "effectiveTo": "2018-10-30 18:00"
+  }]
+}
+```
+
+Rates are split to internal rates and external rates. You need to have billing rates extension enabled to use internal rates. You can provide the id of billing rate used in your company for `defaultRateId` fields. The `effectiveFrom` and `effectiveTo` fields specifies the date ranges when the rate is effective.
+
+There is also deprecated way to set the resource rates. You can set custom billing rate for your resource by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
+default billing will be used for this resource. 
 
 ```
 {
@@ -235,7 +238,7 @@ default billing will be used for this resource. You can read more on billing rat
 }
 ```
 
-`useDefault` and `rate` fields will be automatically set to what is set in chosen billing rate.
+`useDefault` and `rate` fields will be automatically set to what is set in chosen billing rate. Note, that using the legacy approach is compatible with `resourceRates` and will create `external` part of it. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
 
 ## Search Resources
 ```

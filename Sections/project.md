@@ -9,45 +9,99 @@ call will return all projects.
 Server Response example below for 1 project returned within an array. 
 
 ```
-[{  _id: '53a168304cc0f1bb16a898ca',
-    name: '788',
-    links: { link1: '', link2: '', link3: '', link4: '', link5: '' },
-    note: '',
-    createdDate: '2014-06-18T10:21:36.917Z',
-    updatedDate: '2014-07-24T06:23:21.921Z',
-    workDays: [ false, true, true, true, true, true, false ],
-    useProjectDays: false,
-    budget:
-     { hasBudget: false,
-       projectHours: { active: false, hours: 0 },
-      cashAmount: { 
-          active: false,
-          amount: 0,
-          billingRate: { useDefault: true, rate: 0 } 
-        } 
-      },
-    companyBillingRateId: 1234567890,
-    budgetHours: 200,
-    budgetCashAmount: 8000,
-    budgetCurrency: "USD",
-    useStatusColor: true,
-    status: 'STATUS_ACTIVE',
-    useProjectDuration: false,
-    start: null,
-    end: null,
-    backgroundColor: '#81A489',
-    projectCode: 'AA',
-    metadata: '',
-    customFields: [],
-    timeEntryNoteRequired: true,
-    resourceRates: [
-        {
-            _id: 1234567890,
-            resource: 1234567890,
-            companyBillingRateId: 1234567890,
-            companyBillingRate: 100
+[{
+    "_id": "5ba09b645ff58f149a2cf521",
+    "name": "Test proj",
+    "links": {
+        "iconLink5": "",
+        "link1": "",
+        "iconLink4": "",
+        "link2": "",
+        "iconLink3": "",
+        "link3": "",
+        "iconLink2": "",
+        "link4": "",
+        "iconLink1": "",
+        "link5": ""
+    },
+    "note": "",
+    "createdDate": "2018-09-18T06:29:56.261Z",
+    "updatedDate": "2018-09-25T07:45:51.825Z",
+    "timeEntryEnabled": true,
+    "timeEntryLocked": false,
+    "timeEntryApproval": true,
+    "projectCode": "",
+    "timeEntryNoteRequired": false,
+    "workDays": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+    ],
+    "useProjectDays": false,
+    "budget": {
+        "hasBudget": false,
+        "projectHours": {
+            "active": false,
+            "hours": 0
+        },
+        "cashAmount": {
+            "active": false,
+            "amount": 0,
+            "currency": "USD",
+            "billingRate": {
+                "useDefault": false,
+                "rate": 0,
+                "id": null
+            }
         }
-     ],
+    },
+    "budgetHours": 0,
+    "budgetCashAmount": 0,
+    "budgetCurrency": "USD",
+    "companyBillingRateId": null,
+    "useStatusColor": true,
+    "status": "STATUS_ACTIVE",
+    "useProjectDuration": false,
+    "start": null,
+    "end": null,
+    "resourceRates": [],
+    "includeBookedTimeReports": true,
+    "includeBookedTimeGrid": true,
+    "projectManagers": [
+        "5ba09fc85ff58f149a2c2222"
+    ],
+    "resources": [
+        "5ba09b645ff58f149a2c2222",
+        "5ba09b645ff58f149a2c3333",
+        "5ba09b645ff58f149a2c4444",
+        "5ba09b635ff58f149a2c5555",
+        "5ba09fc85ff58f149a2c6666",
+        "5ba09fdb5ff58f149a2c7777",
+        "5ba09fd05ff58f149a2c8888"
+    ],
+    "backgroundColor": "#81A489",
+    "metadata": "",
+    "customFields": [],
+    "projectRate": {
+        "external": {
+            "defaultRateId": "5ba09b645ff58f1455552222"
+            "customRates": [{
+                "resourceId": "5ba09b645ff58f149a2c3333",
+                "id": "5ba09b645ff58f1477773333"
+            }]
+        },
+        "internal": {
+            "defaultRateId": "5ba09b645ff58f1455552223"
+            "customRates": [{
+                "resourceId": "5ba09b645ff58f149a2c3333",
+                "id": "5ba09b645ff58f1477773333"
+            }]
+        }
+    }
 }]
 ```
 
@@ -59,10 +113,18 @@ links | *object* |Project Links | NO | NO
 note | *string* | Project Notes | NO | NO
 createdDate | *string* | Project Creation Date | NO | YES
 updatedDate | *string* | Project Updated Date | NO | YES
+timeEntryEnabled | *boolean* | If time entry is enabled | NO | NO
+timeEntryLocked | *boolean* | If time entry is locked | NO | NO
+timeEntryApproval | *boolean* | If time entry approval is set | NO | NO
+resourceRates | *object* | Reference to resource billing rates | NO, deprecated, use `projectRate` instead | NO
+includeBookedTimeReports | *boolean* | If to include booked time reports | NO | NO
+includeBookedTimeGrid | *boolean* | If to include booked time grid | NO | NO
+projectManagers | *string array* | Project managers of project | NO | NO
+resources | *string array* | Resources in project | NO | NO
 workDays | *boolean* | Object of work days for a week | NO | NO
 useProjectDays | *boolean* | If using default days or custom. | NO | NO
-budget | *object* | An object containing budget properites. | NO, deprecated, use `companyBillingRateId`, `budgetHours`, `budgetCashAmount` and `budgetCurrency` instead | NO
-companyBillingRateId | *string* | Id of selected billing rate for project | NO | NO
+budget | *object* | An object containing budget properites. | NO, deprecated, use `projectRate` instead | NO
+companyBillingRateId | *string* | Id of selected billing rate for project | NO, deprecated, use `projectRate` instead | NO
 budgetHours | number | Amount of hours budgeted for this project. 0 means the budget in hours is disabled for this project. | NO | YES
 budgetCashAmount | number | Amount of money budgeted for this project, given in currency selected in `budgetCurrency`. 0 means that cash budget is disabled in this project. | NO | YES
 budgetCurrency | number | Currency of money budgeted for this project | NO | YES
@@ -76,6 +138,7 @@ projectCode |*string* | Project Code (Unique) | NO | NO
 metadata | *string* | Custom Field (255 Characters) | NO | YES
 customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO, but if you use them check Custom Fields section to see how to use them | NO
 timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO | NO
+projectRate | *object* | Reference to billing rates in project | NO | NO
 
 ##### Custom Fields
 
@@ -196,10 +259,32 @@ templateLabel: "Skills",
 ] }
 ```
 
-##### Billing
+##### Billing rates
 
-You can set custom billing rate for your project by giving the id of billing rate used in your company. If you put 'null' as `billing.id` the company
-default billing will be used for this resource. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
+The recommended way to set custom billing rate for the project is by using `projectRate` field. The `projectRate` is structured as follows:
+
+```
+"projectRate": {
+    "external": {
+        "defaultRateId": "5ba09b645ff58f1455552222"
+        "customRates": [{
+            "resourceId": "5ba09b645ff58f149a2c3333",
+            "id": "5ba09b645ff58f1477773333"
+        }]
+    },
+    "internal": {
+        "defaultRateId": "5ba09b645ff58f1455552223"
+        "customRates": [{
+            "resourceId": "5ba09b645ff58f149a2c3333",
+            "id": "5ba09b645ff58f1477773333"
+        }]
+    }
+}
+```
+
+Rates are split to internal rates and external rates. You need to have billing rates extension enabled to use internal rates. You can provide the id of billing rate used in your company for `defaultRateId` field. The `customRates` array allows to have custom billing rates for given resource. The `resourceId` field is the id of the resource and the `id` field is the id of the billing rate used for this resource. 
+
+There is also deprecated way to set the rates. You can set the id of billing rate used in your company to the `companyBillingRateId` field as follows:
 
 ```
     companyBillingRateId: 1234567890,
@@ -217,7 +302,7 @@ You can also set custom billing rates for resources. To do that change resourceR
 ```
 
 In the response you will get automatically generated `_id` of custom resource rate, which you should keep in update calls.
-Both resource id and billing rate id must exist in system. Billing rate is assigned automatically from the billing rate.
+Both resource id and billing rate id must exist in system. Billing rate is assigned automatically from the billing rate. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
 
 ###### Legacy Billing
 
