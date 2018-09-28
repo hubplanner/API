@@ -1,5 +1,7 @@
 ## Get All Unassigned Work
 
+*NOTE*: you need to have enabled unassigned work extension to use this API.
+
 ```
 GET /unassigned-work
 ```
