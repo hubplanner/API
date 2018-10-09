@@ -537,3 +537,50 @@ projectId | string | Project ID e.g. 654654365436543634
 Body | array | Array of Project Manager ID's
 
 A successful set will return a `200` Ok response status from the server along with updated project.
+
+## Project Tags
+
+### Get all Project Tags
+Use the following command to get a list of project tags.
+```
+GET /project/12345678/tag
+```
+Will return all tags that project `12345678` has. An example response is as follows:
+```
+[
+    {
+        "tagId": "5bb1e49065e0555544443333",
+        "value": "scala",
+        "_id": "5bbcaa1ae9fcfa1a87cd5f0e"
+    }
+]
+```
+
+A successful operation will return a `200` Ok response status from the server.
+
+### Add new Project Tag
+Use the following command to add a new project tag to project.
+```
+PATCH /project/12345678/tag
+```
+Will add the tag with id `56789` to project `12345678`.
+
+This operation works as adding to set, meaning that it preserves already existing tags and appends only new ones added in request body.
+
+The request body is as follows:
+```
+{
+    "tags": ["5bb1e49065e03b5388887777", "5bb1e49065e03b5388887778"]
+}
+```
+
+A successful operation will return a `200` Ok response status from the server and project updated with new tags.
+
+### Remove Project Tag from Project
+Use the following command to remove the project tag from project.
+```
+DELETE /project/12345678/tag/222333
+```
+Will remove the tag with id `222333` from project `12345678`.
+
+A successful operation will return a `204` No content response status from the server.
