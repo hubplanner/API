@@ -231,6 +231,15 @@ will update the booking with the id 123456789. You must pass in the entire booki
 
 A successful update will return a `200` Ok response status from the server.
 
+## Patch the booking
+Patch an existing booking.
+```
+PATCH /booking/123456789
+```
+will patch the booking with the id 123456789. Unlike PUT, you don't have to pass in the entire booking object, only the properties that you want to modify.
+
+A successful update will return a `200` Ok response status from the server and updated booking.
+
 ## Delete a booking
 Use the following command to delete a specific booking by `id`.
 ```
