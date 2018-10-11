@@ -339,3 +339,50 @@ Provide the array of ids in the request body. An example:
 ```
 
 A successful delete will return a `200` Ok response status from the server and an array of removed resource ids.
+
+## Resource Tags
+
+### Get all Resource Tags
+Use the following command to get a list of resource tags.
+```
+GET /resource/12345678/tag
+```
+Will return all tags that resource `12345678` has. An example response is as follows:
+```
+[
+    {
+        "tagId": "5bb1e49065e0555544443333",
+        "value": "scala",
+        "_id": "5bbcaa1ae9fcfa1a87cd5f0e"
+    }
+]
+```
+
+A successful operation will return a `200` Ok response status from the server.
+
+### Add new Resource Tag
+Use the following command to add a new resource tag to resource.
+```
+PATCH /resource/12345678/tag
+```
+Will add the tag with id `56789` to resource `12345678`.
+
+This operation works as adding to set, meaning that it preserves already existing tags and appends only new ones added in request body.
+
+The request body is as follows:
+```
+{
+    "tags": ["5bb1e49065e03b5388887777", "5bb1e49065e03b5388887778"]
+}
+```
+
+A successful operation will return a `200` Ok response status from the server and resource updated with new tags.
+
+### Remove Resource Tag from Resource
+Use the following command to remove the resource tag from resource.
+```
+DELETE /resource/12345678/tag/222333
+```
+Will remove the tag with id `222333` from resource `12345678`.
+
+A successful operation will return a `204` No content response status from the server.
