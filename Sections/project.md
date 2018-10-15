@@ -447,7 +447,7 @@ Update an existing project.
 ```
 PUT /project/123456789
 ```
-will update the project with the id 123456789. You must pass in the entire project object in the body. 
+will update the project with the id 123456789. You must pass at least `name` field in the body.
 
 A successful update will return a `200` Ok response status from the server.
 
