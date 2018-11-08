@@ -160,7 +160,7 @@ _id | $nin, $in | booking id
 metadata | $nin, $in | custom meta data field
 start | $lt, $lte, $gte | start date range
 end | $lt, $lte, $gte | end date range
-updatedDate | $lt, $lte, $gte | end date range
+updatedDate | $lt, $lte, $gte | updated date range
 resources | $nin, $in | resource id
 project | $nin, $in | project id
 
