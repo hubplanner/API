@@ -110,7 +110,8 @@ Property | Parameters | Description
 --- | --- | ---
 _id | $nin, $in | booking id
 metadata | $nin, $in | custom meta data field
-date | $lt, $lte, $gte | date ('YYYY-MM-DD') 
+date | $lt, $lte, $gte | date ('YYYY-MM-DD')
+updatedDate | $lt, $lte, $gte | updated date range
 resources | $nin, $in | resource id
 project | $nin, $in | project id
 status | $nin, $in | Entry Status (UNSUBMITTED, SUBMITTED, APPROVED, REJECTED, PENDING)
