@@ -129,7 +129,7 @@ budgetHours | number | Amount of hours budgeted for this project. 0 means the bu
 budgetCashAmount | number | Amount of money budgeted for this project, given in currency selected in `budgetCurrency`. 0 means that cash budget is disabled in this project. | NO | YES
 budgetCurrency | number | Currency of money budgeted for this project | NO | YES
 useStatusColor | *boolean* | If using the default status color or not | NO | NO
-status | *string* | Project Status (Active, Archived, Pending, Planned, Floating) | NO, defaults to Active | YES | NO
+status | *string* | Project Status (STATUS_ACTIVE, STATUS_ARCHIVED, STATUS_PENDING, STATUS_PLANNED, STATUS_FLOATING) | NO, defaults to Active | YES | NO
 useProjectDuration | *boolean* | Display Project Start and End Display Dates | NO | NO
 start | *string* |('YYYY-MM-DD') Project Start Display Date | Only if `useProjectDuration` is set to true | YES | NO
 end |*string* |('YYYY-MM-DD') Project End Display Date | Only if `useProjectDuration` is set to true | YES | NO
