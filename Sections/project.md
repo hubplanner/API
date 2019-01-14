@@ -442,6 +442,17 @@ The server will retyrn the full project object once created including the newly 
 
 A successful create will return a `201` Ok response status from the server.
 
+## Create Multiple Projects
+Create multiple projects.
+```
+POST /project
+```
+Pass in an array in the body
+
+```
+[{"name": "My First Project"}, {"name": "My Second Project"}]
+```
+
 ## Update a Project
 Update an existing project.
 ```
