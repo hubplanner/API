@@ -306,6 +306,17 @@ The server will return the full resource object once created including the newly
 
 A successful create will return a `201` Ok response status from the server.
 
+## Create Multiple Resources
+Create multiple resources.
+```
+POST /resource
+```
+Pass in an array in the body
+
+```
+[{"firstName": "Resource 1"}, {"firstName": "Resource 2"}]
+```
+
 ## Update a Resource
 Update an existing resource.
 ```
