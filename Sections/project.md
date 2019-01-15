@@ -471,6 +471,16 @@ Will delete project with the id `12345678`
 
 A successful delete will return a `200` Ok response status from the server.
 
+## Delete Multiple Projects
+Pass in an array of project id's in the body to delete.
+```
+DELETE /project
+```
+```
+['1234', '5678']
+```
+Will delete project with the id `1234` & `5678`
+
 ## Add a Resource to a Project
 Add a Resource to a Project
 ```
