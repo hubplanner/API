@@ -84,6 +84,8 @@ STATE_DAY_MINUTE | the `stateValue` is the minutes per day for the booking. e.g.
 STATE_PERCENTAGE | the `stateValue` is the percentage of the daily commitment
 STATE_TOTAL_MINUTE | the `stateValue` is the total minutes for the booking from start to end
 
+### Booking Type
+
 Booking type is returned as a read only property. The possible types are as follows:
 
 Booking Type | Description
