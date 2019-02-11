@@ -10,6 +10,7 @@ A response from the server would be as follows:
         "_id": "5b1977ade02d407011112222",
         "title": "",
         "state": "STATE_PERCENTAGE",
+        "type": "SCHEDULED",
         "allDay": true,
         "scale": "SCALE_DAY",
         "start": "2018-06-07T09:00",
@@ -82,6 +83,15 @@ Booking State | Description
 STATE_DAY_MINUTE | the `stateValue` is the minutes per day for the booking. e.g. 480 would be 8hrs
 STATE_PERCENTAGE | the `stateValue` is the percentage of the daily commitment
 STATE_TOTAL_MINUTE | the `stateValue` is the total minutes for the booking from start to end
+
+Booking type is returned as a read only property. The possible types are as follows:
+
+Booking Type | Description
+--- | ---
+SCHEDULED | when a booking is scheduled in the scheduler.
+APPROVED | when using the requesting & approval flow extension and the booking is approved.
+WAITING_FOR_APPROVAL | when using the requesting & approval flow extension and the booking is requested / pending / waiting for approval.
+REJECTED | when using the requesting & approval flow extension and the booking is rejected.
 
 ### Billing rates
 
