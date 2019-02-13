@@ -240,23 +240,32 @@ Date needs to be in `YYYY-MM-DD` format. Color needs to use html hex codes(for e
 
 For choice fields you need to set templateId and an array of choices, where each choice needs to have proper choiceId. For example:
 
+Once you GET the custom field templates you need to map `_id` from the template to `choiceId` when setting it.
+
 ```
-{ templateId:"55100b09640c63d006c673b2",
-_id: "5626541945f2d486dd0b7106",
-templateType: "CHECKBOX | RADIO | SELECT",
-templateLabel: "Skills",
-"choices": [
-    {
-        "value": "JAVA",
-        "choiceId": "560a9a1cf0168116192eccf5",
-        "_id": "5626541945f2d486dd0b7105"
-    },
-    {
-        "value": "C++",
-        "choiceId": "560a9a1ea5a77611195a3ee1",
-        "_id": "5626541945f2d486dd0b7104"
-    }
-] }
+
+{
+    "customFields": [
+        {
+            "templateId": "5c6407f15dcb90565b47a97a",
+            "templateType": "CHECKBOX", // you need to pass the type as per current version.
+            "choices": [
+                {
+                    "choiceId": "5c6408235dcb90565b47a9c1", // choiceId is mapped from the template choices _id
+                    "value": "Easy"// at the moment this is a validated field but won't do anything if changed.
+                },
+                {
+                    "value": "Hard",
+                    "choiceId": "5c6408125dcb90565b47a9bc"                  
+                },
+                {
+                    "value": "Medium",
+                    "choiceId": "5c6408175dcb90565b47a9bd"                  
+                }
+            ]
+        }
+    ]
+
 ```
 
 ##### Billing rates
