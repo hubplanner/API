@@ -243,8 +243,6 @@ For choice fields you need to set templateId and an array of choices, where each
 Once you GET the custom field templates you need to map `_id` from the template to `choiceId` when setting it.
 
 ```
-
-{
     "customFields": [
         {
             "templateId": "5c6407f15dcb90565b47a97a",
