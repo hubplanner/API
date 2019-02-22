@@ -50,7 +50,8 @@ A response from the server would be as follows:
             "internal": {
                 "defaultRateId": "5bab32f98a5a834311113333"
             }
-        }
+        },
+        "lastUpdatedById": "5aa0f2414a576d0c11112222"
     }
 ]
   ```
@@ -75,6 +76,7 @@ metadata | *string* | Custom Field | NO | YES
 customFields | *string* | All resource custom fields | NO | NO
 bookingCreatorId | *string* | Id of booking creator | NO | NO
 bookingRate | *object* | References booking rates | NO | NO
+lastUpdatedById | *string* | id of resource who last updated the booking | NO | NO
 
 The following table shows the different types of booking states that can be returned and their implication on which property they use for the booking time. 
 
