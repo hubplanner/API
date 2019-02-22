@@ -55,7 +55,7 @@ An example response will look like below.
 ```
 
 ## Responses when Subscribed to Webhooks
-The following code examples show sample responses when subscribed to the different webhooks. 
+The following code examples show sample responses when subscribed to the different webhooks. Note that `createdBy` and `updatedBy` fields in booking webhooks are deprecated fields and will be removed in the future. They are replaced by `bookingCreatorId` and `lastUpdatedById` fields accordingly.
 
 *project.update*
 
@@ -168,7 +168,12 @@ The following code examples show sample responses when subscribed to the differe
             "date": "2017-09-12T09:00:00.000Z",
             "formatted": "Sep 12th 2017"
         },
-        "bookingCreatorName": "Tom M",
+        "createdBy":"5c62978a7b10e376c13faaaa",
+        "updatedBy":"5c62978a7b10e376c13fbbbb",
+        "bookingCreatorName":"Mike Tyson",
+        "bookingCreatorId":"5c62978a7b10e376c13faaaa",
+        "lastUpdatedById":"5c62978a7b10e376c13fbbbb",
+        "lastUpdatedByName":"Andrew Hammonds",
         "resourceName": "Resource 1",
         "projectName": "Test Project",
         "projectId": "5963b1320eb98a0be485a1d4",
@@ -200,7 +205,12 @@ The following code examples show sample responses when subscribed to the differe
     "projectId":"5ad9d08c880646448864427c",
     "projectName":"Test Project",
     "resourceName":"Resource 1",
+    "createdBy":"5c62978a7b10e376c13faaaa",
+    "updatedBy":"5c62978a7b10e376c13fbbbb",
     "bookingCreatorName":"Mike Tyson",
+    "bookingCreatorId":"5c62978a7b10e376c13faaaa",
+    "lastUpdatedById":"5c62978a7b10e376c13fbbbb",
+    "lastUpdatedByName":"Andrew Hammonds",
     "start": {
         "formatted":"Apr 24th 2018",
         "date":"2018-04-24T07:00:00.000Z",
@@ -231,7 +241,12 @@ The following code examples show sample responses when subscribed to the differe
     "projectId":"5adda32626bc1357570172b4",
     "projectName":"Test Project",
     "resourceName":"Resource 1",
+    "createdBy":"5c62978a7b10e376c13faaaa",
+    "updatedBy":"5c62978a7b10e376c13fbbbb",
     "bookingCreatorName":"Mike Tyson",
+    "bookingCreatorId":"5c62978a7b10e376c13faaaa",
+    "lastUpdatedById":"5c62978a7b10e376c13fbbbb",
+    "lastUpdatedByName":"Andrew Hammonds",
     "start": {
         "formatted":"May 10th 2018",
         "date":"2018-05-10T07:00:00.000Z",
@@ -263,7 +278,12 @@ The following code examples show sample responses when subscribed to the differe
         "projectId":"5adda32626bc1357570172b4",
         "projectName":"Test Project",
         "resourceName":"Resource 1",
+        "createdBy":"5c62978a7b10e376c13faaaa",
+        "updatedBy":"5c62978a7b10e376c13fbbbb",
         "bookingCreatorName":"Mike Tyson",
+        "bookingCreatorId":"5c62978a7b10e376c13faaaa",
+        "lastUpdatedById":"5c62978a7b10e376c13fbbbb",
+        "lastUpdatedByName":"Andrew Hammonds",
         "start": {
             "formatted":"May 10th 2018",
             "date":"2018-05-10T07:00:00.000Z",
@@ -288,7 +308,12 @@ The following code examples show sample responses when subscribed to the differe
         "projectId":"5adda32626bc1357570172b4",
         "projectName":"Test Project",
         "resourceName":"Resource 1",
+        "createdBy":"5c62978a7b10e376c13faaaa",
+        "updatedBy":"5c62978a7b10e376c13fbbbb",
         "bookingCreatorName":"Mike Tyson",
+        "bookingCreatorId":"5c62978a7b10e376c13faaaa",
+        "lastUpdatedById":"5c62978a7b10e376c13fbbbb",
+        "lastUpdatedByName":"Andrew Hammonds",
         "start": {
             "formatted":"May 11th 2018",
             "date":"2018-05-11T07:00:00.000Z",
