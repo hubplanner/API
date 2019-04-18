@@ -1,7 +1,9 @@
 Hub Planner API
 ===
 
-Welcome to the Hub Planner API. The Hub Planner API provides programmatic access to the following [Sections](https://github.com/hubplanner/API/tree/master/Sections)
+Welcome to the Hub Planner API which provides programmatic access to Hub Planner Resource Management and Timesheets https://hubplanner.com
+
+The following [Sections](https://github.com/hubplanner/API/tree/master/Sections) are available:
 
 * [Projects](https://github.com/hubplanner/API/blob/master/Sections/project.md)
 * [Resources](https://github.com/hubplanner/API/blob/master/Sections/resource.md)
@@ -35,6 +37,10 @@ If you have any direct implementation issues, please contact the tech team at th
 ## API Updates and Changes
 
 We will be managing the API via GitHub, so please watch the Hub Planner API repository to receive email notification of updates to the API documentation. 
+
+## API Limits
+
+For security reasons we have a daily limit of 6000 API calls and burst limits on every account. Please be careful to avoid these limits as otherwise you will get an error response from the API.
 
 ## Sharing
 
