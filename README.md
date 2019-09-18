@@ -6,6 +6,7 @@
 </p>
 <p align="center">
   <a href="https://signup.hubplanner.com">Free Trial</a>
+  |
   <a href="https://hubplanner.com">Home Page</a>
 </p>
 
