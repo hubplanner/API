@@ -1,4 +1,13 @@
-Hub Planner API
+<p align="center">
+  <img alt="Hub Planner Logo" title="Hub Planner" src="/logo.png" width="250">
+</p>
+<p align="center" style="margin-top: 40px">
+  <strong>API Documentation</strong> for Hub Planner
+</p>
+<p align="center">
+  <a href="https://signup.hubplanner.com">Demo</a>
+</p>
+
 ===
 
 Welcome to the Hub Planner API which provides programmatic access to Hub Planner Resource Management and Timesheets https://hubplanner.com
