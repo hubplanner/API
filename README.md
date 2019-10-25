@@ -80,7 +80,7 @@ Please note that all requests to the Hub Planner API must be made over HTTPS.
 
 Most of the above areas can be paginated using url parameters `limit` and `page`. By default passing no limit returns 20 results which can be paginated. 
 
-If you pass a limti of `0` or a limit of > `1000`, you will get a response of `400`
+If you pass a limit of `0` or a limit of > `1000`, you will get a bad response `400` from the server.
 
 The example call to make use of pagination looks like this:
 
