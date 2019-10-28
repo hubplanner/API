@@ -78,7 +78,9 @@ Please note that all requests to the Hub Planner API must be made over HTTPS.
 
 ### Pagination
 
-Most of the above areas can be paginated using url parameters `limit` and `page`. By default passing no limit returns 20 results which can be paginated. 
+Most of the above areas can be paginated using url parameters `limit` and `page`. For Bookings and Time Entries passing no limit returns 20 results by default which can then be paginated, while other end points for Project and Resources will return all results. 
+
+The max `limit` you can set is `1000`. 
 
 If you pass a limit of `0` or a limit of > `1000`, you will get a Bad Request `400` response from the server.
 
@@ -87,8 +89,7 @@ The example call to make use of pagination looks like this:
 ```
 GET /project?page=0&limit=20
 ```
-Which will paginate endpoint with 20 results per page. Pages start numbering with `0`. If you want to get all results you should loop trough pages until
-you reach page with less than requested amount of elements(in this example less than 20).
+Which will paginate endpoint with 20 results per page. Pages start numbering with `0`. If you want to get all results you should loop trough pages until you reach page with less than requested amount of elements(in this example less than 20).
 
 The endpoints that can be paginated in most areas are `GET /areaName` and `POST /areaName/search`.
 
