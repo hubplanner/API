@@ -4,7 +4,9 @@
 GET /timeentry
 ```
 
-This call will return an empty array `[]` due to the amount of data that could be return. You must specify a project or resource to `GET` timeEntry.
+You should pagiante the results for time entries that are returned. Please see pagination reference here https://github.com/hubplanner/API/blob/master/README.md#pagination
+
+```GET /timeentry?page=0&limit=20```
 
 ## Get Specific TimeEntry
 Use the following command to get a specific TimeEntry by `id`.
