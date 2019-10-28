@@ -5,7 +5,9 @@ GET /booking
 ```
 You should pagiante the results for bookings that are returned. Please see pagination reference here https://github.com/hubplanner/API/blob/master/README.md#pagination
 
-```GET /booking?page=0&limit=20```
+```
+GET /booking?page=0&limit=20
+```
 ```
 [
   {
