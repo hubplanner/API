@@ -51,7 +51,7 @@ We will be managing the API via GitHub, so please watch the Hub Planner API repo
 
 ## API Limits
 
-For security reasons we have a daily limit of 6000 API calls and burst limits on every account. Please be careful to avoid these limits as otherwise you will get an error response from the API.
+For security reasons we have a daily limit of 6000 API calls and burst limits of 50 per 5 seconds on every account. Please be careful to avoid these limits as otherwise you will get an error response from the API.
 
 ## Sharing
 
