@@ -247,6 +247,8 @@ The following code examples show sample responses when subscribed to the differe
     "bookingCreatorId":"5c62978a7b10e376c13faaaa",
     "lastUpdatedById":"5c62978a7b10e376c13fbbbb",
     "lastUpdatedByName":"Andrew Hammonds",
+    "deletedById":"5c62978a7b10e376c13faaaa", //valid for deleted webhook only
+    "deletedByResourceName":"Andrew Hammonds", //valid for deleted webhook only
     "start": {
         "formatted":"May 10th 2018",
         "date":"2018-05-10T07:00:00.000Z",
