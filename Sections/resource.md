@@ -173,25 +173,31 @@ value: "Can make a mean chili" }
 The value will be validated based on it's type. Min length, max length has to be kept as given. Email field can only contain properly validated e-mail.
 Date needs to be in `YYYY-MM-DD` format. Color needs to use html hex codes(for example `#fff000` or `#fff`).
 
-For choice fields you need to set templateId and an array of choices, where each choice needs to have proper choiceId. For example:
+##### Creating a Resource with Custom Field Choice
+For choice fields you need to set templateId and an array of choices which is the `_id` field when you GET the Custom Field Templates.  
 
 ```
-{ templateId:"55100b09640c63d006c673b2",
-_id: "5626541945f2d486dd0b7106",
-templateType: "CHECKBOX | RADIO | SELECT",
-templateLabel: "Skills",
-"choices": [
-    {
-        "value": "JAVA",
-        "choiceId": "560a9a1cf0168116192eccf5",
-        "_id": "5626541945f2d486dd0b7105"
-    },
-    {
-        "value": "C++",
-        "choiceId": "560a9a1ea5a77611195a3ee1",
-        "_id": "5626541945f2d486dd0b7104"
-    }
-] }
+{
+    "firstName":"First Name",
+    "lastName":"Last Name",
+    "email":"unique22@email.com",
+    "customFields": [
+        {
+            "templateId":"57a385803754451a08de2da7", // _id field in template from GET.
+            "templateType": "CHECKBOX",
+            "choices": [
+                {
+                    "value": "Photoshop",
+                    "choiceId": "5c9e2bc10e378fa97db8509d" // _id field in template from GET.
+                },
+                {
+                    "value": "Illustrator",
+                    "choiceId": "5c9e2bc10e378fa97db85092" // _id field in template from GET.
+                }
+            ]
+        }
+    ]
+}
 ```
 
 ##### Status
