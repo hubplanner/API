@@ -160,20 +160,30 @@ value | *string* | Choice value
 
 There are two different templates for custom fields, one that has a single property (string) value and one that allows for multiple linkable values stored in choices array. The templateType property will dictate which template is being used.
 
+#### Creating a Resource with Custom Field Value
+
 To set simple values choose templateId to use, pass in proper templateType and value you want to set, for example:
 
 ```
-{ templateId:"55100b09640c63d006c673b2",
-_id: "5626541945f2d486dd0b7106",
-templateType: "TEXT | TEXTAREA | EMAIL | DATE | COLOR | NUMBER",
-templateLabel: "Other information",
-value: "Can make a mean chili" }
+
+{
+    "firstName":"First Name",
+    "lastName":"Last Name",
+    "email":"unique2@email.com",
+    "customFields": [
+    	{ 
+    		"templateId":"5e54db0041e7270c38b248f8",
+			"templateType": "TEXT", // set the filed TEXT | TEXTAREA | EMAIL | DATE | COLOR | NUMBER
+			"value": "Hub Planner 567876534" 
+		}
+		]
+}
+
 ```
 
-The value will be validated based on it's type. Min length, max length has to be kept as given. Email field can only contain properly validated e-mail.
-Date needs to be in `YYYY-MM-DD` format. Color needs to use html hex codes(for example `#fff000` or `#fff`).
+The value will be validated based on it's type. Min length, max length has to be kept as given. Email field can only contain properly validated e-mail. Date needs to be in `YYYY-MM-DD` format. Color needs to use html hex codes(for example `#fff000` or `#fff`).
 
-##### Creating a Resource with Custom Field Choice
+#### Creating a Resource with Custom Field Choice
 For choice fields you need to set templateId and an array of choices which is the `_id` field when you GET the Custom Field Templates.  
 
 ```
