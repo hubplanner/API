@@ -522,7 +522,7 @@ A successful remove will return a `200` Ok response status from the server.
 ## Add Clients to a Project
 Add Clients to a Project
 ```
-POST projectId/client/
+POST project/projectId/client/
 Accept: application/json
 Content-Type: application/json
 
