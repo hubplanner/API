@@ -32,16 +32,6 @@ Server Response example below for 1 project returned within an array.
     "timeEntryApproval": true,
     "projectCode": "",
     "timeEntryNoteRequired": false,
-    "workDays": [
-        false,
-        true,
-        true,
-        true,
-        true,
-        true,
-        false
-    ],
-    "useProjectDays": false,
     "budget": {
         "hasBudget": false,
         "projectHours": {
@@ -121,8 +111,6 @@ includeBookedTimeReports | *boolean* | If to include booked time reports | NO | 
 includeBookedTimeGrid | *boolean* | If to include booked time grid | NO | NO
 projectManagers | *string array* | Project managers of project | NO | NO
 resources | *string array* | Resources in project | NO | NO
-workDays | *boolean* | Object of work days for a week | NO | NO
-useProjectDays | *boolean* | If using default days or custom. | NO | NO
 budget | *object* | An object containing budget properites. | NO, deprecated, use `projectRate` instead | NO
 companyBillingRateId | *string* | Id of selected billing rate for project | NO, deprecated, use `projectRate` instead | NO
 budgetHours | number | Amount of hours budgeted for this project. 0 means the budget in hours is disabled for this project. | NO | YES
