@@ -5,11 +5,18 @@ GET /holiday
 ```
 A response from the server would be as follows:
 ```
-[{ _id: '54785431e91e5ead13e8d841',
-  name: 'Christmas',
-  date: '2014-12-25',
-  metadata: '' 
-}]
+[
+  {
+    "_id": "5e96a89f9088ba10r2e933c1",
+    "name": "Birthday",
+    "color": "#0070c0",
+    "date": "1985-04-18",
+    "metadata": "",
+    "createdDate": "2020-04-15T06:24:36.808Z",
+    "updatedDate": "2020-04-15T06:24:36.808Z",
+    "repeat": true
+  }
+]
   ```
 The following is a description of the properties in the response.
 
