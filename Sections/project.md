@@ -533,7 +533,7 @@ Content-Type: application/json
 ```
 Property | Type | Description
 --- | --- | ---
-clientId | string | Resource ID e.g. 654654365436543634
+clientId | string | Client ID e.g. 654654365436543634
 projectIds | array | Array of Project ID's
 
 A successful remove will return a `200` Ok response status from the server.
