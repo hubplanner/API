@@ -448,14 +448,47 @@ Pass in an array in the body
 [{"name": "My First Project"}, {"name": "My Second Project"}]
 ```
 
-## Update a Project
-Update an existing project.
-```
-PUT /project/123456789
-```
-will update the project with the id 123456789. You must pass at least `name` field in the body.
+## Update Single Project [PATCH]
 
-A successful update will return a `200` Ok response status from the server.
+You can easily update a project by passing the `_id` of the project and the property you would like to update. You must pass the project object inside an array `[]` for it to validate using the `PATCH` method. 
+
+	PATCH {{API_URL}}/project
+
+example `body`, update project with `_id: 5d414b23c0881e733f85f419` 
+
+    [  
+		{  
+			"_id": "5d414b23c0881e733f85f419",  
+			"note": "Hub Planner",  
+			"name": "Test Project",  
+			"projectCode": "pr_code",  
+			"budgetCashAmount": 123456  
+		}
+	]
+
+## Bulk Update Projects [PATCH]
+
+Similar to above example you just need to pass in multiple objects in the array `[]` to bulk update multiple projects.
+
+	PATCH {{API_URL}}/project
+	
+example `body`, update 2 projects  
+
+    [  
+		{  
+			"_id": "5d414b23c0881e733f85f419",  
+			"note": "Hub Planner",  
+			"name": "Test Project",  
+			"projectCode": "pr_code",  
+			"budgetCashAmount": 123456  
+		},  
+		{  
+			"_id": "5d415b52e7212d55cfc877cf",  
+			"note": "new note",  
+			"name": "Another project",  
+			"budgetCurrency": "GBP"  
+		}  
+	]
 
 ## Delete a Project
 Use the following command to delete a specific project by `id`.
