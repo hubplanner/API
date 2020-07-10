@@ -333,14 +333,41 @@ Pass in an array in the body
 [{"firstName": "Resource 1"}, {"firstName": "Resource 2"}]
 ```
 
-## Update a Resource
-Update an existing resource.
-```
-PUT /resource/123456789
-```
-will update the resource with the id 123456789. You must pass in the entire resource object in the body when updating so no values will be overwritten to default. Best practice will be to read first and then merge.  
+## Update Single Resource
 
-A successful update will return a `200` Ok response status from the server.
+You can easily update a resource by passing the `_id` of the resource and the property you would like to update. You must pass the resource object inside an array `[]` for it to validate using the `PATCH` method. 
+
+	PATCH {{API_URL}}/resource
+
+example `body`, update resource with `_id: 5f02d81cf959470bfda820b0` 
+
+    [  
+		{  
+			"_id": "5f02d81cf959470bfda820b0",  
+			"lastName": "Green",  
+			"note": "Hub Planner"  
+		}
+	]
+
+## Bulk Update Resources
+
+Similar to above example you just need to pass in multiple objects in the array `[]` to bulk update multiple resources.
+
+	PATCH {{API_URL}}/resource
+	
+example `body`, update 2 resources  
+
+    [  
+		{  
+			"_id": "5f02d81cf959470bfda820b0",  
+			"lastName": "Green",  
+			"note": "Hub Planner"  
+		},  
+		{  
+			"_id": "5ce678c066df572dae543b93",  
+			"firstName": "Anna"  
+		}  
+	]
 
 ## Delete a Resource
 Use the following command to delete a specific resource by `id`.
