@@ -448,7 +448,7 @@ Pass in an array in the body
 [{"name": "My First Project"}, {"name": "My Second Project"}]
 ```
 
-## Update Single Project [PATCH]
+## Update Single Project
 
 You can easily update a project by passing the `_id` of the project and the property you would like to update. You must pass the project object inside an array `[]` for it to validate using the `PATCH` method. 
 
@@ -466,7 +466,7 @@ example `body`, update project with `_id: 5d414b23c0881e733f85f419`
 		}
 	]
 
-## Bulk Update Projects [PATCH]
+## Bulk Update Projects
 
 Similar to above example you just need to pass in multiple objects in the array `[]` to bulk update multiple projects.
 
