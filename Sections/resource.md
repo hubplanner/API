@@ -219,6 +219,7 @@ Status | Description
 STATUS_ACTIVE | Active Resources
 STATUS_ARCHIVED | Archived Resources
 STATUS_NON_BOOKABLE | Non Bookable Resource
+STATUS_PARKED | Parked Resource
 
 ##### Billing rates
 
