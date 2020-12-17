@@ -82,6 +82,23 @@ POST {{API_URL}}/categories
 }
 ```
 
+## Update an Existing Booking Category
+You must pass in the entire object in the body when updating so no values will be overwritten. Best practice will be to read first and then merge.
+
+A successful update will return a 200 Ok response status from the server.
+
+```
+PUT {{API_URL}}/categories/{{CATEGORY_ID}}
+```
+
+```
+{
+    "name": "Video Shooting Category",
+    "gridColor": "#C81930",
+    "type": "CUSTOM"
+}
+```
+
 ## Get all Category Groups
 ```
 GET {{API_URL}}/category-groups
