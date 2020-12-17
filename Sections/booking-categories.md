@@ -15,7 +15,80 @@ A response from the server would be as follows:
       "type": "CUSTOM"
   }
 ]
+```
 
 The call will return an array of booking categories for your company.
 
-Property type shows if the booking category is default in its group. It can be set as `NON_OPTIONAL` (default) or CUSTOM.
+Property type shows if the booking category is default in its group. It can be set as `NON_OPTIONAL` (default) or `CUSTOM`.
+
+## Search a Booking Category
+
+```
+POST {{API_URL}}/categories/search
+```
+The body can be as follows:
+```
+{
+	"type": "NON_OPTIONAL"
+}
+```
+Use the following command to search booking categories, it allows to get more complex results.
+
+### Search Parameters
+Use paramters to narrow you search. You can send exact values or use parameters below.
+
+Parameters | Description
+--- | ---
+$in | values included in array
+$nin | values excluded from array
+
+### Searchable Properties
+Property | Parameters | Type
+--- | --- | ---
+_id | $in, $nin | *ID*
+name | $in, $nin | *string*
+type | $in, $nin | *string*
+gridColor | $in, $nin | *string*
+group | | *ID*
+
+To get categories from other groups than default, there is extension **"Booking Category Groups"** required.
+
+## Get a Booking Category by ID
+Use the following command to get a specific booking category by id.
+
+A successful resource will return a 200 Ok response status from the server.
+
+```
+GET {{API_URL}}/categories/{{CATEGORY_ID}}
+```
+
+## Create a Booking Category
+In the body you have to send ID of the group to add new booking category.
+
+Possible values of property `type` are `NON_OPTIONAL` and `CUSTOM`. Setting `type` to `NON_OPTIONAL` sets the new category as default one in the group.
+
+A successful create operation will return a 201 OK response status from the server.
+
+```
+POST {{API_URL}}/categories
+```
+
+```
+{
+	"groupId": "5e62e12027a3df671be4582b",
+	"name": "New Category",
+	"gridColor": "#131215",
+	"type": "NON_OPTIONAL"
+}
+```
+
+## Get all Category Groups
+```
+GET {{API_URL}}/category-groups
+```
+The call will return an array of category groups for your company. 
+
+The properties returned are displayed in example.
+Property `type` shows if the category group is default. It can be set as `NON_OPTIONAL` (default) or `CUSTOM`.
+
+To receive `CUSTOM` gorups, there is extension **"Booking Category Groups"** required.
