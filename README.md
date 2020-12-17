@@ -32,6 +32,7 @@ The following [Sections](https://github.com/hubplanner/API/tree/master/Sections)
 * [Unassigned work](https://github.com/hubplanner/API/blob/master/Sections/unassigned-work.md)
 * [Project tag](https://github.com/hubplanner/API/blob/master/Sections/project-tag.md)
 * [Resource tag](https://github.com/hubplanner/API/blob/master/Sections/resource-tag.md)
+* [Booking Categories](https://github.com/hubplanner/API/blob/master/Sections/booking-categories.md)
 
 You can use the API to integrate Hub Planner with your own third party applications or generally integrate with your existing back-office setup.
 
