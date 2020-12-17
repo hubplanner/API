@@ -14,6 +14,7 @@ Welcome to the Hub Planner API. The Hub Planner API provides programmatic access
 * [Billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md)
 * [Webhooks](https://github.com/hubplanner/API/blob/master/Sections/webhooks.md)
 * [Clients](https://github.com/hubplanner/API/blob/master/Sections/clients.md)
+* [Booking Categories](https://github.com/hubplanner/API/blob/master/Sections/booking-categories.md)
 
 #### Pagination
 
