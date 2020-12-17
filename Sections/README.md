@@ -8,12 +8,17 @@ Welcome to the Hub Planner API. The Hub Planner API provides programmatic access
 * [Timesheets](https://github.com/hubplanner/API/blob/master/Sections/timesheets.md)
 * [Bookings](https://github.com/hubplanner/API/blob/master/Sections/bookings.md)
 * [Events](https://github.com/hubplanner/API/blob/master/Sections/events.md)
-* [Holidays](https://github.com/hubplanner/API/blob/master/Sections/holidays.md)
+* [Public Holidays](https://github.com/hubplanner/API/blob/master/Sections/holidays.md)
 * [Groups](https://github.com/hubplanner/API/blob/master/Sections/groups.md)
 * [Milestones](https://github.com/hubplanner/API/blob/master/Sections/milestones.md)
 * [Billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md)
 * [Webhooks](https://github.com/hubplanner/API/blob/master/Sections/webhooks.md)
 * [Clients](https://github.com/hubplanner/API/blob/master/Sections/clients.md)
+* [Vacation](https://github.com/hubplanner/API/blob/master/Sections/vacation.md)
+* [Project managers](https://github.com/hubplanner/API/blob/master/Sections/project-manager.md)
+* [Unassigned work](https://github.com/hubplanner/API/blob/master/Sections/unassigned-work.md)
+* [Project tag](https://github.com/hubplanner/API/blob/master/Sections/project-tag.md)
+* [Resource tag](https://github.com/hubplanner/API/blob/master/Sections/resource-tag.md)
 * [Booking Categories](https://github.com/hubplanner/API/blob/master/Sections/booking-categories.md)
 
 #### Pagination
