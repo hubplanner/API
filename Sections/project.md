@@ -386,7 +386,7 @@ will return all projects which are NOT `STATUS_ACTIVE`
 ```
 will return all projects which are `STATUS_ACTIVE` and `STATUS_FLOATING`
 ```
-{"name" : {"$in": ["STATUS_ACTIVE", "STATUS_FLOATING"] } }
+{"search" : {"$in": ["STATUS_ACTIVE", "STATUS_FLOATING"] } }
 ```
 
 ### Search Parameters
