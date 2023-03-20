@@ -223,6 +223,19 @@ for example when booking 8hrs
 }
 ```
 
+## Create a new Booking Request
+To create a new booking request you need to make sure you have the resource request extension installed. The booking object is the same, you only need to pass in a type of `WAITING_FOR_APPROVAL` to make the booking a request. Example
+
+```
+{
+    "resource" : "5992a4a6e333b50c3c721c51",
+    "start" : "2023-11-03",
+    "end" : "2023-11-19",
+    "project" : "5992a4a6e583b5333c721c6d",
+    "type" : "WAITING_FOR_APPROVAL"
+}
+```
+
 ## Create a Booking in Hours View
 You will need to make sure to pass in the following object. Note the start and End include the hours and you do not pass in a `stateValue` and you set `allDay` to `false`.
 
