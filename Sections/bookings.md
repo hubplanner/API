@@ -1,4 +1,4 @@
-## Get All Project Bookings
+## Get All Bookings
 
 ```
 GET /booking
