@@ -254,7 +254,7 @@ The server will return the full booking object once created including the newly 
 
 A successful create will return a `201` Ok response status from the server.
 
-## Update a booking
+## Update a booking or booking request
 Update an existing booking.
 ```
 PUT /booking/123456789
@@ -263,7 +263,7 @@ will update the booking with the id 123456789. You must pass in the entire booki
 
 A successful update will return a `200` Ok response status from the server.
 
-## Patch the booking
+## Patch the booking or booking request
 Patch an existing booking.
 ```
 PATCH /booking/123456789
@@ -272,7 +272,29 @@ will patch the booking with the id 123456789. Unlike PUT, you don't have to pass
 
 A successful update will return a `200` Ok response status from the server and updated booking.
 
-## Delete a booking
+## Patch a booking request to change Booking Type
+Patch an existing booking request you need to make sure you have the resource request extension installed.
+```
+PATCH /booking/123456789
+```
+will patch the booking with the id 123456789. Unlike PUT, you don't have to pass in the entire booking object, only the properties that you want to modify.
+
+You only need to pass in a type `APPROVED` or `REJECTED` and `approvedOrRejectedById` to approve or reject request. Example
+
+```
+{
+    "type" : "APPROVED",
+    "approvalInfo": {
+        "approvedOrRejectedById": "123456789"
+    }
+}
+```
+
+You can also add in `approvalInfo` object an optional properties like `approvedOrRejectedDate` (it will be filled it automatic, if missing), `approverNote` or `requesterNote` data.
+
+A successful update will return a `200` Ok response status from the server and updated booking.
+
+## Delete a booking or booking request
 Use the following command to delete a specific booking by `id`.
 ```
 DELETE /booking/12345678
@@ -281,7 +303,7 @@ Will delete booking with the id `12345678`
 
 A successful delete will return a `200` Ok response status from the server.
 
-## Delete multiple bookings (Bulk)
+## Delete multiple bookings or booking request (Bulk)
 Use the following query to delete multiple bookings, either by booking IDs, projectId or resourceId.
 
 Delete multiple bookings by booking IDs:
