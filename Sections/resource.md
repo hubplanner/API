@@ -323,6 +323,10 @@ The server will return the full resource object once created including the newly
 
 A successful create will return a `201` Ok response status from the server.
 
+###### Mandatory Custom Fields
+
+*IMPORTANT*: If any of Resource Custom Fields is set to mandatory, it will be validated only, if `customFields` property will be present in payload.
+
 ## Create Multiple Resources
 Create multiple resources.
 ```
@@ -349,6 +353,10 @@ example `body`, update resource with `_id: 5f02d81cf959470bfda820b0`
 			"note": "Hub Planner"  
 		}
 	]
+
+###### Mandatory Custom Fields
+
+*IMPORTANT*: If any of Resource Custom Fields is set to mandatory, it will be validated only, if `customFields` property will be present in payload.
 
 ## Bulk Update Resources
 
