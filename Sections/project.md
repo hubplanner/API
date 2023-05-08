@@ -437,6 +437,10 @@ The server will retyrn the full project object once created including the newly 
 
 A successful create will return a `201` Ok response status from the server.
 
+###### Mandatory Custom Fields
+
+*IMPORTANT*: If any of Project Custom Fields is set to mandatory, it will be validated only, if `customFields` property will be present in payload.
+
 ## Create Multiple Projects
 Create multiple projects.
 ```
@@ -465,6 +469,10 @@ example `body`, update project with `_id: 5d414b23c0881e733f85f419`
 			"budgetCashAmount": 123456  
 		}
 	]
+
+###### Mandatory Custom Fields
+
+*IMPORTANT*: If any of Project Custom Fields is set to mandatory, it will be validated only, if `customFields` property will be present in payload.
 
 ## Bulk Update Projects
 
