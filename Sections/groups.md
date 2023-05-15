@@ -130,3 +130,18 @@ Content-Type: application/json
 {"groupIds":["654654365436543634","654365436543654365436"]}
 ```
 A successful add will return a `200` Ok response status from the server.
+
+## Add approver to a ResourceGroup
+Update your resource group and pass array of approvers.
+```
+PUT resourcegroup/:id
+Accept: application/json
+Content-Type: application/json
+
+{
+	...
+	"approvers": ["654654365436543634","654365436543654365436"]
+	...
+}
+```
+A successful update will return a `200` Ok response status from the server, and an updated ResourceGroup.
