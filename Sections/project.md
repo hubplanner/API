@@ -73,6 +73,13 @@ Server Response example below for 1 project returned within an array.
         "5ba09fdb5ff58f149a2c7777",
         "5ba09fd05ff58f149a2c8888"
     ],
+    tags: [
+	    {
+		"tagId": "5bb1e49065e0555544443333",
+		"value": "scala",
+		"_id": "5bbcaa1ae9fcfa1a87cd5f0e"
+	    }
+	],
     "backgroundColor": "#81A489",
     "metadata": "",
     "customFields": [],
