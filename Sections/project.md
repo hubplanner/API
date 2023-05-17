@@ -79,7 +79,7 @@ Server Response example below for 1 project returned within an array.
 		"value": "scala",
 		"_id": "5bbcaa1ae9fcfa1a87cd5f0e"
 	    }
-	],
+     ],
     "backgroundColor": "#81A489",
     "metadata": "",
     "customFields": [],
