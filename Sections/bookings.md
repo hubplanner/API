@@ -69,7 +69,7 @@ state | *string* | Booking State (see Below) | NO | YES
 allDay | *boolean* | If created in day view or not | NO | NO
 start | *string* | booking start date (for hourly creation pass in hours, see below) | *YES* | YES
 end | *string* | booking end date (for hourly creation pass in hours, see below) | *YES* | YES
-stateValue | *integer* | booking state value (depends on booking state) - will be 0 unless set | NO | YES
+stateValue | *number* | booking state value (depends on booking state) - will be 0 unless set | NO | YES
 resource | *string* | Resource ID | *YES* | NO
 project | *string* | Project ID | *YES* | NO
 note | *string* | Booking Note | NO | NO
