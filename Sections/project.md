@@ -134,6 +134,7 @@ metadata | *string* | Custom Field (255 Characters) | NO | YES
 customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO, but if you use them check Custom Fields section to see how to use them | NO
 timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO | NO
 projectRate | *object* | Reference to billing rates in project | NO | NO
+budgetCategories | *object array* | Budget Categories | NO | NO
 
 ##### Custom Fields
 
@@ -377,6 +378,23 @@ Sample below shows how to set budget for 200 hours and 8000 USD. All other value
             }
         },
 ```
+
+##### Budget Categories
+
+The recommended way to set budget for the project is by using `budgetCategories` field. Project properties `budgetHours` and `budgetCashAmount` will handle summarised values from array objects. Project property `budgetCurrency` will have 1st array object value. The `budgetCategories` is structured as follows:
+
+```
+"budgetCategories": [
+    {
+        "budgetHours": 10,
+        "budgetCashAmount": 100,
+        "budgetCurrency": "USD",
+        "categoryId": "63cfa1f6734f69b404b65b66"
+    }
+]
+```
+
+One `budgetCategories` array object is available without any extension. More `budgetCategories` are available in `Booking Category Groups` extension.
 
 ## Search Projects
 ```
