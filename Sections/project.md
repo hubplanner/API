@@ -134,6 +134,7 @@ metadata | *string* | Custom Field (255 Characters) | NO | YES
 customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO, but if you use them check Custom Fields section to see how to use them | NO
 timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO | NO
 projectRate | *object* | Reference to billing rates in project | NO | NO
+fixedCosts | *object array* | Fixed Costs | NO | NO
 
 ##### Custom Fields
 
@@ -377,6 +378,26 @@ Sample below shows how to set budget for 200 hours and 8000 USD. All other value
             }
         },
 ```
+
+##### Fixed costs
+
+The `fixedCosts` is structured as follows:
+
+```
+"fixedCosts": [
+    {
+        "scheduled": 100,
+        "actual": 10,
+        "budgetCurrency": "USD",
+        "deductFromProjectBudget": false,
+        "costCategoryId": "63cfa1f6734f69b404b65b66"
+    }
+]
+```
+
+Property `deductFromProjectBudget` has impact on budget calculations in Reports.
+
+`fixedCosts` is available in `Fixed Costs` extension.
 
 ## Search Projects
 ```
