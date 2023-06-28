@@ -89,4 +89,4 @@ DELETE /costCategories/12345678
 ```
 Will delete cost category with the id `12345678`
 
-A successful delete will return a `200` Ok response status from the server.
+A successful delete will return a `204` Ok response status from the server.
