@@ -388,7 +388,7 @@ The `fixedCosts` is structured as follows:
     {
         "scheduled": 100,
         "actual": 10,
-        "budgetCurrency": "USD",
+        "currency": "USD",
         "deductFromProjectBudget": false,
         "costCategoryId": "63cfa1f6734f69b404b65b66"
     }
