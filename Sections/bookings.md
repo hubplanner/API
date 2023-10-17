@@ -254,6 +254,19 @@ The server will return the full booking object once created including the newly 
 
 A successful create will return a `201` Ok response status from the server.
 
+#### Overschedule
+
+If you have set in account customization settings a `Display Warning` option, you can see an error, if a user tries to over schedule booking. You can allow to proceed with the over schedule, repeating request, adding `allowOverschedule` property, for example:
+
+```
+
+{
+    (...),
+    "allowOverschedule": true
+}
+
+```
+
 ## Update a booking or booking request
 Update an existing booking.
 ```
@@ -271,6 +284,19 @@ PATCH /booking/123456789
 will patch the booking with the id 123456789. Unlike PUT, you don't have to pass in the entire booking object, only the properties that you want to modify.
 
 A successful update will return a `200` Ok response status from the server and updated booking.
+
+#### Overschedule
+
+If you have set in account customization settings a `Display Warning` option, you can see an error, if a user tries to over schedule booking. You can allow to proceed with the over schedule, repeating request, adding `allowOverschedule` property, for example:
+
+```
+
+{
+    (...),
+    "allowOverschedule": true
+}
+
+```
 
 ## Patch a booking request to change Booking Type
 Patch an existing booking request you need to make sure you have the resource request extension installed.
@@ -293,6 +319,19 @@ You only need to pass in a type `APPROVED` or `REJECTED` and `approvedOrRejected
 You can also add in `approvalInfo` object an optional properties like `approvedOrRejectedDate` (it will be filled it automatic, if missing), `approverNote` or `requesterNote` data.
 
 A successful update will return a `200` Ok response status from the server and updated booking.
+
+#### Overschedule
+
+If you have set in account customization settings a `Display Warning` option, you can see an error, if a user tries to over schedule booking. You can allow to proceed with the over schedule, repeating request, adding `allowOverschedule` property, for example:
+
+```
+
+{
+    (...),
+    "allowOverschedule": true
+}
+
+```
 
 ## Delete a booking or booking request
 Use the following command to delete a specific booking by `id`.

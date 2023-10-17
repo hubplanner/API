@@ -66,7 +66,7 @@ Hub Planner API is a RESTful API that uses HTTP requests and returns JSON for al
 All URLs start with the root URL: 
 
 ```
-https://api.hubplanner.com/v1/
+https://api.hubplanner.com/v1
 ```
 Content-Type and Accept must be defined in the header of all requests. 
 
