@@ -135,6 +135,7 @@ customFields | *object array* | Custom Fields, read Custom Fields section to see
 timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO | NO
 projectRate | *object* | Reference to billing rates in project | NO | NO
 budgetCategories | *object array* | Budget Categories | NO | NO
+fixedCosts | *object array* | Fixed Costs | NO | NO
 
 ##### Custom Fields
 
@@ -395,6 +396,26 @@ The recommended way to set budget for the project is by using `budgetCategories`
 ```
 
 One `budgetCategories` array object is available without any extension. More `budgetCategories` are available in `Booking Category Groups` extension.
+
+##### Fixed costs
+
+The `fixedCosts` is structured as follows:
+
+```
+"fixedCosts": [
+    {
+        "scheduled": 100,
+        "actual": 10,
+        "currency": "USD",
+        "deductFromProjectBudget": false,
+        "costCategoryId": "63cfa1f6734f69b404b65b66"
+    }
+]
+```
+
+Property `deductFromProjectBudget` has impact on budget calculations in Reports.
+
+`fixedCosts` is available in `Fixed Costs` extension.
 
 ## Search Projects
 ```
