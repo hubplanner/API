@@ -19,6 +19,8 @@ GET /booking?page=0&limit=20
         "scale": "SCALE_DAY",
         "start": "2018-06-07T09:00",
         "end": "2018-06-09T18:00",
+        "deadlineName": "Presentation day",
+        "deadlineDate": "2018-06-10T00:00:00.000Z",
         "categoryTemplateId": "5aa0f2414a576d0c11112222",
         "categoryName": "General",
         "bookingCreatorId": "5aa0f2414a576d0c11112222",
@@ -69,6 +71,8 @@ state | *string* | Booking State (see Below) | NO | YES
 allDay | *boolean* | If created in day view or not | NO | NO
 start | *string* | booking start date (for hourly creation pass in hours, see below) | *YES* | YES
 end | *string* | booking end date (for hourly creation pass in hours, see below) | *YES* | YES
+deadlineName | *string* | name of a deadline displayed on scheduler | NO | NO
+deadlineDate | *string* | date of a deadline | NO | NO
 stateValue | *number* | booking state value (depends on booking state) - will be 0 unless set | NO | YES
 resource | *string* | Resource ID | *YES* | NO
 project | *string* | Project ID | *YES* | NO
