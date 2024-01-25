@@ -145,3 +145,27 @@ Content-Type: application/json
 }
 ```
 A successful update will return a `200` Ok response status from the server, and an updated ResourceGroup.
+
+Or use a dedicated endpoint to add approver to multiple groups
+```
+PUT resourcegroup/addApproverToGroups/:resourceId
+Accept: application/json
+Content-Type: application/json
+
+{
+	groupIds: ["654654365436543634","654365436543654365436"]
+}
+```
+A successful call will return a `200` Ok response status
+
+## Remove approver from a ResourceGroup
+```
+PUT resourcegroup/removeApproverFromGroups/:resourceId
+Accept: application/json
+Content-Type: application/json
+
+{
+	groupIds: ["654654365436543634","654365436543654365436"]
+}
+```
+A successful call will return a `200` Ok response status
