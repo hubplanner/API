@@ -173,18 +173,21 @@ $nin | not included
 $in | included
 $lt | less than
 $lte | less than or equal
-$gte | greater than
+$gte | greater than or equal
+$gt | greater than
 
 ### Searchable Properties
 Property | Parameters | Description
---- | --- | ---
+--- |---------------| ---
 _id | $nin, $in | booking id
 metadata | $nin, $in | custom meta data field
 start | $lt, $lte, $gte | start date range
 end | $lt, $lte, $gte | end date range
-updatedDate | $lt, $lte, $gte | updated date range
+updatedDate | $lt, $lte, $gte, $gt | updated date range
 resources | $nin, $in | resource id
 project | $nin, $in | project id
+deleted | true | get only deleted bookings
+deletedDate | $lt, $lte, $gte, $gt | deleted date range
 
 A successful search will return a `200` Ok response status from the server.
 
