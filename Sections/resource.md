@@ -282,6 +282,7 @@ Property | Parameters
 --- | --- | ---
 $nin | not included
 $in | included
+$like | includes (also partial) string
 
 ### Searchable Properties
 Property | Parameters | Description
@@ -293,6 +294,53 @@ lastName | $nin, $in | resource last name
 status | $nin, $in | resource status
 role | $nin, $in | resource role
 email | $nin, $in | resource email
+customFieldsTemplateId | $nin, $in | custom fields template id
+customFieldsTemplateLabel | $nin, $in, $like | custom fields template label
+customFieldsTemplateType | $nin, $in | custom fields template type
+customFieldsValue | $nin, $in, $like | custom fields value
+
+A successful search will return a `200` Ok response status from the server.
+
+## Search Custom Fields
+```
+POST project/customField/template/search
+```
+If you only want a certain type of custom fields such as `CHECKBOX`.
+```
+{"type" : "CHECKBOX" }
+```
+will return all custom fields which are NOT `CHECKBOX`
+```
+{"type" : {"$nin": ["CHECKBOX"] } }
+```
+will return all custom fields which are `CHECKBOX` and `TEXT`
+```
+{"type" : {"$in": ["CHECKBOX", "TEXT"] } }
+```
+will return all custom fields which includes `Policy` in label
+```
+{"label" : {"$like": "Policy" } }
+```
+will return all required custom fields
+```
+{"isRequired" : true }
+```
+
+### Custom Fields Search Parameters
+Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
+
+Property | Parameters
+--- | --- | ---
+$nin | not included
+$in | included
+$like | includes (also partial) string
+
+### Searchable Properties
+Property | Parameters | Description
+--- |------------------| ---
+label | $nin, $in, $like | custom fields template label
+type | $nin, $in | custom fields template type
+isRequired | - | is required flag
 
 A successful search will return a `200` Ok response status from the server.
 
