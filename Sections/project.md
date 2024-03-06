@@ -445,18 +445,66 @@ $in | included
 $lt | less than
 $lte | less than or equal
 $gte | greater than
+$like | includes (also partial) string
 
 ### Searchable Properties
 Property | Parameters | Description
---- | --- | ---
+--- |--------------| ---
 _id | $nin, $in | project id
 metadata | $nin, $in | custom meta data field
 name | $nin, $in | project name
 projectCode | $nin, $in | project code
 status | $nin, $in | project status
 resources | $nin, $in | project resource id
-start |$lt, $lte, $gte | project start
+start | $lt, $lte, $gte | project start
 end | $lt, $lte, $gte | project end
+customFieldsTemplateId | $nin, $in | custom fields template id
+customFieldsTemplateLabel | $nin, $in, $like | custom fields template label
+customFieldsTemplateType | $nin, $in | custom fields template type
+customFieldsValue | $nin, $in, $like | custom fields value
+
+A successful search will return a `200` Ok response status from the server.
+
+## Search Custom Fields
+```
+POST project/customField/template/search
+```
+If you only want a certain type of custom fields such as `CHECKBOX`.
+```
+{"type" : "CHECKBOX" }
+```
+will return all custom fields which are NOT `CHECKBOX`
+```
+{"type" : {"$nin": ["CHECKBOX"] } }
+```
+will return all custom fields which are `CHECKBOX` and `TEXT`
+```
+{"type" : {"$in": ["CHECKBOX", "TEXT"] } }
+```
+will return all custom fields which includes `Policy` in label 
+```
+{"label" : {"$like": "Policy" } }
+```
+will return all required custom fields
+```
+{"isRequired" : true }
+```
+
+### Custom Fields Search Parameters
+Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
+
+Property | Parameters
+--- | --- | ---
+$nin | not included
+$in | included
+$like | includes (also partial) string
+
+### Searchable Properties
+Property | Parameters       | Description
+--- |------------------| ---
+label | $nin, $in, $like | custom fields template label
+type | $nin, $in | custom fields template type
+isRequired | - | is required flag
 
 A successful search will return a `200` Ok response status from the server.
 
