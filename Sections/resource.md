@@ -279,7 +279,7 @@ will return all resources which are `STATUS_ACTIVE` and `STATUS_ARCHIVED`
 Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
 
 Property | Parameters
---- | --- | ---
+--- | ---
 $nin | not included
 $in | included
 $like | includes (also partial) string
@@ -330,7 +330,7 @@ will return all required custom fields
 Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
 
 Property | Parameters
---- | --- | ---
+--- | ---
 $nin | not included
 $in | included
 $like | includes (also partial) string

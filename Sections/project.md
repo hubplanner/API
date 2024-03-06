@@ -439,7 +439,7 @@ will return all projects which are `STATUS_ACTIVE` and `STATUS_FLOATING`
 Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
 
 Property | Parameters
---- | --- | ---
+--- | ---
 $nin | not included
 $in | included
 $lt | less than
@@ -494,13 +494,13 @@ will return all required custom fields
 Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
 
 Property | Parameters
---- | --- | ---
+--- | ---
 $nin | not included
 $in | included
 $like | includes (also partial) string
 
 ### Searchable Properties
-Property | Parameters       | Description
+Property | Parameters | Description
 --- |------------------| ---
 label | $nin, $in, $like | custom fields template label
 type | $nin, $in | custom fields template type
