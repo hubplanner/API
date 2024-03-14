@@ -462,6 +462,7 @@ customFieldsTemplateId | $nin, $in | custom fields template id
 customFieldsTemplateLabel | $nin, $in, $like | custom fields template label
 customFieldsTemplateType | $nin, $in | custom fields template type
 customFieldsValue | $nin, $in, $like | custom fields value
+customFieldsChoiceId | $nin, $in | custom fields template choice id
 
 A successful search will return a `200` Ok response status from the server.
 
@@ -505,6 +506,7 @@ Property | Parameters | Description
 label | $nin, $in, $like | custom fields template label
 type | $nin, $in | custom fields template type
 isRequired | - | is required flag
+choiceId | $nin, $in | custom fields template choice id
 
 A successful search will return a `200` Ok response status from the server.
 
