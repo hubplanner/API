@@ -27,13 +27,54 @@ Returns the list of Clients, e.g.:
 ```
 The following is a description of the properties in the response.
 
-Property | Type | Description | Required | Sortable
---- | --- | --- | --- | ---
-_id | *string* | id of the Client | NO | NO
-name | *string* | Client name | YES | YES
-createdDate | *string* | Created Date | NO | YES
-updatedDate | *string* | Updated Date | NO | YES
-deleted | *boolean* | Deleted Date | NO | NO
+Property | Type | Description      | Required | Sortable
+--- | --- |------------------|----------| ---
+_id | *string* | id of the Client | NO       | NO
+name | *string* | Client name      | YES      | YES
+metadata | *string* | Client metadata  | NO       | NO
+createdDate | *string* | Created Date     | NO       | YES
+updatedDate | *string* | Updated Date     | NO       | YES
+deleted | *boolean* | Deleted Date     | NO       | NO
+
+## Search Clients
+```
+POST client/search
+```
+If you only want a client with certain name as `customer1`.
+
+```
+{"name" : "customer1" }
+```
+will return all clients which are NOT `customer2`
+```
+{"name" : {"$nin": ["customer2"] } }
+```
+will return all clients which have `112233` and `1d39e0` values in metadata
+```
+{"metadata" : {"$in": ["112233", "11d39e0"] } }
+```
+will return all clients which have partially `11` in value in metadata
+```
+{"metadata" : {"$like": "11" } }
+```
+
+### Search Parameters
+Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
+
+Property | Parameters
+--- | ---
+$nin | not included
+$in | included
+$like | includes (also partial) string
+
+### Searchable Properties
+Property | Parameters       | Description
+--- |------------------| ---
+metadata | $nin, $in, $like | custom meta data field
+name | $nin, $in, $like      | project name
+
+A successful search will return a `200` Ok response status from the server.
+
 ## Create a new Client
 ```
 POST /client
