@@ -9,19 +9,15 @@ Returns the list of Clients, e.g.:
     {
         "_id": "59c9fa822eb949496346ed85",
         "name": "customer2",
-        "company": "59c9f8b531cd6d49506f84b0",
-        "__v": 0,
-        "updatedDate": "2017-09-26T07:00:30.083Z",
+        "metadata": null,
         "createdDate": "2017-09-26T06:58:10.528Z",
-        "deleted": false
+        "updatedDate": "2017-09-26T07:00:30.083Z"
     },
     {
         "_id": "59cb3a0c242639540481a196",
         "name": "customer1",
-        "company": "59c9f8b531cd6d49506f84b0",
-        "__v": 0,
-        "createdDate": "2017-09-27T05:41:32.059Z",
-        "deleted": false
+        "metadata": "very important customer",
+        "createdDate": "2017-09-27T05:41:32.059Z"
     }
 ]
 ```
@@ -86,12 +82,10 @@ An example of a Client
 The server will return the full client object once created including the newly created project ID `_id`
 ```
 {
-    "__v": 0,
-    "name": "sample_client",
-    "company": "59cb8941996b735a1d018af3",
     "_id": "59cb91f41900f95ce6961d24",
-    "createdDate": "2017-09-27T11:56:36.901Z",
-    "deleted": false
+    "name": "sample_client",
+    "metadata": null,    
+    "createdDate": "2017-09-27T11:56:36.901Z"
 }
 ```
 ## Update an existing Client
@@ -119,11 +113,3 @@ GET /client/123456789012
 Will return project with the id `123456789012`
 
 The server should return the full Client object and a `200` Ok response status.
-{
-    "_id": "59cb91f41900f95ce6961d24",
-    "name": "sample_client",
-    "company": "59cb8941996b735a1d018af3",
-    "__v": 0,
-    "createdDate": "2017-09-27T11:56:36.901Z",
-    "deleted": false
-}
