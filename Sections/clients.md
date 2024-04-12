@@ -67,7 +67,7 @@ $like | includes (also partial) string
 Property | Parameters       | Description
 --- |------------------| ---
 metadata | $nin, $in, $like | custom meta data field
-name | $nin, $in, $like      | project name
+name | $nin, $in, $like      | client name
 
 A successful search will return a `200` Ok response status from the server.
 
@@ -79,7 +79,7 @@ An example of a Client
 ```
 {"name": "sample_client"}
 ```
-The server will return the full client object once created including the newly created project ID `_id`
+The server will return the full client object once created including the newly created client ID `_id`
 ```
 {
     "_id": "59cb91f41900f95ce6961d24",
@@ -110,6 +110,6 @@ Use the following command to get a specific Client by `id`.
 ```
 GET /client/123456789012
 ```
-Will return project with the id `123456789012`
+Will return Client with the id `123456789012`
 
 The server should return the full Client object and a `200` Ok response status.
