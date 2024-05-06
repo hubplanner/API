@@ -29,7 +29,8 @@ POST {{API_URL}}/categories/search
 The body can be as follows:
 ```
 {
-	"type": "NON_OPTIONAL"
+	"type": "NON_OPTIONAL",
+	"name": { "$like": "Video" }
 }
 ```
 Use the following command to search booking categories, it allows to get more complex results.
@@ -41,15 +42,16 @@ Parameters | Description
 --- | ---
 $in | values included in array
 $nin | values excluded from array
+$like | includes (also partial) string
 
 ### Searchable Properties
-Property | Parameters | Type
---- | --- | ---
-_id | $in, $nin | *ID*
-name | $in, $nin | *string*
-type | $in, $nin | *string*
-gridColor | $in, $nin | *string*
-group | | *ID*
+Property | Parameters  | Type
+--- |-------------| ---
+_id | $in, $nin   | *ID*
+name | $in, $nin, $like | *string*
+type | $in, $nin   | *string*
+gridColor | $in, $nin   | *string*
+group |             | *ID*
 
 To get categories from other groups than default, there is extension **"Booking Category Groups"** required.
 
