@@ -129,6 +129,13 @@ To retrieve deleted bookings use query parameter *deleted*
 GET booking?deleted=true
 ```
 
+### Retrieving booking dependencies 
+
+To retrieve booking dependencies use query parameter *dependencies*
+```
+GET booking?dependencies=true
+```
+Response will contain two additional fields `parentIds` and `childIds`.
 
 ## Search Bookings
 Search allows to get more complex results.
@@ -190,6 +197,14 @@ deleted | true | get only deleted bookings
 deletedDate | $lt, $lte, $gte, $gt | deleted date range
 
 A successful search will return a `200` Ok response status from the server.
+
+### Retrieving booking dependencies
+
+To retrieve booking dependencies use query parameter *dependencies*
+```
+POST booking/search?dependencies=true
+```
+Response will contain two additional fields `parentIds` and `childIds`.
 
 ## Get Specific Booking
 Use the following command to get a specific booking by `id`.
