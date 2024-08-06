@@ -85,6 +85,17 @@ customFields | *string* | All resource custom fields | NO | NO
 bookingCreatorId | *string* | Id of booking creator | NO | NO
 bookingRate | *object* | References booking rates | NO | NO
 lastUpdatedById | *string* | id of resource who last updated the booking | NO | NO
+repeat | *boolean* | Is booking repeating | NO | NO
+interval | *string* | Interval of the repeating booking | NO | NO
+repeatEveryTime | *number* | Repeat every x amount of intervals | NO | NO
+repeatEndsOnDate | *string* | Date of last repeating booking | NO | NO
+repeatEndsAfterTimes | *string* | Max number of repeating bookings | NO | NO
+repeatEveryInterval | *string* | Interval of the repeating booking | NO | NO
+repeatOn | *string* | See [here](#repeating-booking) | NO | NO
+repeatOnWeekdays | *object* | See [here](#repeating-booking) | NO | NO
+repeatOnDates | *array* | See [here](#repeating-booking) | NO | NO
+repeatOnCustom1 | *string* | See [here](#repeating-booking) | NO | NO
+repeatOnCustom2 | *string* | See [here](#repeating-booking) | NO | NO
 
 The following table shows the different types of booking states that can be returned and their implication on which property they use for the booking time. 
 
@@ -353,6 +364,42 @@ If you have set in account customization settings a `Display Warning` option, yo
     "allowOverschedule": true
 }
 
+```
+
+## Repeating booking
+Create/Update repeating booking.
+
+Example (create booking that repeats for 4 consecutive weeks):
+```
+{
+    "resource": "6672cb5e6d70d30ed4a30636",
+    "start": "2024-08-06",
+    "end": "2024-08-06",
+    "project": "6672cb5e6d70d30ed4a30693",
+    "repeat": true,
+    "interval": "WEEKLY",
+    "repeatEndsAfterTimes": 4
+}
+```
+
+```
+// FOR repeatEveryInterval: WEEK
+repeatOnWeekdays: {
+    monday: <boolean>,
+    tuesday: <boolean>,
+    wednesday: <boolean>,
+    thursday: <boolean>,
+    friday: <boolean>,
+    saturday: <boolean>,
+    sunday: <boolean>,
+}
+
+// FOR repeatEveryInterval: MONTH, YEAR
+repeatOnDates: <number[]>, // day of month/year to repeat on
+
+// FOR repeatEveryInterval: MONTH, YEAR
+repeatOnCustom1: <string>, // possible values: ['FIRST', 'SECOND', 'THIRD', 'FOURTH', 'FIFTH', 'LAST']
+repeatOnCustom2: <string>, // possible values: ['MONDAY', 'TUESDAY', 'WEDNESDAY', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY', 'DAY', 'WEEKDAY', 'WEEKEND_DAY']
 ```
 
 ## Delete a booking or booking request
