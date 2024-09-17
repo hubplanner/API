@@ -34,6 +34,7 @@ The following [Sections](https://github.com/hubplanner/API/tree/master/Sections)
 * [Resource tag](https://github.com/hubplanner/API/blob/master/Sections/resource-tag.md)
 * [Booking Categories](https://github.com/hubplanner/API/blob/master/Sections/booking-categories.md)
 * [Project Cost Categories](https://github.com/hubplanner/API/blob/master/Sections/project-cost-categories.md)
+* [Custom Fields](https://github.com/hubplanner/API/blob/master/Sections/custom-fields.md)
 
 You can use the API to integrate Hub Planner with your own third party applications or generally integrate with your existing back-office setup.
 
