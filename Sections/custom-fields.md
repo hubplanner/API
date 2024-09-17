@@ -1,4 +1,5 @@
 # Custom Fields
+The custom fields API allows you to create custom field templates with the following endPoints. 
 
 ### Properties
 Property | Type | Description
