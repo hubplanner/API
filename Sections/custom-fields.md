@@ -3,12 +3,12 @@
 ### Properties
 Property | Type | Description
 --- | --- | ---
-filterGrid | *boolean* | Make CF Searchable in Filter
-label | *string* | Name of custom field, set by company admin
-instructions | *string* | Instructions how to use custom field, set by company admin
-defaultValue | *string* | Default value, if any. Used only by fields without choices
+filterGrid | *boolean* | Make the custom field searchable in the scheduler. 
+label | *string* | Name of the custom field.
+instructions | *string* | Instructions how to use custom field.
+defaultValue | *string* | Default value, if there should be any for field type. Used only by fields without choices
 defaultRadioId | *string* | Id of default value for radio button
-placeholderText | *string* | Placeholder text for frontend forms
+placeholderText | *string* | Placeholder text for input fields.
 choices | *objects* | Array of choices selectable by users
 canResourceEdit | *boolean* | Whenever regular resources can edit this field
 type | *enum* | Type of field, one of TEXT, TEXTAREA, EMAIL, DATE, COLOR, NUMBER, CHECKBOX, SELECT, RADIO
