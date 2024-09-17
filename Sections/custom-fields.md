@@ -31,6 +31,49 @@ Property | Type | Description
 --- | --- | ---
 value | *string* | Choice value
 
+## Example payloads
+`POST /resource/customField/template`
+
+### Text
+```
+{
+  "type": "TEXT",
+  "label": "Field Name",
+  "instructions": "Enter the value",
+  "placeholderText": "",
+  "status": "ACTIVE",
+  "allowMultipleValues": false,
+  "isRequired": false,
+  "canResourceEdit": false,
+  "characterLimit": "",
+  "isChoicesSortedAlphabetically": true
+}
+```
+
+### Dropdown
+```
+{
+  "type": "select",
+  "label": "Field Name",
+  "instructions": "Select the value",
+  "placeholderText": "Field Placeholder",
+  "defaultValue": "",
+  "status": "ACTIVE",
+  "choices": [
+    {
+      "value": "a"
+    },
+    {
+      "value": "b"
+    }
+  ],
+  "allowMultipleValues": "false",
+  "isRequired": "true",
+  "canResourceEdit": "true",
+  "isChoicesSortedAlphabetically" : "true"
+}
+```
+
 ## Resource
 
 ### Search
