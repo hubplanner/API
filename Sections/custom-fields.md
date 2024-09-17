@@ -24,17 +24,53 @@ weekStartOn | *number* | Number of day week starts on, starting with 0 as Sunday
 
 There are two different templates for custom fields, one that has a single property (string) value and one that allows for multiple linkable values stored in [choices](#Choices) array. The templateType property will dictate which template is being used.
 
-### Choices
+## Choices
 
-Items in choices array have following properties:
+Items in choices array have the following properties:
 Property | Type | Description
 --- | --- | ---
 value | *string* | Choice value
 
-## Example payloads
+# Endpoints
+
+## Search
+Search for custom field templates
+
+### Resource
+```
+POST /resource/customField/template/search
+```
+### Project
+```
+POST /project/customField/template/search
+```
+
+## Get
+### Resource
+```
+GET /resource/customField/template
+GET /resource/customField/template/:id
+```
+### Project
+```
+GET /project/customField/template
+GET /project/customField/template/:id
+```
+
+## Create
+### Resource
+```
+POST /resource/customField/template
+```
+### Project
+```
+POST /project/customField/template
+```
+
+### Example payloads
 `POST /resource/customField/template`
 
-### Text
+#### Text
 ```
 {
   "type": "TEXT",
@@ -50,7 +86,7 @@ value | *string* | Choice value
 }
 ```
 
-### Dropdown
+#### Dropdown
 ```
 {
   "type": "select",
@@ -74,59 +110,22 @@ value | *string* | Choice value
 }
 ```
 
-## Resource
-
-### Search
-```
-POST /resource/customField/template/search
-```
-
-### Get
-```
-GET /resource/customField/template
-GET /resource/customField/template/:id
-```
-
-### Create
-```
-POST /resource/customField/template
-```
-
-### Update
+## Update
+### Resource
 ```
 PUT /resource/customField/template/:id
 ```
-
-### Delete
-```
-DELETE /resource/customField/template/:id
-```
-
-
-## Project
-
-### Search
-```
-POST /project/customField/template/search
-```
-
-### Get
-```
-GET /project/customField/template
-GET /project/customField/template/:id
-```
-
-### Create
-```
-POST /project/customField/template
-```
-
-### Update
+### Project
 ```
 PUT /project/customField/template/:id
 ```
 
-### Delete
+## Delete
+### Resource
+```
+DELETE /resource/customField/template/:id
+```
+### Project
 ```
 DELETE /project/customField/template/:id
 ```
