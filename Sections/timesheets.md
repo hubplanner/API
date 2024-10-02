@@ -139,3 +139,19 @@ DELETE /timeentry/12345678
 Will delete TimeEntry with the id `12345678`
 
 A successful delete will return a `200` Ok response status from the server.
+
+## Delete multiple TimeEntries
+Use the following command to delete multiple TimeEntries by `id`.
+```
+DELETE /timeentry
+```
+Provide the array of ids in the request body. An example:
+```
+[
+    "5ae1d7a2d61e560c4916aaaa",
+    "5ae1d7a2d61e560c4926bbbb",
+    "5ae1d7a2d61e560c4936cccc"
+]
+```
+
+A successful delete will return a `204` Ok response status from the server.
