@@ -2,11 +2,11 @@
 
 FEATURES:
 
-* Allow to delete multiple time entries [[timesheets](https://github.com/hubplanner/API/blob/master/Sections/timesheets.md#delete-multiple-timeentries)]
+* Allow deletion of multiple time entries [[timesheets](https://github.com/hubplanner/API/blob/master/Sections/timesheets.md#delete-multiple-timeentries)]
 
 IMPROVEMENTS:
 
-* Allow to delete locked time entries [[timesheets](https://github.com/hubplanner/API/blob/master/Sections/timesheets.md#delete-a-timeentry)]
+* Allow deletion of locked time entries [[timesheets](https://github.com/hubplanner/API/blob/master/Sections/timesheets.md#delete-a-timeentry)]
 
 ## September 25, 2024
 
