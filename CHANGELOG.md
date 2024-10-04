@@ -1,3 +1,9 @@
+## October 04, 2024
+
+IMPROVEMENTS:
+
+* Update Projects documentation about clients and tags [[project](https://github.com/hubplanner/API/blob/master/Sections/project.md#get-all-projects)]
+
 ## October 02, 2024
 
 FEATURES:

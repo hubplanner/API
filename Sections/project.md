@@ -98,7 +98,14 @@ Server Response example below for 1 project returned within an array.
                 "id": "5ba09b645ff58f1477773333"
             }]
         }
-    }
+    },
+    "customers": [
+        {
+            "customerId": "65ca012029601f211c2864b0",
+            "name": "Test customer",
+            "_id": "66eaa4633010add921016fc7"
+        }
+    ]
 }]
 ```
 
@@ -118,6 +125,7 @@ includeBookedTimeReports | *boolean* | If to include booked time reports | NO | 
 includeBookedTimeGrid | *boolean* | If to include booked time grid | NO | NO
 projectManagers | *string array* | Project managers of project | NO | NO
 resources | *string array* | Resources in project | NO | NO
+tags | *object array* | Tags in project | NO | NO
 budget | *object* | An object containing budget properites. | NO, deprecated, use `projectRate` instead | NO
 companyBillingRateId | *string* | Id of selected billing rate for project | NO, deprecated, use `projectRate` instead | NO
 budgetHours | number | Amount of hours budgeted for this project. 0 means the budget in hours is disabled for this project. | NO | YES
@@ -136,6 +144,8 @@ timeEntryNoteRequired | *boolean* | Require Note on Time Entries | NO | NO
 projectRate | *object* | Reference to billing rates in project | NO | NO
 budgetCategories | *object array* | Budget Categories | NO | NO
 fixedCosts | *object array* | Fixed Costs | NO | NO
+tags | *object array* | Tags in project | NO | NO
+customers | *object array* | Project clients | NO | NO
 
 ##### Custom Fields
 
