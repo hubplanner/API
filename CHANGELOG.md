@@ -1,3 +1,9 @@
+## October 15, 2024
+
+IMPROVEMENTS:
+
+* Added 'timeEntry.update', 'timeEntry.create.update', 'timeEntry.delete' Webhooks [[webhooks](https://github.com/hubplanner/API/blob/master/Sections/webhooks.md#supported-events)]
+
 ## October 04, 2024
 
 IMPROVEMENTS:

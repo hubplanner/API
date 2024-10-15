@@ -32,6 +32,9 @@ project.update | Triggers when project is created or updated
 resource.update | Triggers when resource is created or updated
 booking.create | Triggers when booking is created 
 timeEntry.create | Triggers when time entry is created
+timeEntry.update | Triggers when time entry is updated
+timeEntry.create.update | Triggers when time entry is created or updated
+timeEntry.delete | Triggers when time entry is deleted
 booking.update | Triggers when booking is updated
 booking.delete | Triggers when booking is deleted
 booking.delete.multiple | Triggers when repeated booking is deleted
@@ -188,6 +191,48 @@ The following code examples show sample responses when subscribed to the differe
 {
     "event" : "timeEntry.create",
     "status" : "UNSUBMITTED",
+    "categoryName" : "General",
+    "minutes" : "180",
+    "date" : "2017-08-30T00:00",
+    "projectId" : "59a008a8ab3cad27e08a9374",
+    "timeEntryId" : "59a3ea783e1e8427b4547a6d"
+}
+```
+
+*timeEntry.update*
+
+```
+{
+    "event" : "timeEntry.update",
+    "status" : "SUBMITTED",
+    "categoryName" : "General",
+    "minutes" : "180",
+    "date" : "2017-08-30T00:00",
+    "projectId" : "59a008a8ab3cad27e08a9374",
+    "timeEntryId" : "59a3ea783e1e8427b4547a6d"
+}
+```
+
+*timeEntry.create.update*
+
+```
+{
+    "event" : "timeEntry.create.update",
+    "status" : "SUBMITTED",
+    "categoryName" : "General",
+    "minutes" : "180",
+    "date" : "2017-08-30T00:00",
+    "projectId" : "59a008a8ab3cad27e08a9374",
+    "timeEntryId" : "59a3ea783e1e8427b4547a6d"
+}
+```
+
+*timeEntry.delete*
+
+```
+{
+    "event" : "timeEntry.delete",
+    "status" : "SUBMITTED",
     "categoryName" : "General",
     "minutes" : "180",
     "date" : "2017-08-30T00:00",
