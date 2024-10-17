@@ -4,6 +4,10 @@ FEATURES:
 
 * Added endpoints to add Custom Field Templates Choices easier and faster [[custom-fields](https://github.com/hubplanner/API/blob/master/Sections/custom-fields.md#add-choices)]
 
+IMPROVEMENTS:
+
+* Update Custom Field Templates documentation [[custom-fields](https://github.com/hubplanner/API/blob/master/Sections/custom-fields.md)]
+
 ## October 15, 2024
 
 IMPROVEMENTS:

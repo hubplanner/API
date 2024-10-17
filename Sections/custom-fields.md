@@ -120,6 +120,78 @@ PUT /resource/customField/template/:id
 PUT /project/customField/template/:id
 ```
 
+### Example payloads
+`POST /resource/customField/template/669554d27dc15b5590a1b831`
+
+#### Text
+```
+{
+  "_id": "669554d27dc15b5590a1b831",
+  "type": "TEXT",
+  "label": "Updated Field Name",
+  "instructions": "Enter the value",
+  "placeholderText": "",
+  "status": "ACTIVE",
+  "allowMultipleValues": false,
+  "isRequired": true,
+  "canResourceEdit": false,
+  "characterLimit": "30",
+  "isChoicesSortedAlphabetically": true
+}
+```
+
+#### Dropdown
+```
+{
+  "type": "select",
+  "label": "Updated Field Name",
+  "instructions": "Select the value",
+  "placeholderText": "Field Placeholder",
+  "defaultValue": "",
+  "status": "ACTIVE",
+  "choices": [
+    {
+      "_id": "669554d27dc15b5590a1b831",
+      "value": "Updated a"
+    },
+    {
+      "value": "c"
+    },
+    {
+      "value": "d"
+    }
+  ],
+  "allowMultipleValues": "false",
+  "isRequired": "false",
+  "canResourceEdit": "true",
+  "isChoicesSortedAlphabetically" : "true"
+}
+```
+
+###### Modify custom field choices of SELECT, RADIO or CHECKBOX type.
+
+You can modify custom field choices, updating `choices` array and save whole custom field object making `Update` request.
+
+Actions:
+- add new choices to existing `choices` array
+```
+{
+  "value": "c"
+}
+```
+- update existing choices `value` property in array
+```
+{
+  "_id": "669554d27dc15b5590a1b831",
+  "value": "Updated a"
+}
+```
+- remove some choices from array
+
+*Making `Update` request, `choices` array must be always complete. Any modifications in this array will trigger listed actions on previously saved data.*
+
+There are also specific endpoints to simplify adding new choices process, described in [Add choices](https://github.com/hubplanner/API/blob/master/Sections/custom-fields.md#add-choices) section.
+
 ## Delete
 ### Resource
 ```
@@ -160,6 +232,6 @@ A successful request will return a `200` Ok response status from the server.
 
 ###### Other way to add (update and delete) choices
 
-You can add choices using `Update` functionality. Get custom field using `Search` or `Get`, add new custom fields to `choices` array and save whole custom field object making `Update` request.
+You can add choices using `Update` functionality. Get custom field using `Search` or `Get`, add new choices to `choices` array and save whole custom field object making `Update` request.
 
 Do the same, if you need to update or remove some choices. Just update or remove existing object from "choices" array and save whole custom field object making `Update` request.
