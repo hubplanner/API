@@ -143,6 +143,7 @@ PUT /project/customField/template/:id
 #### Dropdown
 ```
 {
+  "_id": "669554d27dc15b5590a1b83b",
   "type": "select",
   "label": "Updated Field Name",
   "instructions": "Select the value",
@@ -151,7 +152,7 @@ PUT /project/customField/template/:id
   "status": "ACTIVE",
   "choices": [
     {
-      "_id": "669554d27dc15b5590a1b831",
+      "_id": "6710c8991bb1818b0a409e0b",
       "value": "Updated a"
     },
     {
@@ -182,7 +183,7 @@ Actions:
 - update existing choices `value` property in array
 ```
 {
-  "_id": "669554d27dc15b5590a1b831",
+  "_id": "6710c8991bb1818b0a409e0b",
   "value": "Updated a"
 }
 ```
