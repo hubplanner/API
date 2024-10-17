@@ -129,3 +129,37 @@ DELETE /resource/customField/template/:id
 ```
 DELETE /project/customField/template/:id
 ```
+
+## Add choices
+Add choices to custom fields of SELECT, RADIO or CHECKBOX type.
+
+### Resource
+```
+POST /resource/customField/template/:id/addChoices
+```
+### Project
+```
+POST /project/customField/template/:id/addChoices
+```
+
+#### Example payload
+```
+[
+  {
+    "value": "new choice 1"
+  },
+  {
+    "value": "new choice 2"
+  }
+]
+```
+
+Will return complete custom field with all properties, containing new added choices.
+
+A successful request will return a `200` Ok response status from the server.
+
+###### Other way to add (update and delete) choices
+
+You can add choices using `Update` functionality. Get custom field using `Search` or `Get`, add new custom fields to `choices` array and save whole custom field object making `Update` request.
+
+Do the same, if you need to update or remove some choices. Just update or remove existing object from "choices" array and save whole custom field object making `Update` request.
