@@ -1,3 +1,9 @@
+## October 17, 2024
+
+FEATURES:
+
+* Added endpoints to add Custom Field Templates Choices easier and faster [[custom-fields](https://github.com/hubplanner/API/blob/master/Sections/custom-fields.md#add-choices)]
+
 ## October 15, 2024
 
 IMPROVEMENTS:
@@ -34,7 +40,7 @@ BUG FIXES:
 
 FEATURES:
 
-* Added customFieldTemplates endpoints [[custom-fields](https://github.com/hubplanner/API/blob/master/Sections/custom-fields.md)] 
+* Added Custom Field Templates endpoints [[custom-fields](https://github.com/hubplanner/API/blob/master/Sections/custom-fields.md)] 
 
 ## September 04, 2024
 
