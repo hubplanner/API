@@ -13,7 +13,8 @@ With the request body passed in JSON format.
 ```
 {
    "event":"project.update",
-   "target_url":"http://mycompany.com/webhooks_listener"
+   "target_url":"http://mycompany.com/webhooks_listener",
+   "authorization_token": "secret-token-123"
 }
 ```
 
