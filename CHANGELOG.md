@@ -1,3 +1,9 @@
+## October 25, 2024
+
+FEATURES:
+
+* Added secret authorization token to Webhooks [[webhooks](https://github.com/hubplanner/API/blob/master/Sections/webhooks.md#secret-authorization-token)]
+
 ## October 17, 2024
 
 FEATURES:

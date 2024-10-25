@@ -17,11 +17,11 @@ With the request body passed in JSON format.
 }
 ```
 
-Property | Type | Description | Required
---- | --- | --- | ---
-event | String (*check supported events for possible values*) | name of event for which you want to subscribe | YES
+Property | Type | Description                                         | Required
+--- | --- |-----------------------------------------------------| ---
+event | String (*check supported events for possible values*) | name of event for which you want to subscribe       | YES
 target_url | String | url of your endpoint to listen for subscribed event | YES
-
+authorization_token | String | secret authorization token to validate requests | NO
 
 ## Supported Events
 The following table outlines the supported events that you can subscribe to. 
@@ -50,12 +50,14 @@ An example response will look like below.
    "_id": "448847eea20e6d05bc53a49a",
    "companyId": "59841c04844e6738c8d45123",
    "creationDate": "2017-06-01T10:56:34.088Z",
-   "
-   
-   ": "http://mydomain.hubplanner.com/webhooks_listener",
+   "target_url": "http://mydomain.hubplanner.com/webhooks_listener",
    "event": "project.update",
+   "authorization_token": "secret-token-123"
 }
 ```
+
+## Secret authorization token
+Adding `authorization_token` as secret authorization token to validate requests, which is sent with the webhook request as `hubplanner-token` HTTP header. Your webhook endpoint can check the token to verify the request is legitimate.
 
 ## Responses when Subscribed to Webhooks
 The following code examples show sample responses when subscribed to the different webhooks. Note that `createdBy` and `updatedBy` fields in booking webhooks are deprecated fields and will be removed in the future. They are replaced by `bookingCreatorId` and `lastUpdatedById` fields accordingly.
