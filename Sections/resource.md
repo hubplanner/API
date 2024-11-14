@@ -377,6 +377,21 @@ A successful create will return a `201` Ok response status from the server.
 
 *IMPORTANT*: If any of Resource Custom Fields is set to mandatory, it will be validated only, if `customFields` property will be present in payload.
 
+### Automatically Invite User when Added
+
+`sendInviteEmail` property added to payload, will automatically invite User when added, sending invitation email. Example:
+
+```
+{
+    "firstName":"Paddy",
+    "lastName":"DMan",
+    "email":"unique@email.com",
+    "sendInviteEmail": true				   
+}
+```
+
+*IMPORTANT*: `email` property must be filled in with valid email, not used by other resource. 
+
 ## Create Multiple Resources
 Create multiple resources.
 ```

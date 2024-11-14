@@ -1,3 +1,9 @@
+## November 14, 2024
+
+FEATURES:
+
+* Added Automatically Invite User option to Resources [[resource](https://github.com/hubplanner/API/blob/master/Sections/resource.md#mautomatically-invite-user-when-added)]
+
 ## October 25, 2024
 
 FEATURES:
