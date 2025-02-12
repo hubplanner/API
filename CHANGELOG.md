@@ -1,3 +1,15 @@
+## February 12, 2025
+
+FEATURES:
+
+* Added option to update specific properties of account owner [[resource](https://github.com/hubplanner/API/blob/master/Sections/resource.md)]
+* Allowed properties
+  * firstName
+  * lastName
+  * customFields
+  * note
+  * metadata
+
 ## November 14, 2024
 
 FEATURES:
