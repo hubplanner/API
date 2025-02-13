@@ -12,6 +12,7 @@ Server Response example below for 1 project returned within an array.
 ```
 [{  _id: '53a168304cc0f1bb16a898ca',
     name: '788',
+    eventCode: "",
     createdDate: '',
     updatedDate: '',
     backgroundColor: '',
@@ -23,6 +24,7 @@ Property | Type | Description | Required | Sortable
 --- | --- | --- | --- | ---
 _id | *string* | id of the project | NO | NO
 name | *string* | Event name | *YES* | YES
+eventCode |*string* | Event Code (Unique) | NO | NO
 createdDate | *string* | Event Creation Date | NO | YES
 updatedDate | *string* | Event Updated Date | NO | YES
 backgroundColor | *string* | Event Color | NO | NO
@@ -36,6 +38,29 @@ Search by name
 ```
 {"name" : "Conference Day" }
 ```
+Search by eventCode
+```
+{"eventCode" : {"$in": ["C123", "C456"] } }
+```
+
+### Search Parameters
+Use paramters to narrow you search. For example use `$nin` for not included, and use `$in` for included.
+
+Property | Parameters
+--- | ---
+$nin | not included
+$in | included
+
+### Searchable Properties
+Property | Parameters | Description
+--- |--------------| ---
+_id |  | project id
+name | $nin, $in | project name
+eventCode | $nin, $in | project code
+resources |  | project resource id
+metadata | $nin, $in | custom meta data field
+
+A successful search will return a `200` Ok response status from the server.
 
 ## Get Specific Event
 Use the following command to get a specific event by `id`.

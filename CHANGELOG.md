@@ -1,3 +1,10 @@
+## February 13, 2025
+
+IMPROVEMENTS:
+
+* Allow to set 'eventCode' property in Events [[events](https://github.com/hubplanner/API/blob/master/Sections/events.md#add-events-to-resources)]
+* Allow to search by 'eventCode' property in Events [[events](https://github.com/hubplanner/API/blob/master/Sections/events.md#search-events)]
+
 ## February 12, 2025
 
 FEATURES:
