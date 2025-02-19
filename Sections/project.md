@@ -407,6 +407,8 @@ The recommended way to set budget for the project is by using `budgetCategories`
 
 One `budgetCategories` array object is available without any extension. More `budgetCategories` are available in `Booking Category Groups` extension.
 
+*IMPORTANT*: If `budgetCategories` property is present in payload, `budgetHours`, `budgetCashAmount`, `budgetCurrency` properties are calculated using `budgetCategories` data. Other way, payload `budgetHours`, `budgetCashAmount`, `budgetCurrency` are used.
+
 ##### Fixed costs
 
 The `fixedCosts` is structured as follows:
