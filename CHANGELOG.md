@@ -1,3 +1,9 @@
+## February 26, 2025
+
+IMPROVEMENTS:
+
+* Added 'durationMinutes' property to Webhooks [[webhooks](https://github.com/hubplanner/API/blob/master/Sections/webhooks.md)]
+
 ## February 13, 2025
 
 IMPROVEMENTS:

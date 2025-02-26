@@ -159,6 +159,7 @@ The following code examples show sample responses when subscribed to the differe
 {
     "event": "booking.create",
         "duration": "24 hrs",
+        "durationMinutes": "1440",
         "categoryName": "General",
         "end": {
             "day": "14th",
@@ -275,6 +276,7 @@ The following code examples show sample responses when subscribed to the differe
     },
     "categoryName":"General",
     "duration":"16 hrs",
+    "durationMinutes": "960",
     "event":"booking.update"
 }
 
@@ -313,6 +315,7 @@ The following code examples show sample responses when subscribed to the differe
     },
     "categoryName":"General",
     "duration":"16 hrs",
+    "durationMinutes": "960",
     "event":"booking.delete"
 }
 
@@ -350,6 +353,7 @@ The following code examples show sample responses when subscribed to the differe
         },
         "categoryName":"General",
         "duration":"16 hrs",
+        "durationMinutes": "960",
         "event":"booking.delete.multiple"
     },
     {
@@ -380,6 +384,7 @@ The following code examples show sample responses when subscribed to the differe
         },
         "categoryName":"General",
         "duration":"16 hrs",
+        "durationMinutes": "960",
         "event":"booking.delete.multiple"
     }
 ]
