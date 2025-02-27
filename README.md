@@ -56,6 +56,18 @@ We will be managing the API via GitHub, so please watch the Hub Planner API repo
 
 For security reasons we have a daily limit of 6000 API calls and burst limits of 50 per 5 seconds on every account. Please be careful to avoid these limits as otherwise you will get an error response from the API.
 
+API is returning daily rate limits informations in headers:
+```
+X-RateLimit-Limit
+X-RateLimit-Reset
+X-RateLimit-Remaining
+```
+
+If you will reach burst limit, it will display burst limit values instead and additional header:
+```
+Retry-After
+```
+
 ## Sharing
 
 If you've built something interesting with the Hub Planner API, made a wrapper for a certain code language or integrated with a third party software you would like to share or think will help others, then please let us know at hello@hubplanner.com
