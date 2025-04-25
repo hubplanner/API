@@ -1,3 +1,9 @@
+## April 25, 2025
+
+IMPROVEMENTS:
+
+* Set default calendar to a new resource [[resource](https://github.com/hubplanner/API/blob/master/Sections/resource.md#set-default-calendar-to-a-new-resource)]
+
 ## February 26, 2025
 
 IMPROVEMENTS:
