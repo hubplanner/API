@@ -51,28 +51,30 @@ Server Response example below for 1 resource returned within an array.
           "effectiveFrom": "2018-09-20 09:00",
           "effectiveTo": "2018-10-30 18:00"
       }]
-    }
+    },
+    "calendarIds": [],
 }]
 ```
 The following is a description of the properties in the response.
 
-Property | Type | Description | Required | Sortable
---- | --- | --- | --- | ---
-_id | *string* | id of the Resource | NO | NO
-email | *string* | Resource Email (Unique) | NO | YES
-metadata | *string* | Custom Field (255 Characters) | NO | YES
-createdDate | *string* | Resource Creation Date | NO | YES
-updatedDate | *string* | Resource Updated Date | NO | YES
-note | *string* | Resource Notes | NO | NO
-firstName | *string* | Resource First Name | *YES* | YES
-lastName | *string* | Resource Last Name | NO | YES
-status | *string* | Resource Status | NO | YES
-role | *string* | Resource Role | NO | YES
-links | *object* |Resource Links | NO | NO
-billing | *object* | Resource Billing Options | NO, deprecated, use `resourceRates` instead | NO
-useCustomAvailability | *boolean* | Using Default Availability | NO | NO
+Property | Type | Description                                                      | Required | Sortable
+--- | --- |------------------------------------------------------------------| --- | ---
+_id | *string* | id of the Resource                                               | NO | NO
+email | *string* | Resource Email (Unique)                                          | NO | YES
+metadata | *string* | Custom Field (255 Characters)                                    | NO | YES
+createdDate | *string* | Resource Creation Date                                           | NO | YES
+updatedDate | *string* | Resource Updated Date                                            | NO | YES
+note | *string* | Resource Notes                                                   | NO | NO
+firstName | *string* | Resource First Name                                              | *YES* | YES
+lastName | *string* | Resource Last Name                                               | NO | YES
+status | *string* | Resource Status                                                  | NO | YES
+role | *string* | Resource Role                                                    | NO | YES
+links | *object* | Resource Links                                                   | NO | NO
+billing | *object* | Resource Billing Options                                         | NO, deprecated, use `resourceRates` instead | NO
+useCustomAvailability | *boolean* | Using Default Availability                                       | NO | NO
 customFields | *object array* | Custom Fields, read Custom Fields section to see how to set them | NO | NO
-resourceRates | *object* | Reference to billing rates for the resource | NO | NO
+resourceRates | *object* | Reference to billing rates for the resource                      | NO | NO
+customFields | *object array* | Calandar IDs, read Calandars section to see how to set them | NO | NO
 
 ##### Custom Fields
 
@@ -256,6 +258,27 @@ default billing will be used for this resource.
 ```
 
 `useDefault` and `rate` fields will be automatically set to what is set in chosen billing rate. Note, that using the legacy approach is compatible with `resourceRates` and will create `external` part of it. You can read more on billing rate management under [billing rates](https://github.com/hubplanner/API/blob/master/Sections/billingrate.md).
+
+#### Add a calendar to a resource
+
+This feature is available only to customers that have purchaced the `Calendar and Holidays` extension.
+
+In order to assign a specific calendar to a resource, update a resource by passing additional 'calendarIds' field into a request payload.
+
+```
+{
+    calendarIds: [
+       "5ba09b645ff58f14555522dd",
+       "5ba09b645522235ff58f1455"
+    ]
+}
+```
+
+You can read more on manage calendars under [Public Holidays](https://api-docs.hubplanner.com/#3a1e3ae6-703e-48e8-9358-afa713d28c4f) section. 
+
+##### Set default calendar to a new resource
+
+If you won't pass `calendarIds` property into new resource creation request payload, system will set default calendar to a new resource.
 
 ## Search Resources
 ```
