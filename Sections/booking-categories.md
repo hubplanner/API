@@ -12,7 +12,9 @@ A response from the server would be as follows:
       "gridColor": "#81A489",
       "createdDate": "2020-07-08T07:44:09.929Z",
       "updatedDate": "2020-07-08T07:44:09.929Z",
-      "type": "CUSTOM"
+      "type": "CUSTOM",
+      "categoryGroupId": "66e81d231d512707a7266d32",
+      "categoryGroupName": "Default group"
   }
 ]
 ```
