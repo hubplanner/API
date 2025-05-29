@@ -2,7 +2,7 @@
 
 IMPROVEMENTS:
 
-* Add booking category group info to category response [[categories](https://github.com/hubplanner/API/blob/booking_categories_group_info/Sections/booking-categories.md#get-all-booking-categories)]
+* Add booking category group info to category response [[categories](https://github.com/hubplanner/API/blob/master/Sections/booking-categories.md#get-all-booking-categories)]
 
 ## April 25, 2025
 
