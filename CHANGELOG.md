@@ -1,3 +1,9 @@
+## July 08, 2025
+
+IMPROVEMENTS:
+
+* Unify 'timeEntry' Webhooks response data [[webhooks](https://github.com/hubplanner/API/blob/master/Sections/webhooks.md)]
+
 ## May 29, 2025
 
 IMPROVEMENTS:

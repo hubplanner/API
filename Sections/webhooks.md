@@ -195,11 +195,14 @@ The following code examples show sample responses when subscribed to the differe
 {
     "event" : "timeEntry.create",
     "status" : "UNSUBMITTED",
+    "categoryTemplateId": "6593f956d79fd7797ca4e978"
     "categoryName" : "General",
     "minutes" : "180",
-    "date" : "2017-08-30T00:00",
+    "date" : "2017-08-30",
     "projectId" : "59a008a8ab3cad27e08a9374",
-    "timeEntryId" : "59a3ea783e1e8427b4547a6d"
+    "resourceId": "6593f963d79fd7797ca4eb4b",
+    "timeEntryId" : "59a3ea783e1e8427b4547a6d",
+    "note": "lorem ipsum"
 }
 ```
 
@@ -209,11 +212,14 @@ The following code examples show sample responses when subscribed to the differe
 {
     "event" : "timeEntry.update",
     "status" : "SUBMITTED",
+    "categoryTemplateId": "6593f956d79fd7797ca4e978"
     "categoryName" : "General",
     "minutes" : "180",
-    "date" : "2017-08-30T00:00",
+    "date" : "2017-08-30",
     "projectId" : "59a008a8ab3cad27e08a9374",
-    "timeEntryId" : "59a3ea783e1e8427b4547a6d"
+    "resourceId": "6593f963d79fd7797ca4eb4b",
+    "timeEntryId" : "59a3ea783e1e8427b4547a6d",
+    "note": "lorem ipsum"
 }
 ```
 
@@ -223,11 +229,14 @@ The following code examples show sample responses when subscribed to the differe
 {
     "event" : "timeEntry.create.update",
     "status" : "SUBMITTED",
+    "categoryTemplateId": "6593f956d79fd7797ca4e978"
     "categoryName" : "General",
     "minutes" : "180",
-    "date" : "2017-08-30T00:00",
+    "date" : "2017-08-30",
     "projectId" : "59a008a8ab3cad27e08a9374",
-    "timeEntryId" : "59a3ea783e1e8427b4547a6d"
+    "resourceId": "6593f963d79fd7797ca4eb4b",
+    "timeEntryId" : "59a3ea783e1e8427b4547a6d",
+    "note": "lorem ipsum"
 }
 ```
 
@@ -237,11 +246,14 @@ The following code examples show sample responses when subscribed to the differe
 {
     "event" : "timeEntry.delete",
     "status" : "SUBMITTED",
+    "categoryTemplateId": "6593f956d79fd7797ca4e978"
     "categoryName" : "General",
     "minutes" : "180",
-    "date" : "2017-08-30T00:00",
+    "date" : "2017-08-30",
     "projectId" : "59a008a8ab3cad27e08a9374",
-    "timeEntryId" : "59a3ea783e1e8427b4547a6d"
+    "resourceId": "6593f963d79fd7797ca4eb4b",
+    "timeEntryId" : "59a3ea783e1e8427b4547a6d",
+    "note": "lorem ipsum"
 }
 ```
 
