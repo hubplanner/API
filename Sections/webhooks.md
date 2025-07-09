@@ -1,6 +1,12 @@
 # Webhooks
 You can use Hub Planners webhooks to tap into real time events that are triggered in the Hub Planner application and use those events in other third party softwares. A simple example of usage could be when a New Project is created in Hub Planner, you want to create that project in another service. You can apply this concept to the support events below. 
 
+## Get All Webhooks
+
+```
+GET /subscription
+```
+
 ## Creating a New Webhook
 
 To use the webhooks functionality you first need to subscribe to the choosen event. Below is a url and example of how to create such a subscription.
