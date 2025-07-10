@@ -61,7 +61,7 @@ creator |*string* | Resource ID of who created this entry (Read Only)           
 categoryTemplateId |*string* | Category Template ID                                                       | NO | NO
 categoryName |*string* | Category Template Name (Read Only)                                         | NO | YES
 
-_* EMPTY status is used to fill in weekdays without time entries data. If week contains at least one time entry data, the other days in that week, will be filled in with EMPTY status entries.
+_*EMPTY status is used to fill in weekdays without time entries data. If week contains at least one time entry data, the other days in that week, will be filled in with EMPTY status entries._
 
 ## Create a TimeEntry
 Create a new TimeEntry.
