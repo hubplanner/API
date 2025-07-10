@@ -414,11 +414,25 @@ A successful delete will return a `200` Ok response status from the server.
 ## Delete multiple bookings or booking request (Bulk)
 Use the following query to delete multiple bookings, either by booking IDs, projectId or resourceId.
 
-Delete multiple bookings by booking IDs:
+Delete multiple bookings by booking IDs.
+
+Provide the array of ids in the request body. An example:
+```
+[
+    "12340",
+    "12341",
+    "12342",
+    "12343",
+    "12344"
+]
+```
+
+Or provide the list of ids in the as request parameters. An example:
 ```
 DELETE /booking?ids=12340,12341,12342,12343,12344
 ```
-Will delete multiple bookings with the IDs: `12340`, `12341`, `12342`, `12343`, `12344`.
+
+Both solutions will delete multiple bookings with the IDs: `12340`, `12341`, `12342`, `12343`, `12344`.
 
 Delete multiple bookings by resourceId:
 ```
