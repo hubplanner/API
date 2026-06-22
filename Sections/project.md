@@ -571,7 +571,7 @@ example `body`, update project with `_id: 5d414b23c0881e733f85f419`
     [  
 		{  
 			"_id": "5d414b23c0881e733f85f419",  
-			"note": "Hub Planner",  
+			"note": "Resource Flow",  
 			"name": "Test Project",  
 			"projectCode": "pr_code",  
 			"budgetCashAmount": 123456  
@@ -593,7 +593,7 @@ example `body`, update 2 projects
     [  
 		{  
 			"_id": "5d414b23c0881e733f85f419",  
-			"note": "Hub Planner",  
+			"note": "Resource Flow",  
 			"name": "Test Project",  
 			"projectCode": "pr_code",  
 			"budgetCashAmount": 123456  

@@ -138,7 +138,7 @@ The asterisk sign is explained in the approvers logic below.
 
 # Approvers logic
 
-In Hub Planner under settings -> Manage Approvers, approvers can be set. From here you can specify default approvers for the resource. Default approvers of a resource are a subset of company approvers. 
+In Resource Flow under settings -> Manage Approvers, approvers can be set. From here you can specify default approvers for the resource. Default approvers of a resource are a subset of company approvers. 
 
 Vacation request can be approved by any of company approvers. By default, if no approvers are provided in request body, the resource default approvers will be set as request approvers. 
 

@@ -1,7 +1,7 @@
-Hub Planner API Sections
+Resource Flow API Sections
 ===
 
-Welcome to the Hub Planner API. The Hub Planner API provides programmatic access to the following areas
+Welcome to the Resource Flow API. The Resource Flow API provides programmatic access to the following areas
 
 * [Projects](https://github.com/hubplanner/API/blob/master/Sections/project.md)
 * [Resources](https://github.com/hubplanner/API/blob/master/Sections/resource.md)
