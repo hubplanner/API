@@ -11,7 +11,7 @@ Server Response example below for 1 resource returned within an array.
 ```
 [{
     "_id": "5ba09b635ff58f149a2cf4e7",
-    "email": "wojciech.bator@resourceflow.com",
+    "email": "wojciech.bator@milientsoftware.com",
     "metadata": "",
     "createdDate": "2018-09-18T06:24:25.297Z",
     "updatedDate": null,

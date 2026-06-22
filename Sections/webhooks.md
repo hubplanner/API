@@ -57,7 +57,7 @@ An example response will look like below.
    "_id": "448847eea20e6d05bc53a49a",
    "companyId": "59841c04844e6738c8d45123",
    "creationDate": "2017-06-01T10:56:34.088Z",
-   "target_url": "http://mydomain.resourceflow.com/webhooks_listener",
+   "target_url": "http://mydomain.hubplanner.com/webhooks_listener",
    "event": "project.update",
    "authorization_token": "secret-token-123"
 }
