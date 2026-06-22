@@ -1,8 +1,8 @@
 <p align="center">
-  <img alt="Hub Planner Logo" title="Hub Planner" src="/logo.png" width="250">
+  <img alt="Resource Flow Logo" title="Resource Flow" src="logo.svg" width="250">
 </p>
 <p align="center" style="margin-top: 40px">
-  <strong>API Documentation</strong> for Hub Planner
+  <strong>API Documentation</strong> for Resource Flow
 </p>
 <p align="center">
   <a href="https://signup.hubplanner.com">Free Trial</a>
@@ -12,7 +12,7 @@
 
 ===
 
-Welcome to the Hub Planner API which provides programmatic access to Hub Planner Resource Management and Timesheets https://hubplanner.com
+Welcome to the Resource Flow API which provides programmatic access to Resource Flow Resource Management and Timesheets https://www.milientsoftware.com/hub-planner
 
 The following [Sections](https://github.com/hubplanner/API/tree/master/Sections) are available:
 
@@ -36,21 +36,21 @@ The following [Sections](https://github.com/hubplanner/API/tree/master/Sections)
 * [Project Cost Categories](https://github.com/hubplanner/API/blob/master/Sections/project-cost-categories.md)
 * [Custom Fields](https://github.com/hubplanner/API/blob/master/Sections/custom-fields.md)
 
-You can use the API to integrate Hub Planner with your own third party applications or generally integrate with your existing back-office setup.
+You can use the API to integrate Resource Flow with your own third party applications or generally integrate with your existing back-office setup.
 
 ## Zapier Integration
 
-We offer an integration with Zapier. Please [Visit Here](https://zapier.com/apps/hub-planner/integrations) to get access and start usign Zaps with HUb Planner.
+We offer an integration with Zapier. Please [Visit Here](https://zapier.com/apps/hub-planner/integrations) to get access and start usign Zaps with Resource Flow.
 
 ## API Support
 
 If you have a question about using the API or have noticed an error or omission in the documentation. Please feel free to open an [issue](https://github.com/hubplanner/API/issues) on GitHub with your question and we will attend to it.
 
-If you have any direct implementation issues, please contact the tech team at the following address hello@hubplanner.com and add API as as the Subject. 
+If you have any direct implementation issues, please contact the tech team at the following address support@milientsoftware.com and add API as as the Subject. 
 
 ## API Updates and Changes
 
-We will be managing the API via GitHub, so please watch the Hub Planner API repository to receive email notification of updates to the API documentation. 
+We will be managing the API via GitHub, so please watch the Resource Flow API repository to receive email notification of updates to the API documentation. 
 
 ## API Limits
 
@@ -70,11 +70,11 @@ Retry-After
 
 ## Sharing
 
-If you've built something interesting with the Hub Planner API, made a wrapper for a certain code language or integrated with a third party software you would like to share or think will help others, then please let us know at hello@hubplanner.com
+If you've built something interesting with the Resource Flow API, made a wrapper for a certain code language or integrated with a third party software you would like to share or think will help others, then please let us know at support@milientsoftware.com
 
 ## API Data Formats
 
-Hub Planner API is a RESTful API that uses HTTP requests and returns JSON for all responses. 
+Resource Flow API is a RESTful API that uses HTTP requests and returns JSON for all responses. 
 
 All URLs start with the root URL: 
 
@@ -89,7 +89,7 @@ Accept: application/json
 Content-Type: application/json
 ```
 
-Please note that all requests to the Hub Planner API must be made over HTTPS.
+Please note that all requests to the Resource Flow API must be made over HTTPS.
 
 ### Pagination
 
@@ -178,11 +178,11 @@ It's suggested that you use sort argument along with pagination.
 
 Remember to write your application carefully. In case of abuse you may be blocked, disallowing further API access. As an act of courtesy, please provide User-Agent strings denoting your application.
 
-`User-Agent: My Hub Planner Import App (my-name@my-email.com)`
+`User-Agent: My Resource Flow Import App (my-name@my-email.com)`
 
 ## Authentication
 
-Hub Planner API is authenticated with a OAuth 2.0 Bearer Token.
+Resource Flow API is authenticated with a OAuth 2.0 Bearer Token.
 
 You must supply an Authorization header with the token for all requests. 
 
@@ -190,7 +190,7 @@ You must supply an Authorization header with the token for all requests.
 
 Where xxx is Your generated API key. Do not provide `Bearer` keyword before API key in the header.
 
-You must enable API access and generate your API key in order to use the Hub Planner API. The API key is available in All Accounts with Administrator privileges and higher. To generate your API key and enable the API login to your Hub Planner account and navigate to 
+You must enable API access and generate your API key in order to use the Resource Flow API. The API key is available in All Accounts with Administrator privileges and higher. To generate your API key and enable the API login to your Resource Flow account and navigate to 
 
 `Settings -> API`
 
@@ -216,5 +216,5 @@ Code | Text | Description
 404 | Not Found | The URI requested is invalid or the resource requested, such as a user, does not exists.
 429 | To Many Requests | This status code indicates that the user has sent too many requests in a given amount of time ("rate limiting"). We currently allow 2 requests / second per account. 
 500 | Internal Server Error | Something unexpected broke. Please raise an [issue](https://github.com/hubplanner/API/issues) so we can investigate your problem.
-502 | Bad Gateway | Hub Planner API is down or temporary not accessible. 
+502 | Bad Gateway | Resource Flow API is down or temporary not accessible. 
 

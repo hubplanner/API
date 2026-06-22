@@ -1,5 +1,5 @@
 # Webhooks
-You can use Hub Planners webhooks to tap into real time events that are triggered in the Hub Planner application and use those events in other third party softwares. A simple example of usage could be when a New Project is created in Hub Planner, you want to create that project in another service. You can apply this concept to the support events below. 
+You can use Resource Flow webhooks to tap into real time events that are triggered in the Resource Flow application and use those events in other third party softwares. A simple example of usage could be when a New Project is created in Resource Flow, you want to create that project in another service. You can apply this concept to the support events below. 
 
 ## Get All Webhooks
 
@@ -57,7 +57,7 @@ An example response will look like below.
    "_id": "448847eea20e6d05bc53a49a",
    "companyId": "59841c04844e6738c8d45123",
    "creationDate": "2017-06-01T10:56:34.088Z",
-   "target_url": "http://mydomain.hubplanner.com/webhooks_listener",
+   "target_url": "http://mydomain.resourceflow.com/webhooks_listener",
    "event": "project.update",
    "authorization_token": "secret-token-123"
 }

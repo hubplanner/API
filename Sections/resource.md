@@ -11,7 +11,7 @@ Server Response example below for 1 resource returned within an array.
 ```
 [{
     "_id": "5ba09b635ff58f149a2cf4e7",
-    "email": "wojciech.bator@hubplanner.com",
+    "email": "wojciech.bator@resourceflow.com",
     "metadata": "",
     "createdDate": "2018-09-18T06:24:25.297Z",
     "updatedDate": null,
@@ -176,7 +176,7 @@ To set simple values choose templateId to use, pass in proper templateType and v
     	{ 
     		"templateId":"5e54db0041e7270c38b248f8",
 			"templateType": "TEXT", // set the filed TEXT | TEXTAREA | EMAIL | DATE | COLOR | NUMBER
-			"value": "Hub Planner 567876534" 
+			"value": "Resource Flow 567876534" 
 		}
 		]
 }
@@ -438,7 +438,7 @@ example `body`, update resource with `_id: 5f02d81cf959470bfda820b0`
 		{  
 			"_id": "5f02d81cf959470bfda820b0",  
 			"lastName": "Green",  
-			"note": "Hub Planner"  
+			"note": "Resource Flow"  
 		}
 	]
 
@@ -458,7 +458,7 @@ example `body`, update 2 resources
 		{  
 			"_id": "5f02d81cf959470bfda820b0",  
 			"lastName": "Green",  
-			"note": "Hub Planner"  
+			"note": "Resource Flow"  
 		},  
 		{  
 			"_id": "5ce678c066df572dae543b93",  
