@@ -1,3 +1,10 @@
+## July 29, 2026
+
+FEATURES:
+
+* Added Public Holiday Calendars documentation with full CRUD endpoints [[holidays](https://github.com/hubplanner/API/blob/master/Sections/holidays.md#public-holiday-calendars)]
+* Added new Resource Dynamic Capacity section documenting custom availability override endpoints [[resource-dynamic-capacity](https://github.com/hubplanner/API/blob/master/Sections/resource-dynamic-capacity.md)]
+
 ## July 08, 2025
 
 IMPROVEMENTS:
