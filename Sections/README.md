@@ -20,6 +20,7 @@ Welcome to the Resource Flow API. The Resource Flow API provides programmatic ac
 * [Project tag](https://github.com/hubplanner/API/blob/master/Sections/project-tag.md)
 * [Resource tag](https://github.com/hubplanner/API/blob/master/Sections/resource-tag.md)
 * [Booking Categories](https://github.com/hubplanner/API/blob/master/Sections/booking-categories.md)
+* [Resource Dynamic Capacity](https://github.com/hubplanner/API/blob/master/Sections/resource-dynamic-capacity.md)
 
 #### Pagination
 
