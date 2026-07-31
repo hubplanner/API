@@ -1,3 +1,17 @@
+## July 29, 2026
+
+FEATURES:
+
+* Added Public Holiday Calendars documentation with full CRUD endpoints [[holidays](https://github.com/hubplanner/API/blob/master/Sections/holidays.md#public-holiday-calendars)]
+* Added new Resource Dynamic Capacity section documenting custom availability override endpoints [[resource-dynamic-capacity](https://github.com/hubplanner/API/blob/master/Sections/resource-dynamic-capacity.md)]
+* Added Category Groups section with full CRUD and search endpoints, plus `DELETE /categories/{{CATEGORY_ID}}` [[booking-categories](https://github.com/hubplanner/API/blob/master/Sections/booking-categories.md#category-groups)]
+
+IMPROVEMENTS:
+
+* Reconciled holiday documentation with source schema — added missing `POST /holiday` body fields (`calendarId`, `color`, `repeat`, `metadata`), missing response properties (`color`, `createdDate`, `updatedDate`) with `Required`/`Sortable` columns, `calendarId` and the `$gt` date operator to search, and corrected the `PUT /holiday/{{HOLIDAY_ID}}` path and accepted body fields [[holidays](https://github.com/hubplanner/API/blob/master/Sections/holidays.md#get-all-holidays)]
+* Reconciled booking category documentation with source schema — added a response property table with `Required`/`Sortable` columns plus `categoryGroupId` and `categoryGroupName`, query parameters (`sort`, `page`, `limit`) to `GET /categories` [[booking-categories](https://github.com/hubplanner/API/blob/master/Sections/booking-categories.md#get-all-booking-categories)]
+* Documented booking category behaviors — extension gating across category and category group endpoints, request body tables for `POST`/`PUT /categories` [[booking-categories](https://github.com/hubplanner/API/blob/master/Sections/booking-categories.md#extension-gating)]
+
 ## July 08, 2025
 
 IMPROVEMENTS:
