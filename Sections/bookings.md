@@ -148,6 +148,14 @@ GET booking?dependencies=true
 ```
 Response will contain two additional fields `parentIds` and `childIds`.
 
+### Paginating bookings with skip
+
+As an alternative to *page*, use query parameter *skip* to set the record offset directly. Please see pagination reference here https://github.com/hubplanner/API/blob/master/README.md#pagination
+```
+GET booking?skip=1000&limit=1000
+```
+`skip` is an offset in records, while `page` is an index of `limit`-sized pages. An invalid or negative `skip` is treated as `0`. If both are sent, `page` will take priority.
+
 ## Search Bookings
 Search allows to get more complex results.
 

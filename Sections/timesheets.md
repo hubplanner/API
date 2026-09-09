@@ -10,6 +10,18 @@ You should pagiante the results for time entries that are returned. Please see p
 GET /timeentry?page=0&limit=20
 ```
 
+### Filtering time entries
+
+You can filter `GET /timeentry` by project and by a date range. These query parameters are equivalent to the `project` and `date` filters in the [search parameters](https://github.com/hubplanner/API/blob/master/Sections/timesheets.md#searchable-properties) below.
+
+```
+GET /timeentry?project=5678&start=2014-10-20&end=2014-10-27
+```
+
+* `project` takes a single project id.
+* `start` and `end` set an inclusive date range in `YYYY-MM-DD` format.
+* These parameters combine with `page`, `limit` and `sort`.
+
 ## Get Specific TimeEntry
 Use the following command to get a specific TimeEntry by `id`.
 ```

@@ -99,6 +99,8 @@ The max `limit` you can set is `1000`.
 
 If you pass a limit of `0` or a limit of > `1000`, you will get a Bad Request `400` response from the server.
 
+For Bookings you can also use `skip` to set the record offset directly, as an alternative to `page`. The default value for `skip` is 0. If both are sent, `page` will take priority.
+
 The example call to make use of pagination looks like this:
 
 ```
