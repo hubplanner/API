@@ -1,3 +1,10 @@
+## September 16, 2026
+
+IMPROVEMENTS:
+
+* Added 'project', 'start' and 'end' query parameters to filter 'GET /timeentry' [[timesheets](https://github.com/hubplanner/API/blob/master/Sections/timesheets.md#filtering-time-entries)]
+* Added 'skip' query parameter for booking pagination [[bookings](https://github.com/hubplanner/API/blob/master/Sections/bookings.md#paginating-bookings-with-skip)]
+
 ## July 08, 2025
 
 IMPROVEMENTS:
