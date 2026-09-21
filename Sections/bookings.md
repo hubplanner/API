@@ -8,6 +8,7 @@ You should pagiante the results for bookings that are returned. Please see pagin
 ```
 GET /booking?page=0&limit=20
 ```
+For large booking sets, [cursor pagination](#cursor-pagination) is much faster.
 ```
 [
   {
@@ -155,6 +156,28 @@ As an alternative to *page*, use query parameter *skip* to set the record offset
 GET booking?skip=1000&limit=1000
 ```
 `skip` is an offset in records, while `page` is an index of `limit`-sized pages. An invalid or negative `skip` is treated as `0`. If both are sent, `page` will take priority.
+
+### Cursor pagination
+
+`page` gets slower the deeper you go. For large booking sets use `cursor` instead, where
+every page costs the same however far in you are.
+
+Send an empty `cursor` for the first page, then the `_id` of the last booking of each
+response to get the next one:
+
+```
+GET /booking?cursor=&limit=1000
+GET /booking?cursor=5b1977ade02d407011112222&limit=1000
+```
+
+Bookings come back ordered by `_id` ascending. Repeat until a page holds fewer than `limit`
+bookings; the call after that returns `[]`. `limit` defaults to 20, max 1000.
+
+* Send only `cursor` and `limit`. Combining `cursor` with `sort`, `page` or `skip` returns a
+  Bad Request `400`, as does a cursor that is not a 24 character booking `_id`.
+* Not supported on `POST /booking/search`.
+* Bookings added mid-walk may or may not appear; one already returned never repeats.
+* Integrations that do not send `cursor` are unaffected.
 
 ## Search Bookings
 Search allows to get more complex results.

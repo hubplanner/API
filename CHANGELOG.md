@@ -1,3 +1,9 @@
+## September 21, 2026
+
+IMPROVEMENTS:
+
+* Added `cursor` query parameter to Bookings for fast pagination of large booking sets [[bookings](https://github.com/hubplanner/API/blob/master/Sections/bookings.md#cursor-pagination)]
+
 ## September 16, 2026
 
 IMPROVEMENTS:
